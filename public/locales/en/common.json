@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "offers": "Offers",
+    "account": "Account"
+  },
+  "cta": {
+    "shop": "Shop Now"
+  },
+  "label": {
+    "search": "Search",
+    "category": "Category"
+  },
+  "msg": {
+    "noItems": "No items found"
+  },
+  "products": {
+    "title": "Our Products",
+    "loading": "Loading products...",
+    "error": "Error loading products. Please try again.",
+    "noItems": "No items found",
+    "backToProducts": "← Back to products",
+    "description": "Description",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "loadingProduct": "Loading product...",
+    "errorLoadingProduct": "Error loading product. Please try again.",
+    "descriptions": {
+      "1": "Fresh whole grain bread, handcrafted daily in our local bakery. High in fiber and protein content.",
+      "2": "Extra virgin olive oil from ancient olive trees in the Mediterranean region. Rich in flavor and health benefits.",
+      "3": "Traditional feta cheese from sheep and goat milk. Perfectly salted and seasoned for salads and Greek dishes.",
+      "4": "Natural organic honey from local bees. Sweet taste and rich in natural health benefits.",
+      "5": "Dried thyme from fresh herbs. Perfect for cooking and adding flavor to various dishes."
+    }
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "subtotal": "Subtotal",
+    "clear": "Clear All",
+    "checkout": "Checkout"
+  },
+  "hero": {
+    "title": "Fresh Mediterranean groceries, delivered fast",
+    "subtitle": "Premium pantry staples and produce direct to your door in 48 hours.",
+    "shipping": "Free EU shipping on orders ≥ €80"
+  },
+  "footer": {
+    "company": "Company",
+    "about": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "support": "Support",
+    "help": "Help Center",
+    "contact": "Contact",
+    "shipping": "Shipping",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "copyright": "© {{year}} jozef supermarket. All rights reserved."
+  }
+} 

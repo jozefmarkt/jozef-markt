@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import RTL utilities */
+@import './theme/rtl.css';
+
+/* Basic CSS without Tailwind */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f9fafb;
+}
+
+.nav-link {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #4f46e5;
+}
+
+.sidebar-link {
+  color: #374151;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar-link:hover {
+  color: #4f46e5;
+  background-color: #f9fafb;
+}
+
+.footer-link {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #111827;
+}
