@@ -3,13 +3,27 @@ import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "../i18n";
 import Header from "../components/layout/Header";
-import Sidebar from "../components/layout/Sidebar";
 import Footer from "../components/layout/Footer";
 import { CartProvider } from "../contexts/CartContext";
 import { CartDrawer } from "../components/cart/CartDrawer";
+import ProtectedRoute from "../components/admin/ProtectedRoute";
 import Home from "../pages/Home";
 import ProductsPage from "../pages/Products";
 import ProductDetails from "../pages/Products/Details";
+import AdminLogin from "../pages/Admin/Login";
+import AdminDashboard from "../pages/Admin/Dashboard";
+import AdminProducts from "../pages/Admin/Products";
+import ProductForm from "../components/admin/ProductForm";
+import ImageManager from "../pages/Admin/ImageManager";
+import Placeholder from "../pages/Admin/Placeholder";
+import { 
+  Package, 
+  Plus, 
+  Settings, 
+  Users, 
+  BarChart3,
+  Image as ImageIcon
+} from 'lucide-react';
 
 const RootLayout: React.FC = () => {
   const { i18n } = useTranslation();
@@ -22,16 +36,93 @@ const RootLayout: React.FC = () => {
     <CartProvider>
       <div className="flex min-h-screen flex-col">
         <Header />
-        <div className="flex flex-1">
-          <Sidebar />
-          <main className="flex-1 p-4">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/products" element={<ProductsPage />} />
-              <Route path="/products/:id" element={<ProductDetails />} />
-            </Routes>
-          </main>
-        </div>
+        <main className="flex-1">
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            
+            {/* Admin Routes */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route 
+              path="/admin" 
+              element={
+                <ProtectedRoute>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/products" 
+              element={
+                <ProtectedRoute>
+                  <AdminProducts />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/products/add" 
+              element={
+                <ProtectedRoute>
+                  <ProductForm />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/products/edit/:id" 
+              element={
+                <ProtectedRoute>
+                  <ProductForm />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/images" 
+              element={
+                <ProtectedRoute>
+                  <ImageManager />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/analytics" 
+              element={
+                <ProtectedRoute>
+                  <Placeholder 
+                    title="Analytics" 
+                    description="View sales and performance data"
+                    icon={BarChart3}
+                  />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/users" 
+              element={
+                <ProtectedRoute>
+                  <Placeholder 
+                    title="Users" 
+                    description="Manage customer accounts"
+                    icon={Users}
+                  />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/settings" 
+              element={
+                <ProtectedRoute>
+                  <Placeholder 
+                    title="Settings" 
+                    description="Configure store settings"
+                    icon={Settings}
+                  />
+                </ProtectedRoute>
+              } 
+            />
+          </Routes>
+        </main>
         <Footer />
         <CartDrawer />
       </div>

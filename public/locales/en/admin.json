@@ -1,0 +1,168 @@
+{
+  "login": {
+    "title": "Admin Login",
+    "subtitle": "Sign in to manage your store",
+    "username": "Username",
+    "password": "Password",
+    "signIn": "Sign In",
+    "error": "Invalid credentials. Please try again.",
+    "loading": "Signing in..."
+  },
+  "dashboard": {
+    "title": "Admin Dashboard",
+    "welcome": "Welcome back, {{username}}",
+    "logout": "Logout",
+    "stats": {
+      "totalProducts": "Total Products",
+      "activeProducts": "Active Products",
+      "totalCustomers": "Total Customers",
+      "imagesUploaded": "Images Uploaded"
+    },
+    "cards": {
+      "products": {
+        "title": "Products",
+        "description": "Manage your product catalog"
+      },
+      "addProduct": {
+        "title": "Add Product",
+        "description": "Add new products to your store"
+      },
+      "imageUpload": {
+        "title": "Image Upload",
+        "description": "Upload and manage product images"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "View sales and performance data"
+      },
+      "users": {
+        "title": "Users",
+        "description": "Manage customer accounts"
+      },
+      "settings": {
+        "title": "Settings",
+        "description": "Configure store settings"
+      }
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Manage your product catalog",
+    "addProduct": "Add Product",
+    "stats": {
+      "totalProducts": "Total Products",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "table": {
+      "product": "Product",
+      "category": "Category",
+      "price": "Price",
+      "status": "Status",
+      "actions": "Actions",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "deleteModal": {
+      "title": "Delete Product",
+      "message": "Are you sure you want to delete this product? This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting..."
+    },
+    "loading": "Loading products...",
+    "error": "Error loading products. Please try again."
+  },
+  "productForm": {
+    "addTitle": "Add Product",
+    "editTitle": "Edit Product",
+    "addSubtitle": "Add a new product to your store",
+    "editSubtitle": "Update product information",
+    "image": {
+      "label": "Product Image",
+      "uploadText": "Click to upload or drag and drop",
+      "fileTypes": "PNG, JPG, GIF up to 10MB"
+    },
+    "fields": {
+      "name": {
+        "label": "Product Name *",
+        "placeholder": "Enter product name"
+      },
+      "description": {
+        "label": "Description *",
+        "placeholder": "Enter product description"
+      },
+      "price": {
+        "label": "Price (€) *",
+        "placeholder": "0.00"
+      },
+      "category": {
+        "label": "Category *",
+        "placeholder": "Select a category"
+      },
+      "nutrition": {
+        "label": "Nutrition Information",
+        "placeholder": "Enter nutrition information (e.g., Energy 100 kcal/100g, Protein 5g/100g)"
+      },
+      "inStock": {
+        "label": "Product is in stock"
+      }
+    },
+    "categories": {
+      "vegetables": "Vegetables",
+      "fruits": "Fruits",
+      "dairy": "Dairy",
+      "bakery": "Bakery",
+      "meat": "Meat",
+      "cheese": "Cheese",
+      "beverages": "Beverages",
+      "snacks": "Snacks",
+      "pantry": "Pantry"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create Product",
+      "update": "Update Product",
+      "saving": "Saving..."
+    },
+    "loading": "Loading product..."
+  },
+  "imageManager": {
+    "title": "Image Manager",
+    "subtitle": "Upload and manage product images",
+    "upload": {
+      "title": "Upload Images",
+      "selectImages": "Select Images",
+      "uploading": "Uploading...",
+      "fileTypes": "PNG, JPG, GIF up to 10MB each"
+    },
+    "gallery": {
+      "title": "Uploaded Images ({{count}})",
+      "empty": {
+        "title": "No images",
+        "message": "Upload some images to get started."
+      }
+    },
+    "actions": {
+      "copyUrl": "Copy URL",
+      "delete": "Delete"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "success": "Operation completed successfully.",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "back": "Back"
+  }
+} 

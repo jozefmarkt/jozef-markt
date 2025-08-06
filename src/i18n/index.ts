@@ -11,11 +11,15 @@ i18n
     },
     lng: 'ar', // default language
     fallbackLng: 'en',
-    ns: ['common', 'products', 'cart'],
+    ns: ['common', 'cart', 'admin'],
     defaultNS: 'common',
     interpolation: {
       escapeValue: false
-    }
+    },
+    react: {
+      useSuspense: false // This will prevent the app from showing loading states while translations load
+    },
+    debug: false // Disable debug mode
   });
 
 export default i18n; 

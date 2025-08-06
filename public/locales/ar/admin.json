@@ -1,0 +1,168 @@
+{
+  "login": {
+    "title": "تسجيل دخول المدير",
+    "subtitle": "سجل دخولك لإدارة متجرك",
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "error": "بيانات غير صحيحة. يرجى المحاولة مرة أخرى.",
+    "loading": "جاري تسجيل الدخول..."
+  },
+  "dashboard": {
+    "title": "لوحة تحكم المدير",
+    "welcome": "مرحباً بعودتك، {{username}}",
+    "logout": "تسجيل الخروج",
+    "stats": {
+      "totalProducts": "إجمالي المنتجات",
+      "activeProducts": "المنتجات المتوفرة",
+      "totalCustomers": "إجمالي العملاء",
+      "imagesUploaded": "الصور المرفوعة"
+    },
+    "cards": {
+      "products": {
+        "title": "المنتجات",
+        "description": "إدارة كتالوج المنتجات"
+      },
+      "addProduct": {
+        "title": "إضافة منتج",
+        "description": "إضافة منتجات جديدة إلى متجرك"
+      },
+      "imageUpload": {
+        "title": "رفع الصور",
+        "description": "رفع وإدارة صور المنتجات"
+      },
+      "analytics": {
+        "title": "التحليلات",
+        "description": "عرض بيانات المبيعات والأداء"
+      },
+      "users": {
+        "title": "المستخدمين",
+        "description": "إدارة حسابات العملاء"
+      },
+      "settings": {
+        "title": "الإعدادات",
+        "description": "تكوين إعدادات المتجر"
+      }
+    }
+  },
+  "products": {
+    "title": "المنتجات",
+    "subtitle": "إدارة كتالوج المنتجات",
+    "addProduct": "إضافة منتج",
+    "stats": {
+      "totalProducts": "إجمالي المنتجات",
+      "inStock": "متوفر",
+      "outOfStock": "نفذت الكمية"
+    },
+    "table": {
+      "product": "المنتج",
+      "category": "الفئة",
+      "price": "السعر",
+      "status": "الحالة",
+      "actions": "الإجراءات",
+      "inStock": "متوفر",
+      "outOfStock": "نفذت الكمية"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "deleteModal": {
+      "title": "حذف المنتج",
+      "message": "هل أنت متأكد من حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "deleting": "جاري الحذف..."
+    },
+    "loading": "جاري تحميل المنتجات...",
+    "error": "خطأ في تحميل المنتجات. يرجى المحاولة مرة أخرى."
+  },
+  "productForm": {
+    "addTitle": "إضافة منتج",
+    "editTitle": "تعديل المنتج",
+    "addSubtitle": "إضافة منتج جديد إلى متجرك",
+    "editSubtitle": "تحديث معلومات المنتج",
+    "image": {
+      "label": "صورة المنتج",
+      "uploadText": "انقر للرفع أو اسحب وأفلت",
+      "fileTypes": "PNG, JPG, GIF حتى 10 ميجابايت"
+    },
+    "fields": {
+      "name": {
+        "label": "اسم المنتج *",
+        "placeholder": "أدخل اسم المنتج"
+      },
+      "description": {
+        "label": "الوصف *",
+        "placeholder": "أدخل وصف المنتج"
+      },
+      "price": {
+        "label": "السعر (€) *",
+        "placeholder": "0.00"
+      },
+      "category": {
+        "label": "الفئة *",
+        "placeholder": "اختر فئة"
+      },
+      "nutrition": {
+        "label": "معلومات التغذية",
+        "placeholder": "أدخل معلومات التغذية (مثل: الطاقة 100 سعرة/100غ، بروتين 5غ/100غ)"
+      },
+      "inStock": {
+        "label": "المنتج متوفر"
+      }
+    },
+    "categories": {
+      "vegetables": "خضروات",
+      "fruits": "فواكه",
+      "dairy": "ألبان",
+      "bakery": "مخبز",
+      "meat": "لحوم",
+      "cheese": "جبن",
+      "beverages": "مشروبات",
+      "snacks": "وجبات خفيفة",
+      "pantry": "مخزن"
+    },
+    "buttons": {
+      "cancel": "إلغاء",
+      "create": "إنشاء المنتج",
+      "update": "تحديث المنتج",
+      "saving": "جاري الحفظ..."
+    },
+    "loading": "جاري تحميل المنتج..."
+  },
+  "imageManager": {
+    "title": "مدير الصور",
+    "subtitle": "رفع وإدارة صور المنتجات",
+    "upload": {
+      "title": "رفع الصور",
+      "selectImages": "اختر الصور",
+      "uploading": "جاري الرفع...",
+      "fileTypes": "PNG, JPG, GIF حتى 10 ميجابايت لكل صورة"
+    },
+    "gallery": {
+      "title": "الصور المرفوعة ({{count}})",
+      "empty": {
+        "title": "لا توجد صور",
+        "message": "ارفع بعض الصور للبدء."
+      }
+    },
+    "actions": {
+      "copyUrl": "نسخ الرابط",
+      "delete": "حذف"
+    }
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+    "success": "تم إكمال العملية بنجاح.",
+    "confirm": "تأكيد",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "back": "رجوع"
+  }
+} 

@@ -1,0 +1,19 @@
+{
+  "title": "Our Products",
+  "loading": "Loading products...",
+  "error": "Error loading products. Please try again.",
+  "noItems": "No items found",
+  "backToProducts": "← Back to products",
+  "description": "Description",
+  "addToCart": "Add to Cart",
+  "outOfStock": "Out of Stock",
+  "loadingProduct": "Loading product...",
+  "errorLoadingProduct": "Error loading product. Please try again.",
+  "descriptions": {
+    "1": "Fresh whole grain bread, handcrafted daily in our local bakery. High in fiber and protein content.",
+    "2": "Extra virgin olive oil from ancient olive trees in the Mediterranean region. Rich in flavor and health benefits.",
+    "3": "Traditional feta cheese from sheep and goat milk. Perfectly salted and seasoned for salads and Greek dishes.",
+    "4": "Natural organic honey from local bees. Sweet taste and rich in natural health benefits.",
+    "5": "Dried thyme from fresh herbs. Perfect for cooking and adding flavor to various dishes."
+  }
+} 
