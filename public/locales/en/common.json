@@ -3,7 +3,7 @@
     "home": "Home",
     "products": "Products",
     "offers": "Offers",
-    "account": "Account"
+    "contact": "Contact"
   },
   "cta": {
     "shop": "Shop Now"
@@ -33,6 +33,14 @@
       "4": "Natural organic honey from local bees. Sweet taste and rich in natural health benefits.",
       "5": "Dried thyme from fresh herbs. Perfect for cooking and adding flavor to various dishes."
     }
+  },
+  "offers": {
+    "title": "Special Offers",
+    "subtitle": "Discover amazing deals and discounts on our premium products",
+    "loading": "Loading offers...",
+    "error": "Error loading offers. Please try again.",
+    "noOffers": "No active offers at the moment. Check back soon for great deals!",
+    "validUntil": "Valid until"
   },
   "cart": {
     "title": "Shopping Cart",

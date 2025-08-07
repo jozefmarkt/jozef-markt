@@ -1,6 +1,6 @@
 // Cloudinary configuration
-const CLOUDINARY_CLOUD_NAME = 'your-cloud-name'; // Replace with your Cloudinary cloud name
-const CLOUDINARY_UPLOAD_PRESET = 'your-upload-preset'; // Replace with your upload preset
+const CLOUDINARY_CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME || 'demo';
+const CLOUDINARY_UPLOAD_PRESET = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET || 'ml_default';
 
 interface CloudinaryResponse {
   secure_url: string;
@@ -13,6 +13,18 @@ interface CloudinaryResponse {
 export const cloudinaryService = {
   uploadImage: async (file: File): Promise<string> => {
     try {
+      // Check if Cloudinary is properly configured
+      if (!CLOUDINARY_CLOUD_NAME || CLOUDINARY_CLOUD_NAME === 'demo') {
+        console.warn('Cloudinary not configured, using fallback');
+        return new Promise((resolve) => {
+          const reader = new FileReader();
+          reader.onload = (e) => {
+            resolve(e.target?.result as string);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
       // Create form data
       const formData = new FormData();
       formData.append('file', file);
@@ -29,7 +41,9 @@ export const cloudinaryService = {
       );
 
       if (!response.ok) {
-        throw new Error(`Upload failed: ${response.statusText}`);
+        const errorText = await response.text();
+        console.error('Cloudinary upload failed:', response.status, errorText);
+        throw new Error(`Upload failed: ${response.statusText} - ${errorText}`);
       }
 
       const data: CloudinaryResponse = await response.json();

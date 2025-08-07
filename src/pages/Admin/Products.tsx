@@ -12,8 +12,8 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { productsApi } from '../../services/api';
-import { Product } from '../../types';
+import { productService } from '../../services/supabase';
+import { Product } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminProducts: React.FC = () => {
@@ -24,11 +24,11 @@ const AdminProducts: React.FC = () => {
   
   const { data: products, isLoading, error } = useQuery({
     queryKey: ['products'],
-    queryFn: productsApi.getAll,
+    queryFn: productService.getAll,
   });
 
   const deleteProductMutation = useMutation({
-    mutationFn: productsApi.delete,
+    mutationFn: productService.delete,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['products'] });
       setDeleteConfirm(null);
@@ -103,9 +103,9 @@ const AdminProducts: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                                          <dt className="text-sm font-medium text-gray-500 truncate">
-                      {t('products.stats.totalProducts')}
-                    </dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">
+                        {t('products.stats.totalProducts')}
+                      </dt>
                       <dd className="text-lg font-medium text-gray-900">
                         {products?.length || 0}
                       </dd>
@@ -123,11 +123,11 @@ const AdminProducts: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                                          <dt className="text-sm font-medium text-gray-500 truncate">
-                      {t('products.stats.inStock')}
-                    </dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">
+                        {t('products.stats.inStock')}
+                      </dt>
                       <dd className="text-lg font-medium text-gray-900">
-                        {products?.filter(p => p.inStock).length || 0}
+                        {products?.filter(p => p.in_stock).length || 0}
                       </dd>
                     </dl>
                   </div>
@@ -143,11 +143,11 @@ const AdminProducts: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                                          <dt className="text-sm font-medium text-gray-500 truncate">
-                      {t('products.stats.outOfStock')}
-                    </dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">
+                        {t('products.stats.outOfStock')}
+                      </dt>
                       <dd className="text-lg font-medium text-gray-900">
-                        {products?.filter(p => !p.inStock).length || 0}
+                        {products?.filter(p => !p.in_stock).length || 0}
                       </dd>
                     </dl>
                   </div>
@@ -216,11 +216,11 @@ const AdminProducts: React.FC = () => {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
-                          product.inStock 
+                          product.in_stock 
                             ? 'bg-green-100 text-green-800' 
                             : 'bg-red-100 text-red-800'
                         }`}>
-                          {product.inStock ? t('products.table.inStock') : t('products.table.outOfStock')}
+                          {product.in_stock ? t('products.table.inStock') : t('products.table.outOfStock')}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">

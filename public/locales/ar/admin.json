@@ -10,13 +10,26 @@
   },
   "dashboard": {
     "title": "لوحة تحكم المدير",
+    "subtitle": "إدارة متجرك والمنتجات",
     "welcome": "مرحباً بعودتك، {{username}}",
     "logout": "تسجيل الخروج",
+    "quickActions": "الإجراءات السريعة",
     "stats": {
       "totalProducts": "إجمالي المنتجات",
+      "inStock": "متوفر",
+      "outOfStock": "نفذت الكمية",
+      "totalValue": "القيمة الإجمالية",
       "activeProducts": "المنتجات المتوفرة",
       "totalCustomers": "إجمالي العملاء",
       "imagesUploaded": "الصور المرفوعة"
+    },
+    "actions": {
+      "manageProducts": "إدارة المنتجات",
+      "manageProductsDesc": "عرض وتعديل وحذف المنتجات",
+      "addProduct": "إضافة منتج",
+      "addProductDesc": "إنشاء منتجات جديدة لمتجرك",
+      "manageImages": "إدارة الصور",
+      "manageImagesDesc": "رفع وتنظيم صور المنتجات"
     },
     "cards": {
       "products": {
@@ -152,6 +165,84 @@
       "copyUrl": "نسخ الرابط",
       "delete": "حذف"
     }
+  },
+  "offers": {
+    "title": "العروض",
+    "subtitle": "إدارة العروض والخصومات الخاصة",
+    "addOffer": "إضافة عرض",
+    "stats": {
+      "totalOffers": "إجمالي العروض",
+      "activeOffers": "العروض النشطة",
+      "upcoming": "قادمة",
+      "expired": "منتهية الصلاحية"
+    },
+    "table": {
+      "offer": "العرض",
+      "discount": "الخصم",
+      "dates": "التواريخ",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "actions": {
+      "view": "عرض",
+      "edit": "تعديل",
+      "delete": "حذف"
+    },
+    "deleteModal": {
+      "title": "حذف العرض",
+      "message": "هل أنت متأكد من حذف هذا العرض؟ لا يمكن التراجع عن هذا الإجراء.",
+      "cancel": "إلغاء",
+      "delete": "حذف",
+      "deleting": "جاري الحذف..."
+    },
+    "loading": "جاري تحميل العروض...",
+    "error": "خطأ في تحميل العروض. يرجى المحاولة مرة أخرى.",
+    "empty": "لا توجد عروض. أنشئ أول عرض للبدء."
+  },
+  "offerForm": {
+    "addTitle": "إضافة عرض",
+    "editTitle": "تعديل العرض",
+    "addSubtitle": "إنشاء عرض جديد لمتجرك",
+    "editSubtitle": "تحديث تفاصيل العرض",
+    "image": {
+      "label": "صورة العرض (اختياري)",
+      "uploadText": "انقر لرفع صورة العرض",
+      "fileTypes": "PNG, JPG حتى 10 ميجابايت"
+    },
+    "fields": {
+      "title": {
+        "label": "عنوان العرض *",
+        "placeholder": "مثال: عرض الصيف - خصم 20%"
+      },
+      "description": {
+        "label": "الوصف *",
+        "placeholder": "صف تفاصيل العرض..."
+      },
+      "discount_percentage": {
+        "label": "نسبة الخصم *",
+        "placeholder": "20"
+      },
+      "discount_amount": {
+        "label": "مبلغ الخصم الثابت (اختياري)",
+        "placeholder": "5.00"
+      },
+      "start_date": {
+        "label": "تاريخ البداية *"
+      },
+      "end_date": {
+        "label": "تاريخ الانتهاء *"
+      },
+      "is_active": {
+        "label": "العرض نشط"
+      }
+    },
+    "buttons": {
+      "cancel": "إلغاء",
+      "create": "إنشاء العرض",
+      "update": "تحديث العرض",
+      "saving": "جاري الحفظ..."
+    },
+    "loading": "جاري تحميل العرض..."
   },
   "common": {
     "loading": "جاري التحميل...",

@@ -23,10 +23,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             src={product.image}
             alt={product.name}
             className={`w-full h-48 object-cover rounded-t-xl ${
-              !product.inStock ? 'opacity-50' : ''
+              !product.in_stock ? 'opacity-50' : ''
             }`}
           />
-          {!product.inStock && (
+          {!product.in_stock && (
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
               <span className="text-white font-bold text-lg">{t('outOfStock', { ns: 'products' })}</span>
             </div>
@@ -46,14 +46,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </p>
         <button
           onClick={() => add(product)}
-          disabled={!product.inStock}
+          disabled={!product.in_stock}
           className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
-            product.inStock
+            product.in_stock
               ? 'bg-lion-500 text-white hover:bg-lion-600'
               : 'bg-gray-300 text-gray-500 cursor-not-allowed'
           }`}
         >
-          {product.inStock ? t('addToCart', { ns: 'products' }) : t('outOfStock', { ns: 'products' })}
+          {product.in_stock ? t('addToCart', { ns: 'products' }) : t('outOfStock', { ns: 'products' })}
         </button>
       </div>
     </div>

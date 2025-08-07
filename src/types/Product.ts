@@ -3,8 +3,10 @@ export interface Product {
   name: string;
   price: number;
   image: string;
-  inStock: boolean;
+  in_stock: boolean;
   description: string;
   nutrition: string;
   category: string;
+  created_at: string;
+  updated_at: string;
 } 

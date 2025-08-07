@@ -1,0 +1,11 @@
+# Supabase Configuration
+# Replace these with your actual Supabase project credentials
+# Get these from your Supabase project dashboard > Settings > API
+
+VITE_SUPABASE_URL=https://your-project-id.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key-here
+VITE_SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
+
+# Optional: For local development
+# VITE_API_URL=http://localhost:5174 
+ 

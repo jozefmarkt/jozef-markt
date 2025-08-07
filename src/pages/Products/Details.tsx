@@ -48,10 +48,10 @@ const ProductDetails: React.FC = () => {
             src={product.image}
             alt={product.name}
             className={`w-full h-96 object-cover rounded-xl shadow-lg ${
-              !product.inStock ? 'opacity-50' : ''
+              !product.in_stock ? 'opacity-50' : ''
             }`}
           />
-          {!product.inStock && (
+          {!product.in_stock && (
             <div className="text-center">
               <span className="bg-red-100 text-red-800 px-4 py-2 rounded-lg font-medium">
                 {t('outOfStock')}
@@ -83,14 +83,14 @@ const ProductDetails: React.FC = () => {
 
 
           <button
-            disabled={!product.inStock}
+            disabled={!product.in_stock}
             className={`w-full py-3 px-6 rounded-lg font-medium text-lg transition-colors ${
-              product.inStock
+              product.in_stock
                 ? 'bg-lion-500 text-white hover:bg-lion-600'
                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             }`}
           >
-            {product.inStock ? t('addToCart', 'Add to Cart') : t('outOfStock', 'Out of Stock')}
+            {product.in_stock ? t('addToCart', 'Add to Cart') : t('outOfStock', 'Out of Stock')}
           </button>
         </div>
       </div>

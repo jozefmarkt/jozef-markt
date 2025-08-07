@@ -10,13 +10,26 @@
   },
   "dashboard": {
     "title": "Admin Dashboard",
+    "subtitle": "Manage your store and products",
     "welcome": "Welcome back, {{username}}",
     "logout": "Logout",
+    "quickActions": "Quick Actions",
     "stats": {
       "totalProducts": "Total Products",
+      "inStock": "In Stock",
+      "outOfStock": "Out of Stock",
+      "totalValue": "Total Value",
       "activeProducts": "Active Products",
       "totalCustomers": "Total Customers",
       "imagesUploaded": "Images Uploaded"
+    },
+    "actions": {
+      "manageProducts": "Manage Products",
+      "manageProductsDesc": "View, edit, and delete products",
+      "addProduct": "Add Product",
+      "addProductDesc": "Create new products for your store",
+      "manageImages": "Manage Images",
+      "manageImagesDesc": "Upload and organize product images"
     },
     "cards": {
       "products": {
@@ -152,6 +165,84 @@
       "copyUrl": "Copy URL",
       "delete": "Delete"
     }
+  },
+  "offers": {
+    "title": "Offers",
+    "subtitle": "Manage special offers and promotions",
+    "addOffer": "Add Offer",
+    "stats": {
+      "totalOffers": "Total Offers",
+      "activeOffers": "Active Offers",
+      "upcoming": "Upcoming",
+      "expired": "Expired"
+    },
+    "table": {
+      "offer": "Offer",
+      "discount": "Discount",
+      "dates": "Dates",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "deleteModal": {
+      "title": "Delete Offer",
+      "message": "Are you sure you want to delete this offer? This action cannot be undone.",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "deleting": "Deleting..."
+    },
+    "loading": "Loading offers...",
+    "error": "Error loading offers. Please try again.",
+    "empty": "No offers found. Create your first offer to get started."
+  },
+  "offerForm": {
+    "addTitle": "Add Offer",
+    "editTitle": "Edit Offer",
+    "addSubtitle": "Create a new special offer",
+    "editSubtitle": "Update offer details",
+    "image": {
+      "label": "Offer Image (Optional)",
+      "uploadText": "Click to upload offer image",
+      "fileTypes": "PNG, JPG up to 10MB"
+    },
+    "fields": {
+      "title": {
+        "label": "Offer Title *",
+        "placeholder": "e.g., Summer Sale - 20% Off"
+      },
+      "description": {
+        "label": "Description *",
+        "placeholder": "Describe the offer details..."
+      },
+      "discount_percentage": {
+        "label": "Discount Percentage *",
+        "placeholder": "20"
+      },
+      "discount_amount": {
+        "label": "Fixed Discount Amount (Optional)",
+        "placeholder": "5.00"
+      },
+      "start_date": {
+        "label": "Start Date *"
+      },
+      "end_date": {
+        "label": "End Date *"
+      },
+      "is_active": {
+        "label": "Active Offer"
+      }
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create Offer",
+      "update": "Update Offer",
+      "saving": "Saving..."
+    },
+    "loading": "Loading offer..."
   },
   "common": {
     "loading": "Loading...",

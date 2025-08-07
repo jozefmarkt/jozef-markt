@@ -4,22 +4,11 @@ import { useTranslation } from "react-i18next";
 import { useCart } from "../../contexts/CartContext";
 import { useState, useEffect, useMemo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import LogoControl from "./LogoControl";
-import type { LogoSettings } from "./LogoControl";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation('common');
   const isArabic = i18n.language === 'ar';
   const { state, toggle } = useCart();
-  const [logoSettings, setLogoSettings] = useState<LogoSettings>({
-    height: 80,
-    width: 'auto',
-    opacity: 100,
-    brightness: 100,
-    contrast: 100,
-    filter: 'none',
-    transform: 'none'
-  });
 
   // Scroll animation for logo - simplified
   const { scrollY } = useScroll();
@@ -75,13 +64,13 @@ const Header: React.FC = () => {
         { to: "/", key: "home" },
         { to: "/products", key: "products" },
         { to: "/offers", key: "offers" },
-        { to: "/account", key: "account" },
+        { to: "/contact", key: "contact" },
       ]
     : [
         { to: "/", key: "home" },
         { to: "/products", key: "products" },
         { to: "/offers", key: "offers" },
-        { to: "/account", key: "account" },
+        { to: "/contact", key: "contact" },
       ];
 
   const leftSplitPosition = isArabic ? 'right-8' : 'left-8';
@@ -99,16 +88,10 @@ const Header: React.FC = () => {
 
   const rightSplitItems = [
     { to: "/offers", key: "offers" },
-    { to: "/account", key: "account" },
+    { to: "/contact", key: "contact" },
   ];
 
-  const getLogoStyle = useMemo(() => {
-    return {
-      opacity: logoSettings.opacity / 100,
-      filter: `brightness(${logoSettings.brightness}%) contrast(${logoSettings.contrast}%) ${logoSettings.filter}`,
-      transform: logoSettings.transform
-    };
-  }, [logoSettings]);
+
 
   return (
     <>
@@ -154,7 +137,6 @@ const Header: React.FC = () => {
               alt="Jozef Supermarkt Logo" 
               className="h-16 w-auto object-contain drop-shadow-sm"
               style={{
-                ...getLogoStyle,
                 opacity: leftLogoOpacity
               }}
               transition={{ 
@@ -281,11 +263,6 @@ const Header: React.FC = () => {
         </motion.div>
       </header>
 
-      {/* Logo Control Tool */}
-      <LogoControl 
-        onLogoChange={setLogoSettings}
-        currentSettings={logoSettings}
-      />
     </>
   );
 };

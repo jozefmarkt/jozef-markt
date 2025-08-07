@@ -26,8 +26,8 @@ const Sidebar: React.FC = () => {
         <nav className="mt-8 flex flex-col gap-2 p-4">
           <Link to="/" onClick={() => setOpen(false)} className="sidebar-link">{t('nav.home')}</Link>
           <Link to="/products" onClick={() => setOpen(false)} className="sidebar-link">{t('nav.products')}</Link>
-          <Link to="/offers" onClick={() => setOpen(false)} className="sidebar-link">{t('nav.offers')}</Link>
-          <Link to="/account" onClick={() => setOpen(false)} className="sidebar-link">{t('nav.account')}</Link>
+  
+          <Link to="/contact" onClick={() => setOpen(false)} className="sidebar-link">{t('nav.contact')}</Link>
         </nav>
       </aside>
 

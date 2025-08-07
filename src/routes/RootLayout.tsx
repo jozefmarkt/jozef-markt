@@ -10,11 +10,14 @@ import ProtectedRoute from "../components/admin/ProtectedRoute";
 import Home from "../pages/Home";
 import ProductsPage from "../pages/Products";
 import ProductDetails from "../pages/Products/Details";
+import Contact from "../pages/Contact";
+import OffersPage from "../pages/Offers";
 import AdminLogin from "../pages/Admin/Login";
 import AdminDashboard from "../pages/Admin/Dashboard";
 import AdminProducts from "../pages/Admin/Products";
+import AdminOffers from "../pages/Admin/Offers";
 import ProductForm from "../components/admin/ProductForm";
-import ImageManager from "../pages/Admin/ImageManager";
+import OfferForm from "../components/admin/OfferForm";
 import Placeholder from "../pages/Admin/Placeholder";
 import { 
   Package, 
@@ -42,6 +45,8 @@ const RootLayout: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/offers" element={<OffersPage />} />
+            <Route path="/contact" element={<Contact />} />
             
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
@@ -77,14 +82,32 @@ const RootLayout: React.FC = () => {
                 </ProtectedRoute>
               } 
             />
+
             <Route 
-              path="/admin/images" 
+              path="/admin/offers" 
               element={
                 <ProtectedRoute>
-                  <ImageManager />
+                  <AdminOffers />
                 </ProtectedRoute>
               } 
             />
+            <Route 
+              path="/admin/offers/add" 
+              element={
+                <ProtectedRoute>
+                  <OfferForm />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/offers/edit/:id" 
+              element={
+                <ProtectedRoute>
+                  <OfferForm />
+                </ProtectedRoute>
+              } 
+            />
+
             <Route 
               path="/admin/analytics" 
               element={

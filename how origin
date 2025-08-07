@@ -1,0 +1,4 @@
+[33m8ea1bfa[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update website with latest changes and add localization files
+[33m749d316[m feat: implement shopping cart with slide-over drawer
+[33mf10b919[m Add ESLint, Prettier, and Tailwind CSS configuration
+[33m2ac896a[m Initial Vite + React + TS scaffold
