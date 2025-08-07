@@ -20,8 +20,6 @@ import ProductForm from "../components/admin/ProductForm";
 import OfferForm from "../components/admin/OfferForm";
 import Placeholder from "../pages/Admin/Placeholder";
 import { 
-  Package, 
-  Plus, 
   Settings, 
   Users, 
   BarChart3

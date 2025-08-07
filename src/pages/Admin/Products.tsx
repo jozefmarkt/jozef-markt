@@ -7,6 +7,7 @@ import {
   Plus, 
   Edit, 
   Trash2, 
+  Eye,
   Package,
   AlertTriangle
 } from 'lucide-react';
@@ -16,7 +17,6 @@ import type { Product } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminProducts: React.FC = () => {
-  const { user } = useAuth();
   const { t } = useTranslation('admin');
   const queryClient = useQueryClient();
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);

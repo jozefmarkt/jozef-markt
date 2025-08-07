@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, X, Tag } from 'lucide-react';
 import { offerService } from '../../services/supabase';
 import { cloudinaryService } from '../../services/cloudinary';
-import type { Offer } from '../../services/supabase';
+
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface OfferFormData {
