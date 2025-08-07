@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t: _t } = useTranslation('common');
   const [formData, setFormData] = useState({
     name: '',
     email: '',

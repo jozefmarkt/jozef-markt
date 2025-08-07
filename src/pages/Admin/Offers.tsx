@@ -7,14 +7,13 @@ import {
   Plus, 
   Edit, 
   Trash2, 
-  Eye,
   Tag,
   Calendar,
   Percent
 } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { offerService } from '../../services/supabase';
-import { Offer } from '../../services/supabase';
+import type { Offer } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminOffers: React.FC = () => {

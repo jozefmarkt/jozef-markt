@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { Package, Users, ShoppingCart, TrendingUp, Tag, Home } from 'lucide-react';
+import { Package, TrendingUp, Tag, Home } from 'lucide-react';
 import { productService } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 

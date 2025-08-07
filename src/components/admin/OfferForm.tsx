@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { ArrowLeft, Upload, X, Tag } from 'lucide-react';
+import { ArrowLeft, X, Tag } from 'lucide-react';
 import { offerService } from '../../services/supabase';
 import { cloudinaryService } from '../../services/cloudinary';
-import { Offer } from '../../services/supabase';
+import type { Offer } from '../../services/supabase';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface OfferFormData {

@@ -24,8 +24,7 @@ import {
   Plus, 
   Settings, 
   Users, 
-  BarChart3,
-  Image as ImageIcon
+  BarChart3
 } from 'lucide-react';
 
 const RootLayout: React.FC = () => {

@@ -7,13 +7,12 @@ import {
   Plus, 
   Edit, 
   Trash2, 
-  Eye,
   Package,
   AlertTriangle
 } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productService } from '../../services/supabase';
-import { Product } from '../../services/supabase';
+import type { Product } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminProducts: React.FC = () => {

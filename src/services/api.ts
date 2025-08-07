@@ -1,4 +1,5 @@
-import { productService, Product } from './supabase';
+import { productService } from './supabase';
+import type { Product } from './supabase';
 
 // Re-export the Product type for compatibility
 export type { Product } from './supabase';

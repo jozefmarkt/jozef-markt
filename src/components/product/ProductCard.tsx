@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Product } from '../../types';
+import type { Product } from '../../types';
 import { useCart } from '../../contexts/CartContext';
 
 interface ProductCardProps {

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
-import { AdminUser, LoginCredentials, AuthState } from '../types/Admin';
+import type { AdminUser, LoginCredentials, AuthState } from '../types/Admin';
 
 interface AuthContextType extends AuthState {
   login: (credentials: LoginCredentials) => Promise<void>;
