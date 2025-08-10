@@ -1,0 +1,10 @@
+[33mba20be2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix i18n configuration: default to English and include products namespace
+[33mb4bf294[m Fix vercel.json configuration for proper Vite module handling
+[33m436a2f0[m Update README and test automatic deployment
+[33m5246e41[m Add GitHub Actions workflow for Vercel deployment
+[33mab5cb02[m Fix navigation z-index issues and clean up duplicate repositories
+[33m51e210b[m Remove unused useAuth imports from admin pages
+[33m4f373c0[m Fix remaining TypeScript errors: Remove unused imports and variables
+[33m4164fd5[m Fix TypeScript errors: Remove unused imports and fix type imports
+[33m832232c[m Fix TypeScript error: Remove unused Product import from ProductForm.tsx
+[33m8ea1bfa[m Update website with latest changes and add localization files

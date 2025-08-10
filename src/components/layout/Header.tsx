@@ -34,10 +34,12 @@ const Header: React.FC = () => {
   // Pointer events control to prevent overlapping clicks
   const [splitNavPE, setSplitNavPE] = useState<'auto' | 'none'>('auto');
   const [mainNavPE, setMainNavPE] = useState<'auto' | 'none'>('none');
+  const [rightComponentsPE, setRightComponentsPE] = useState<'auto' | 'none'>('none');
 
   useEffect(() => {
     const unsub1 = splitNavOpacity.on('change', (v) => {
       setSplitNavPE(v > 0.3 ? 'auto' : 'none');
+      setRightComponentsPE(v > 0.3 ? 'none' : 'auto');
     });
     const unsub2 = navOpacity.on('change', (v) => {
       setMainNavPE(v > 0.3 ? 'auto' : 'none');
@@ -229,7 +231,10 @@ const Header: React.FC = () => {
           {/* Right side components */}
           <motion.div 
             className="flex items-center gap-4 md:gap-5"
-            style={{ opacity: rightComponentsOpacity }}
+            style={{ 
+              opacity: rightComponentsOpacity,
+              pointerEvents: rightComponentsPE
+            }}
             transition={{ 
               type: "spring", 
               stiffness: 200, 
