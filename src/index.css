@@ -68,12 +68,14 @@ a[href*="/"] {
 a[href*="/offers"] {
   position: relative !important;
   background: transparent !important;
-  padding: 1rem 1.5rem !important;
-  min-width: 8rem !important;
+  padding: 1.5rem 2rem !important;
+  min-width: 10rem !important;
+  min-height: 4rem !important;
   text-align: center !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: block !important;
+  line-height: 1 !important;
+  border: 2px solid transparent !important;
+  box-sizing: border-box !important;
 }
 
 a[href*="/offers"]:hover {
@@ -81,6 +83,7 @@ a[href*="/offers"]:hover {
   color: #af995d !important;
   transform: translateY(-1px) !important;
   box-shadow: 0 2px 8px rgba(175, 153, 93, 0.2) !important;
+  border-color: rgba(175, 153, 93, 0.3) !important;
 }
 
 a[href*="/offers"]::after {
@@ -101,12 +104,18 @@ a[href*="/offers"]:hover::after {
 
 /* Force full coverage for all navigation links */
 .nav-link {
-  padding: 1rem 1.5rem !important;
-  min-width: 8rem !important;
+  padding: 1.5rem 2rem !important;
+  min-width: 10rem !important;
+  min-height: 4rem !important;
   text-align: center !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: block !important;
+  line-height: 1 !important;
+  border: 2px solid transparent !important;
+  box-sizing: border-box !important;
+}
+
+.nav-link:hover {
+  border-color: rgba(175, 153, 93, 0.3) !important;
 }
 
 .sidebar-link {
