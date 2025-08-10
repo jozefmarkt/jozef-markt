@@ -177,7 +177,7 @@ const Header: React.FC = () => {
             <Link
               key={item.key}
               to={item.to}
-              className="nav-link text-lg font-semibold text-gray-800 hover:text-lion-500 transition-all duration-300 hover:scale-105"
+              className="nav-link text-lg font-semibold text-gray-800"
             >
               {t(`nav.${item.key}`)}
             </Link>
@@ -199,7 +199,7 @@ const Header: React.FC = () => {
             <Link
               key={item.key}
               to={item.to}
-              className="nav-link text-lg font-semibold text-gray-800 hover:text-lion-500 transition-all duration-300 hover:scale-105"
+              className="nav-link text-lg font-semibold text-gray-800"
             >
               {t(`nav.${item.key}`)}
             </Link>
@@ -221,7 +221,7 @@ const Header: React.FC = () => {
             <Link
               key={item.key}
               to={item.to}
-              className="nav-link font-semibold text-gray-800 hover:text-lion-500 transition-all duration-300 hover:scale-105"
+              className="nav-link font-semibold text-gray-800"
             >
               {t(`nav.${item.key}`)}
             </Link>
