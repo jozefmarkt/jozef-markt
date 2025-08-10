@@ -68,6 +68,12 @@ a[href*="/"] {
 a[href*="/offers"] {
   position: relative !important;
   background: transparent !important;
+  padding: 1rem 1.5rem !important;
+  min-width: 8rem !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 a[href*="/offers"]:hover {
@@ -91,6 +97,16 @@ a[href*="/offers"]::after {
 
 a[href*="/offers"]:hover::after {
   width: 80% !important;
+}
+
+/* Force full coverage for all navigation links */
+.nav-link {
+  padding: 1rem 1.5rem !important;
+  min-width: 8rem !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .sidebar-link {
