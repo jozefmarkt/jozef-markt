@@ -76,7 +76,7 @@ const Header: React.FC = () => {
       ];
 
   const leftSplitPosition = isArabic ? 'right-8' : 'left-8';
-  const rightSplitPosition = isArabic ? 'left-8' : 'right-8';
+  const rightSplitPosition = isArabic ? 'left-8' : 'right-16';
 
   const leftSplitItems = isArabic
     ? [
@@ -187,7 +187,10 @@ const Header: React.FC = () => {
           {/* Split Navigation - Right Side (when logo is big) */}
           <motion.nav 
             className={`absolute ${rightSplitPosition} top-1/2 transform -translate-y-1/2 hidden md:flex items-center gap-8 z-20`}
-            style={{ opacity: splitNavOpacity, pointerEvents: splitNavPE }}
+            style={{ 
+              opacity: splitNavOpacity, 
+              pointerEvents: splitNavPE
+            }}
             transition={{ 
               type: "spring", 
               stiffness: 200, 

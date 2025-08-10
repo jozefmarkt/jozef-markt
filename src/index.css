@@ -49,11 +49,8 @@ body {
   width: 80% !important;
 }
 
-/* Ensure all navigation links have proper coverage */
-a[href*="/offers"],
-a[href*="/products"],
-a[href*="/contact"],
-a[href*="/"] {
+/* Ensure all navigation links have consistent styling */
+.nav-link {
   padding: 0.75rem 1rem !important;
   border-radius: 0.5rem !important;
   transition: all 0.3s ease !important;
@@ -62,56 +59,11 @@ a[href*="/"] {
   min-height: 3rem !important;
   min-width: fit-content !important;
   box-sizing: border-box !important;
-}
-
-/* Specific styling for offers link to ensure full coverage */
-a[href*="/offers"] {
   position: relative !important;
   background: transparent !important;
-  padding: 1.5rem 2rem !important;
-  min-width: 10rem !important;
-  min-height: 4rem !important;
   text-align: center !important;
-  display: block !important;
   line-height: 1 !important;
   border: 2px solid transparent !important;
-  box-sizing: border-box !important;
-}
-
-a[href*="/offers"]:hover {
-  background-color: rgba(175, 153, 93, 0.1) !important;
-  color: #af995d !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 2px 8px rgba(175, 153, 93, 0.2) !important;
-  border-color: rgba(175, 153, 93, 0.3) !important;
-}
-
-a[href*="/offers"]::after {
-  content: '' !important;
-  position: absolute !important;
-  bottom: 0.5rem !important;
-  left: 50% !important;
-  width: 0 !important;
-  height: 2px !important;
-  background-color: #af995d !important;
-  transition: width 0.3s ease !important;
-  transform: translateX(-50%) !important;
-}
-
-a[href*="/offers"]:hover::after {
-  width: 80% !important;
-}
-
-/* Force full coverage for all navigation links */
-.nav-link {
-  padding: 1.5rem 2rem !important;
-  min-width: 10rem !important;
-  min-height: 4rem !important;
-  text-align: center !important;
-  display: block !important;
-  line-height: 1 !important;
-  border: 2px solid transparent !important;
-  box-sizing: border-box !important;
 }
 
 .nav-link:hover {
