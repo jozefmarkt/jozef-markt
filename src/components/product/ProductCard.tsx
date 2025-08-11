@@ -29,19 +29,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     }
   };
 
-  const getDisplayDescription = (): string => {
-    switch (currentLanguage) {
-      case 'nl':
-        return product.description_nl || product.description;
-      case 'ar':
-        return product.description_ar || product.description;
-      default:
-        return product.description;
-    }
-  };
-
   const displayName = getDisplayName();
-  const displayDescription = getDisplayDescription();
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
