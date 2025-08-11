@@ -3,5 +3,10 @@
   "empty": "سلة التسوق فارغة",
   "subtotal": "المجموع الفرعي",
   "clear": "مسح الكل",
-  "checkout": "إتمام الطلب"
+  "checkout": "إتمام الطلب",
+  "remove": "إزالة",
+  "quantity": "الكمية",
+  "total": "المجموع",
+  "continueShopping": "مواصلة التسوق",
+  "items": "عناصر"
 } 

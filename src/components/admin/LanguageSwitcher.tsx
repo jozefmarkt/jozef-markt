@@ -7,6 +7,7 @@ const LanguageSwitcher: React.FC = () => {
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' }
   ];
 
@@ -14,6 +15,8 @@ const LanguageSwitcher: React.FC = () => {
 
   const handleLanguageChange = (languageCode: string) => {
     i18n.changeLanguage(languageCode);
+    // Save the language preference to localStorage
+    localStorage.setItem('preferred-language', languageCode);
   };
 
   return (

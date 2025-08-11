@@ -9,6 +9,10 @@
   "outOfStock": "Out of Stock",
   "loadingProduct": "Loading product...",
   "errorLoadingProduct": "Error loading product. Please try again.",
+  "price": "Price",
+  "category": "Category",
+  "inStock": "In Stock",
+  "nutrition": "Nutrition Information",
   "descriptions": {
     "1": "Fresh whole grain bread, handcrafted daily in our local bakery. High in fiber and protein content.",
     "2": "Extra virgin olive oil from ancient olive trees in the Mediterranean region. Rich in flavor and health benefits.",

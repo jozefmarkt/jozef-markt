@@ -1,0 +1,43 @@
+{
+  "title": "Contact",
+  "subtitle": "Heb je een vraag of heb je hulp nodig? We zijn hier om te helpen! Neem contact met ons op en we nemen zo snel mogelijk contact met je op.",
+  "getInTouch": "Neem Contact Op",
+  "address": {
+    "title": "Adres",
+    "street": "123 Supermarktstraat",
+    "city": "Amsterdam, Nederland",
+    "postal": "1000 AB"
+  },
+  "phone": {
+    "title": "Telefoon",
+    "number": "+31 (0) 20 123 4567",
+    "hours": "Maandag - Vrijdag: 8:00 - 20:00"
+  },
+  "email": {
+    "title": "E-mail",
+    "info": "info@jozefmarkt.com",
+    "support": "support@jozefmarkt.com"
+  },
+  "openingHours": {
+    "title": "Openingstijden",
+    "weekdays": "Maandag - Vrijdag: 8:00 - 20:00",
+    "saturday": "Zaterdag: 9:00 - 18:00",
+    "sunday": "Zondag: 10:00 - 16:00"
+  },
+  "sendMessage": "Stuur ons een Bericht",
+  "successMessage": "Bedankt! Je bericht is succesvol verzonden.",
+  "form": {
+    "fullName": "Volledige Naam *",
+    "fullNamePlaceholder": "Je volledige naam",
+    "email": "E-mailadres *",
+    "emailPlaceholder": "jouw.email@voorbeeld.com",
+    "subject": "Onderwerp *",
+    "subjectPlaceholder": "Waar gaat dit over?",
+    "message": "Bericht *",
+    "messagePlaceholder": "Vertel ons meer over je vraag...",
+    "sendMessage": "Bericht Verzenden",
+    "sending": "Verzenden...",
+    "required": "Dit veld is verplicht",
+    "invalidEmail": "Voer een geldig e-mailadres in"
+  }
+}

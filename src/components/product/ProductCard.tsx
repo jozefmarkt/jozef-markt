@@ -10,10 +10,38 @@ interface ProductCardProps {
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { add } = useCart();
-  const { t } = useTranslation(['common', 'products']);
+  const { t, i18n } = useTranslation(['common', 'products']);
+  const currentLanguage = i18n.language;
+  
   const formatPrice = (price: number): string => {
     return `€${price.toFixed(2).replace('.', ',')}`;
   };
+
+  // Get the appropriate name and description based on current language
+  const getDisplayName = (): string => {
+    switch (currentLanguage) {
+      case 'nl':
+        return product.name_nl || product.name;
+      case 'ar':
+        return product.name_ar || product.name;
+      default:
+        return product.name;
+    }
+  };
+
+  const getDisplayDescription = (): string => {
+    switch (currentLanguage) {
+      case 'nl':
+        return product.description_nl || product.description;
+      case 'ar':
+        return product.description_ar || product.description;
+      default:
+        return product.description;
+    }
+  };
+
+  const displayName = getDisplayName();
+  const displayDescription = getDisplayDescription();
 
   return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden">
@@ -21,7 +49,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="relative">
           <img
             src={product.image}
-            alt={product.name}
+            alt={displayName}
             className={`w-full h-48 object-cover rounded-t-xl ${
               !product.in_stock ? 'opacity-50' : ''
             }`}
@@ -35,7 +63,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         
         <div className="p-4">
           <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-lion-600 transition-colors">
-            {product.name}
+            {displayName}
           </h3>
         </div>
       </Link>

@@ -1,0 +1,298 @@
+{
+  "login": {
+    "title": "Admin Login",
+    "subtitle": "Log in om je winkel te beheren",
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "signIn": "Inloggen",
+    "error": "Ongeldige inloggegevens. Probeer het opnieuw.",
+    "loading": "Inloggen..."
+  },
+  "dashboard": {
+    "title": "Admin Dashboard",
+    "subtitle": "Beheer je winkel en producten",
+    "welcome": "Welkom terug, {{username}}",
+    "logout": "Uitloggen",
+    "quickActions": "Snelle Acties",
+    "stats": {
+      "totalProducts": "Totaal Producten",
+      "inStock": "Op Voorraad",
+      "outOfStock": "Niet op Voorraad",
+      "totalValue": "Totale Waarde",
+      "activeProducts": "Actieve Producten",
+      "totalCustomers": "Totaal Klanten",
+      "imagesUploaded": "Afbeeldingen Geüpload"
+    },
+    "actions": {
+      "manageProducts": "Producten Beheren",
+      "manageProductsDesc": "Bekijk, bewerk en verwijder producten",
+      "addProduct": "Product Toevoegen",
+      "addProductDesc": "Maak nieuwe producten aan voor je winkel",
+      "manageImages": "Afbeeldingen Beheren",
+      "manageImagesDesc": "Upload en organiseer productafbeeldingen"
+    },
+    "cards": {
+      "products": {
+        "title": "Producten",
+        "description": "Beheer je productcatalogus"
+      },
+      "addProduct": {
+        "title": "Product Toevoegen",
+        "description": "Voeg nieuwe producten toe aan je winkel"
+      },
+      "imageUpload": {
+        "title": "Afbeelding Upload",
+        "description": "Upload en beheer productafbeeldingen"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Bekijk verkoop- en prestatiegegevens"
+      },
+      "users": {
+        "title": "Gebruikers",
+        "description": "Beheer klantaccounts"
+      },
+      "settings": {
+        "title": "Instellingen",
+        "description": "Configureer winkelinstellingen"
+      }
+    }
+  },
+  "products": {
+    "title": "Producten",
+    "subtitle": "Beheer je productcatalogus",
+    "addProduct": "Product Toevoegen",
+    "stats": {
+      "totalProducts": "Totaal Producten",
+      "inStock": "Op Voorraad",
+      "outOfStock": "Niet op Voorraad"
+    },
+    "table": {
+      "product": "Product",
+      "category": "Categorie",
+      "price": "Prijs",
+      "status": "Status",
+      "actions": "Acties",
+      "inStock": "Op Voorraad",
+      "outOfStock": "Niet op Voorraad"
+    },
+    "actions": {
+      "view": "Bekijken",
+      "edit": "Bewerken",
+      "delete": "Verwijderen"
+    },
+    "deleteModal": {
+      "title": "Product Verwijderen",
+      "message": "Weet je zeker dat je dit product wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen",
+      "deleting": "Verwijderen..."
+    },
+    "loading": "Producten laden...",
+    "error": "Fout bij het laden van producten. Probeer het opnieuw.",
+    "validation": {
+      "nameRequired": "Productnaam is verplicht",
+      "descriptionRequired": "Beschrijving is verplicht",
+      "priceRequired": "Prijs is verplicht",
+      "categoryRequired": "Categorie is verplicht",
+      "invalidPrice": "Prijs moet een positief getal zijn",
+      "imageRequired": "Productafbeelding is verplicht"
+    },
+    "filters": {
+      "allCategories": "Alle Categorieën",
+      "searchProducts": "Zoek producten...",
+      "sortBy": "Sorteren op",
+      "priceLowToHigh": "Prijs: Laag naar Hoog",
+      "priceHighToLow": "Prijs: Hoog naar Laag",
+      "nameAZ": "Naam: A naar Z",
+      "nameZA": "Naam: Z naar A"
+    }
+  },
+  "productForm": {
+    "addTitle": "Product Toevoegen",
+    "editTitle": "Product Bewerken",
+    "addSubtitle": "Voeg een nieuw product toe aan je winkel",
+    "editSubtitle": "Update productinformatie",
+    "image": {
+      "label": "Productafbeelding",
+      "uploadText": "Klik om te uploaden of sleep en zet neer",
+      "fileTypes": "PNG, JPG, GIF tot 10MB"
+    },
+    "fields": {
+      "name": {
+        "label": "Productnaam *",
+        "placeholder": "Voer productnaam in"
+      },
+      "description": {
+        "label": "Beschrijving *",
+        "placeholder": "Voer productbeschrijving in"
+      },
+      "price": {
+        "label": "Prijs (€) *",
+        "placeholder": "0.00"
+      },
+      "category": {
+        "label": "Categorie *",
+        "placeholder": "Selecteer een categorie"
+      },
+      "nutrition": {
+        "label": "Voedingsinformatie",
+        "placeholder": "Voer voedingsinformatie in (bijv. Energie 100 kcal/100g, Eiwit 5g/100g)"
+      },
+      "inStock": {
+        "label": "Product is op voorraad"
+      }
+    },
+    "categories": {
+      "vegetables": "Groenten",
+      "fruits": "Fruit",
+      "dairy": "Zuivel",
+      "bakery": "Bakkerij",
+      "meat": "Vlees",
+      "cheese": "Kaas",
+      "beverages": "Dranken",
+      "snacks": "Snacks",
+      "pantry": "Voorraad",
+      "koffie": "Koffie"
+    },
+    "buttons": {
+      "cancel": "Annuleren",
+      "create": "Product Aanmaken",
+      "update": "Product Bijwerken",
+      "saving": "Opslaan..."
+    },
+    "loading": "Product laden..."
+  },
+  "imageManager": {
+    "title": "Afbeeldingenbeheer",
+    "subtitle": "Upload en beheer productafbeeldingen",
+    "upload": {
+      "title": "Afbeeldingen Uploaden",
+      "selectImages": "Selecteer Afbeeldingen",
+      "uploading": "Uploaden...",
+      "fileTypes": "PNG, JPG, GIF tot 10MB elk"
+    },
+    "gallery": {
+      "title": "Geüploade Afbeeldingen ({{count}})",
+      "empty": {
+        "title": "Geen afbeeldingen",
+        "message": "Upload enkele afbeeldingen om te beginnen."
+      }
+    },
+    "actions": {
+      "copyUrl": "URL Kopiëren",
+      "delete": "Verwijderen"
+    }
+  },
+  "offers": {
+    "title": "Aanbiedingen",
+    "subtitle": "Beheer speciale aanbiedingen en promoties",
+    "addOffer": "Aanbieding Toevoegen",
+    "stats": {
+      "totalOffers": "Totaal Aanbiedingen",
+      "activeOffers": "Actieve Aanbiedingen",
+      "upcoming": "Aankomend",
+      "expired": "Verlopen"
+    },
+    "table": {
+      "offer": "Aanbieding",
+      "discount": "Korting",
+      "dates": "Data",
+      "status": "Status",
+      "actions": "Acties"
+    },
+    "actions": {
+      "view": "Bekijken",
+      "edit": "Bewerken",
+      "delete": "Verwijderen"
+    },
+    "deleteModal": {
+      "title": "Aanbieding Verwijderen",
+      "message": "Weet je zeker dat je deze aanbieding wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen",
+      "deleting": "Verwijderen..."
+    },
+    "loading": "Aanbiedingen laden...",
+    "error": "Fout bij het laden van aanbiedingen. Probeer het opnieuw.",
+    "empty": "Geen aanbiedingen gevonden. Maak je eerste aanbieding aan om te beginnen.",
+    "status": {
+      "active": "Actief",
+      "inactive": "Inactief",
+      "expired": "Verlopen",
+      "upcoming": "Aankomend"
+    },
+    "validation": {
+      "titleRequired": "Aanbiedingstitel is verplicht",
+      "descriptionRequired": "Beschrijving is verplicht",
+      "discountRequired": "Kortingspercentage is verplicht",
+      "datesRequired": "Start- en einddatum zijn verplicht",
+      "invalidDiscount": "Korting moet tussen 1 en 100 liggen"
+    }
+  },
+  "offerForm": {
+    "addTitle": "Aanbieding Toevoegen",
+    "editTitle": "Aanbieding Bewerken",
+    "addSubtitle": "Maak een nieuwe speciale aanbieding aan",
+    "editSubtitle": "Update aanbiedingsdetails",
+    "image": {
+      "label": "Aanbiedingsafbeelding (Optioneel)",
+      "uploadText": "Klik om aanbiedingsafbeelding te uploaden",
+      "fileTypes": "PNG, JPG tot 10MB"
+    },
+    "fields": {
+      "title": {
+        "label": "Aanbiedingstitel *",
+        "placeholder": "bijv. Zomeruitverkoop - 20% Korting"
+      },
+      "description": {
+        "label": "Beschrijving *",
+        "placeholder": "Beschrijf de aanbiedingsdetails..."
+      },
+      "discount_percentage": {
+        "label": "Kortingspercentage *",
+        "placeholder": "20"
+      },
+      "discount_amount": {
+        "label": "Vaste Kortingsbedrag (Optioneel)",
+        "placeholder": "5.00"
+      },
+      "start_date": {
+        "label": "Startdatum *"
+      },
+      "end_date": {
+        "label": "Einddatum *"
+      },
+      "is_active": {
+        "label": "Actieve Aanbieding"
+      }
+    },
+    "buttons": {
+      "cancel": "Annuleren",
+      "create": "Aanbieding Aanmaken",
+      "update": "Aanbieding Bijwerken",
+      "saving": "Opslaan..."
+    },
+    "loading": "Aanbieding laden..."
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Er is een fout opgetreden. Probeer het opnieuw.",
+    "success": "Operatie succesvol voltooid.",
+    "confirm": "Bevestigen",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "view": "Bekijken",
+    "back": "Terug",
+    "yes": "Ja",
+    "no": "Nee",
+    "ok": "OK",
+    "close": "Sluiten",
+    "search": "Zoeken",
+    "filter": "Filteren",
+    "sort": "Sorteren",
+    "refresh": "Vernieuwen"
+  }
+}

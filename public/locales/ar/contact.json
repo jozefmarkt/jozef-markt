@@ -1,0 +1,43 @@
+{
+  "title": "اتصل بنا",
+  "subtitle": "هل لديك سؤال أو تحتاج مساعدة؟ نحن هنا لمساعدتك! تواصل معنا وسنرد عليك في أقرب وقت ممكن.",
+  "getInTouch": "تواصل معنا",
+  "address": {
+    "title": "العنوان",
+    "street": "123 شارع السوبرماركت",
+    "city": "أمستردام، هولندا",
+    "postal": "1000 AB"
+  },
+  "phone": {
+    "title": "الهاتف",
+    "number": "+31 (0) 20 123 4567",
+    "hours": "الاثنين - الجمعة: 8:00 ص - 8:00 م"
+  },
+  "email": {
+    "title": "البريد الإلكتروني",
+    "info": "info@jozefmarkt.com",
+    "support": "support@jozefmarkt.com"
+  },
+  "openingHours": {
+    "title": "ساعات العمل",
+    "weekdays": "الاثنين - الجمعة: 8:00 ص - 8:00 م",
+    "saturday": "السبت: 9:00 ص - 6:00 م",
+    "sunday": "الأحد: 10:00 ص - 4:00 م"
+  },
+  "sendMessage": "أرسل لنا رسالة",
+  "successMessage": "شكراً لك! تم إرسال رسالتك بنجاح.",
+  "form": {
+    "fullName": "الاسم الكامل *",
+    "fullNamePlaceholder": "اسمك الكامل",
+    "email": "عنوان البريد الإلكتروني *",
+    "emailPlaceholder": "بريدك.الإلكتروني@مثال.com",
+    "subject": "الموضوع *",
+    "subjectPlaceholder": "ما هو هذا الموضوع؟",
+    "message": "الرسالة *",
+    "messagePlaceholder": "أخبرنا المزيد عن استفسارك...",
+    "sendMessage": "إرسال الرسالة",
+    "sending": "جاري الإرسال...",
+    "required": "هذا الحقل مطلوب",
+    "invalidEmail": "يرجى إدخال عنوان بريد إلكتروني صحيح"
+  }
+}

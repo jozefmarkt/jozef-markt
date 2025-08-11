@@ -4,13 +4,42 @@ import { useTranslation } from 'react-i18next';
 import { useProduct } from '../../hooks/useProduct';
 
 const ProductDetails: React.FC = () => {
-  const { t } = useTranslation('products');
+  const { t, i18n } = useTranslation('products');
   const { id } = useParams<{ id: string }>();
   const { data: product, isLoading, error } = useProduct(id!);
+  const currentLanguage = i18n.language;
 
   const formatPrice = (price: number): string => {
     return `€${price.toFixed(2).replace('.', ',')}`;
   };
+
+  // Get the appropriate name and description based on current language
+  const getDisplayName = (): string => {
+    if (!product) return '';
+    switch (currentLanguage) {
+      case 'nl':
+        return product.name_nl || product.name;
+      case 'ar':
+        return product.name_ar || product.name;
+      default:
+        return product.name;
+    }
+  };
+
+  const getDisplayDescription = (): string => {
+    if (!product) return '';
+    switch (currentLanguage) {
+      case 'nl':
+        return product.description_nl || product.description;
+      case 'ar':
+        return product.description_ar || product.description;
+      default:
+        return product.description;
+    }
+  };
+
+  const displayName = getDisplayName();
+  const displayDescription = getDisplayDescription();
 
   if (isLoading) {
     return (
@@ -46,7 +75,7 @@ const ProductDetails: React.FC = () => {
         <div className="space-y-4">
           <img
             src={product.image}
-            alt={product.name}
+            alt={displayName}
             className={`w-full h-96 object-cover rounded-xl shadow-lg ${
               !product.in_stock ? 'opacity-50' : ''
             }`}
@@ -64,23 +93,21 @@ const ProductDetails: React.FC = () => {
         <div className="space-y-6">
           <div>
             <h1 className="text-3xl font-jet font-bold text-gray-900 mb-2">
-              {product.name}
+              {displayName}
             </h1>
             <p className="text-2xl font-lion font-semibold text-gray-800">
               {formatPrice(product.price)}
             </p>
           </div>
 
-                     <div>
-             <h2 className="text-lg font-jet font-semibold text-gray-900 mb-3">
-               {t('description')}
-             </h2>
-             <p className="text-gray-700 leading-relaxed">
-               {t(`descriptions.${product.id}`)}
-             </p>
-           </div>
-
-
+          <div>
+            <h2 className="text-lg font-jet font-semibold text-gray-900 mb-3">
+              {t('description')}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {displayDescription}
+            </p>
+          </div>
 
           <button
             disabled={!product.in_stock}

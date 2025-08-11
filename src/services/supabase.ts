@@ -20,12 +20,16 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export interface Product {
   id: string;
   name: string;
+  name_ar?: string; // Arabic name
   price: number;
   image: string;
   in_stock: boolean;
   description: string;
+  description_ar?: string; // Arabic description
   nutrition: string;
+  nutrition_ar?: string; // Arabic nutrition info
   category: string;
+  featured: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -37,8 +41,11 @@ export interface Offer {
   description: string;
   discount_percentage: number;
   discount_amount?: number;
+  discount_price?: number;
+  original_price?: number;
   start_date: string;
   end_date: string;
+  valid_until?: string;
   is_active: boolean;
   product_ids?: string[];
   category_ids?: string[];
@@ -78,6 +85,21 @@ export const productService = {
     return data;
   },
 
+  // Get featured products
+  async getFeatured(): Promise<Product[]> {
+    const { data, error } = await supabase
+      .from('products')
+      .select('*')
+      .eq('featured', true)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      throw new Error(`Error fetching featured products: ${error.message}`);
+    }
+
+    return data || [];
+  },
+
   // Create new product (requires authentication)
   async create(product: Omit<Product, 'id' | 'created_at' | 'updated_at'>): Promise<Product> {
     const { data, error } = await supabase
@@ -104,6 +126,22 @@ export const productService = {
 
     if (error) {
       throw new Error(`Error updating product: ${error.message}`);
+    }
+
+    return data;
+  },
+
+  // Toggle featured status
+  async toggleFeatured(id: string, featured: boolean): Promise<Product> {
+    const { data, error } = await supabase
+      .from('products')
+      .update({ featured })
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      throw new Error(`Error updating featured status: ${error.message}`);
     }
 
     return data;
@@ -141,7 +179,7 @@ export const productService = {
     const { data, error } = await supabase
       .from('products')
       .select('*')
-      .or(`name.ilike.%${query}%,description.ilike.%${query}%`)
+      .or(`name.ilike.%${query}%,name_ar.ilike.%${query}%,description.ilike.%${query}%,description_ar.ilike.%${query}%`)
       .order('created_at', { ascending: false });
 
     if (error) {

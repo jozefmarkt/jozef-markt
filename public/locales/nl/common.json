@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Producten",
+    "offers": "Aanbiedingen",
+    "contact": "Contact"
+  },
+  "cta": {
+    "shop": "Nu Kopen"
+  },
+  "label": {
+    "search": "Zoeken",
+    "category": "Categorie"
+  },
+  "msg": {
+    "noItems": "Geen items gevonden"
+  },
+  "products": {
+    "title": "Onze Producten",
+    "loading": "Producten laden...",
+    "error": "Fout bij het laden van producten. Probeer het opnieuw.",
+    "noItems": "Geen producten gevonden",
+    "noFeatured": "Geen uitgelichte producten beschikbaar",
+    "backToProducts": "← Terug naar producten",
+    "description": "Beschrijving",
+    "addToCart": "Toevoegen aan Winkelwagen",
+    "viewAll": "Alle Producten Bekijken",
+    "outOfStock": "Niet op Voorraad",
+    "loadingProduct": "Product laden...",
+    "errorLoadingProduct": "Fout bij het laden van product. Probeer het opnieuw.",
+    "descriptions": {
+      "1": "Vers volkorenbrood, dagelijks handgemaakt in onze lokale bakkerij. Hoog in vezels en eiwitten.",
+      "2": "Extra vergine olijfolie van eeuwenoude olijfbomen in de Middellandse Zee. Rijk van smaak en gezondheidsvoordelen.",
+      "3": "Traditionele fetakaas van schapen- en geitenmelk. Perfect gezouten en gekruid voor salades en Griekse gerechten.",
+      "4": "Natuurlijke biologische honing van lokale bijen. Zoete smaak en rijk aan natuurlijke gezondheidsvoordelen.",
+      "5": "Gedroogde tijm van verse kruiden. Perfect voor koken en het toevoegen van smaak aan verschillende gerechten."
+    }
+  },
+  "offers": {
+    "title": "Speciale Aanbiedingen",
+    "subtitle": "Ontdek geweldige deals en kortingen op onze premium producten",
+    "loading": "Aanbiedingen laden...",
+    "error": "Fout bij het laden van aanbiedingen. Probeer het opnieuw.",
+    "noOffers": "Momenteel geen actieve aanbiedingen. Kom binnenkort terug voor geweldige deals!",
+    "validUntil": "Geldig tot"
+  },
+  "cart": {
+    "title": "Winkelwagen",
+    "empty": "Je winkelwagen is leeg",
+    "subtotal": "Subtotaal",
+    "clear": "Alles Wissen",
+    "checkout": "Afrekenen"
+  },
+  "hero": {
+    "title": "Verse mediterrane boodschappen, snel bezorgd",
+    "subtitle": "Premium pantry basics en groenten direct aan je deur binnen 48 uur.",
+    "shipping": "Gratis EU verzending bij bestellingen ≥ €80"
+  },
+  "footer": {
+    "company": "Bedrijf",
+    "about": "Over Ons",
+    "careers": "Carrières",
+    "press": "Pers",
+    "support": "Ondersteuning",
+    "help": "Helpcentrum",
+    "contact": "Contact",
+    "shipping": "Verzending",
+    "legal": "Juridisch",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "cookies": "Cookiebeleid",
+    "copyright": "© {{year}} jozef supermarkt. Alle rechten voorbehouden."
+  },
+  "about": {
+    "title": "Over Jozef Supermarkt"
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "fastDelivery": {
+      "title": "Snelle Bezorging",
+      "desc": "Zelfde dag bezorging beschikbaar"
+    },
+    "qualityProducts": {
+      "title": "Kwaliteitsproducten",
+      "desc": "Premium selectie gegarandeerd"
+    },
+    "support": {
+      "title": "24/7 Ondersteuning",
+      "desc": "Altijd hier om je te helpen"
+    },
+    "returns": {
+      "title": "Eenvoudige Retourzending",
+      "desc": "Probleemloos retourbeleid"
+    }
+  },
+  "accessibility": {
+    "shoppingCart": "Winkelwagen",
+    "toggleNavigation": "Navigatie in-/uitschakelen",
+    "logo": "Jozef Supermarkt Logo"
+  },
+  "language": {
+    "en": "Engels",
+    "nl": "Nederlands",
+    "ar": "Arabisch"
+  },
+  "actions": {
+    "close": "Sluiten",
+    "open": "Openen",
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes"
+  }
+}

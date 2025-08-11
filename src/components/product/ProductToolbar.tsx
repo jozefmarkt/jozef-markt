@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../admin/LanguageSwitcher';
 import type { Product } from '../../types/Product';
 
 interface FilterState {
@@ -47,6 +48,9 @@ export const ProductToolbar: React.FC<ProductToolbarProps> = ({ products, onFilt
             </option>
           ))}
         </select>
+      </div>
+      <div className="flex items-center">
+        <LanguageSwitcher />
       </div>
     </div>
   );

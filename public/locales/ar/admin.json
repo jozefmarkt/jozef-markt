@@ -89,7 +89,24 @@
       "deleting": "جاري الحذف..."
     },
     "loading": "جاري تحميل المنتجات...",
-    "error": "خطأ في تحميل المنتجات. يرجى المحاولة مرة أخرى."
+    "error": "خطأ في تحميل المنتجات. يرجى المحاولة مرة أخرى.",
+    "validation": {
+      "nameRequired": "اسم المنتج مطلوب",
+      "descriptionRequired": "الوصف مطلوب",
+      "priceRequired": "السعر مطلوب",
+      "categoryRequired": "الفئة مطلوبة",
+      "invalidPrice": "يجب أن يكون السعر رقماً موجباً",
+      "imageRequired": "صورة المنتج مطلوبة"
+    },
+    "filters": {
+      "allCategories": "جميع الفئات",
+      "searchProducts": "البحث في المنتجات...",
+      "sortBy": "ترتيب حسب",
+      "priceLowToHigh": "السعر: من الأقل إلى الأعلى",
+      "priceHighToLow": "السعر: من الأعلى إلى الأقل",
+      "nameAZ": "الاسم: من أ إلى ي",
+      "nameZA": "الاسم: من ي إلى أ"
+    }
   },
   "productForm": {
     "addTitle": "إضافة منتج",
@@ -135,7 +152,8 @@
       "cheese": "جبن",
       "beverages": "مشروبات",
       "snacks": "وجبات خفيفة",
-      "pantry": "مخزن"
+      "pantry": "مخزن",
+      "koffie": "قهوة"
     },
     "buttons": {
       "cancel": "إلغاء",
@@ -197,7 +215,20 @@
     },
     "loading": "جاري تحميل العروض...",
     "error": "خطأ في تحميل العروض. يرجى المحاولة مرة أخرى.",
-    "empty": "لا توجد عروض. أنشئ أول عرض للبدء."
+    "empty": "لا توجد عروض. أنشئ أول عرض للبدء.",
+    "status": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "expired": "منتهي الصلاحية",
+      "upcoming": "قادم"
+    },
+    "validation": {
+      "titleRequired": "عنوان العرض مطلوب",
+      "descriptionRequired": "وصف العرض مطلوب",
+      "discountRequired": "نسبة الخصم مطلوبة",
+      "datesRequired": "تاريخ البداية والانتهاء مطلوبان",
+      "invalidDiscount": "يجب أن تكون نسبة الخصم بين 1 و 100"
+    }
   },
   "offerForm": {
     "addTitle": "إضافة عرض",
@@ -254,6 +285,14 @@
     "edit": "تعديل",
     "delete": "حذف",
     "view": "عرض",
-    "back": "رجوع"
+    "back": "رجوع",
+    "yes": "نعم",
+    "no": "لا",
+    "ok": "موافق",
+    "close": "إغلاق",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "refresh": "تحديث"
   }
 } 

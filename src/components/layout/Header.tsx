@@ -51,7 +51,15 @@ const Header: React.FC = () => {
   }, [splitNavOpacity, navOpacity]);
 
   const handleLanguageChange = () => {
-    const newLang = i18n.language === 'ar' ? 'en' : 'ar';
+    const currentLang = i18n.language;
+    let newLang;
+    if (currentLang === 'en') {
+      newLang = 'nl';
+    } else if (currentLang === 'nl') {
+      newLang = 'ar';
+    } else {
+      newLang = 'en';
+    }
     i18n.changeLanguage(newLang);
   };
 
@@ -264,7 +272,7 @@ const Header: React.FC = () => {
               onClick={handleLanguageChange}
               className="flex items-center gap-2 rounded-lg border-2 border-gray-200 px-4 py-2.5 text-base hover:bg-gray-50 hover:border-lion-300 transition-all duration-300 hover:scale-105 font-semibold text-gray-700 hover:text-lion-500"
             >
-              {i18n.language === 'ar' ? 'العربية' : 'EN'} 
+              {i18n.language === 'ar' ? 'العربية' : i18n.language === 'nl' ? 'NL' : 'EN'} 
               <ChevronDown size={16} className="transition-transform duration-300 group-hover:rotate-180" />
             </button>
           </motion.div>

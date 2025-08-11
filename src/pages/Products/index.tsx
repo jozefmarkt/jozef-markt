@@ -11,20 +11,49 @@ interface FilterState {
 }
 
 const ProductsPage: React.FC = () => {
-  const { t } = useTranslation('products');
+  const { t, i18n } = useTranslation('products');
   const { data: products, isLoading, error } = useProducts();
   const [filter, setFilter] = useState<FilterState>({ text: '', category: 'All' });
+  const currentLanguage = i18n.language;
 
   const filtered = useMemo(() => {
     if (!products) return [];
     
     return products.filter((product: Product) => {
-      const matchesText = product.name.toLowerCase().includes(filter.text.toLowerCase());
+      // Get the appropriate name and description based on current language for filtering
+      const getProductName = (): string => {
+        switch (currentLanguage) {
+          case 'nl':
+            return product.name_nl || product.name;
+          case 'ar':
+            return product.name_ar || product.name;
+          default:
+            return product.name;
+        }
+      };
+
+      const getProductDescription = (): string => {
+        switch (currentLanguage) {
+          case 'nl':
+            return product.description_nl || product.description;
+          case 'ar':
+            return product.description_ar || product.description;
+          default:
+            return product.description;
+        }
+      };
+
+      const productName = getProductName();
+      const productDescription = getProductDescription();
+      
+      const matchesText = filter.text === '' || 
+        productName.toLowerCase().includes(filter.text.toLowerCase()) ||
+        productDescription.toLowerCase().includes(filter.text.toLowerCase());
       const matchesCategory = filter.category === 'All' || product.category === filter.category;
       
       return matchesText && matchesCategory;
     });
-  }, [products, filter]);
+  }, [products, filter, currentLanguage]);
 
   const handleFilter = useCallback((newFilter: FilterState) => {
     setFilter(newFilter);

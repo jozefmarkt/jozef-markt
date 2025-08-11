@@ -9,10 +9,16 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 interface ProductFormData {
   name: string;
+  name_nl: string;
+  name_ar: string;
   description: string;
+  description_nl: string;
+  description_ar: string;
   price: number;
   category: string;
   nutrition: string;
+  nutrition_nl: string;
+  nutrition_ar: string;
   in_stock: boolean;
   image: string;
 }
@@ -26,10 +32,16 @@ const ProductForm: React.FC = () => {
 
   const [formData, setFormData] = useState<ProductFormData>({
     name: '',
+    name_nl: '',
+    name_ar: '',
     description: '',
+    description_nl: '',
+    description_ar: '',
     price: 0,
     category: '',
     nutrition: '',
+    nutrition_nl: '',
+    nutrition_ar: '',
     in_stock: true,
     image: '',
   });
@@ -49,11 +61,17 @@ const ProductForm: React.FC = () => {
   useEffect(() => {
     if (existingProduct) {
       setFormData({
-        name: existingProduct.name,
-        description: existingProduct.description,
+        name: existingProduct.name || '',
+        name_nl: existingProduct.name_nl || '',
+        name_ar: existingProduct.name_ar || '',
+        description: existingProduct.description || '',
+        description_nl: existingProduct.description_nl || '',
+        description_ar: existingProduct.description_ar || '',
         price: existingProduct.price,
         category: existingProduct.category,
-        nutrition: existingProduct.nutrition,
+        nutrition: existingProduct.nutrition || '',
+        nutrition_nl: existingProduct.nutrition_nl || '',
+        nutrition_ar: existingProduct.nutrition_ar || '',
         in_stock: existingProduct.in_stock,
         image: existingProduct.image,
       });
@@ -176,11 +194,11 @@ const ProductForm: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-3xl mx-auto py-6 sm:px-6 lg:px-8">
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Product Image */}
-            <div>
+            {/* Product Image - Shared across all languages */}
+            <div className="bg-white p-6 rounded-lg shadow">
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 {t('productForm.image.label')}
               </label>
@@ -224,137 +242,269 @@ const ProductForm: React.FC = () => {
               </div>
             </div>
 
-            {/* Product Name */}
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                {t('productForm.fields.name.label')}
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder={t('productForm.fields.name.placeholder')}
-              />
+            {/* Three Language Forms Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* English Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">EN</div>
+                  <h3 className="text-lg font-semibold text-gray-900">English</h3>
+                </div>
+                
+                {/* Product Name */}
+                <div className="mb-4">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    Product Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter product name"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
+                    Description *
+                  </label>
+                  <textarea
+                    id="description"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter product description"
+                  />
+                </div>
+
+                {/* Nutrition Information */}
+                <div className="mb-4">
+                  <label htmlFor="nutrition" className="block text-sm font-medium text-gray-700 mb-1">
+                    Nutrition Information
+                  </label>
+                  <textarea
+                    id="nutrition"
+                    name="nutrition"
+                    value={formData.nutrition}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter nutrition information"
+                  />
+                </div>
+              </div>
+
+              {/* Dutch Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">NL</div>
+                  <h3 className="text-lg font-semibold text-gray-900">Nederlands</h3>
+                </div>
+                
+                {/* Product Name */}
+                <div className="mb-4">
+                  <label htmlFor="name_nl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Productnaam
+                  </label>
+                  <input
+                    type="text"
+                    id="name_nl"
+                    name="name_nl"
+                    value={formData.name_nl}
+                    onChange={handleInputChange}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="Voer productnaam in"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description_nl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Beschrijving
+                  </label>
+                  <textarea
+                    id="description_nl"
+                    name="description_nl"
+                    value={formData.description_nl}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="Voer productbeschrijving in"
+                  />
+                </div>
+
+                {/* Nutrition Information */}
+                <div className="mb-4">
+                  <label htmlFor="nutrition_nl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Voedingsinformatie
+                  </label>
+                  <textarea
+                    id="nutrition_nl"
+                    name="nutrition_nl"
+                    value={formData.nutrition_nl}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="Voer voedingsinformatie in"
+                  />
+                </div>
+              </div>
+
+              {/* Arabic Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">ع</div>
+                  <h3 className="text-lg font-semibold text-gray-900">العربية</h3>
+                </div>
+                
+                {/* Product Name */}
+                <div className="mb-4">
+                  <label htmlFor="name_ar" className="block text-sm font-medium text-gray-700 mb-1">
+                    اسم المنتج
+                  </label>
+                  <input
+                    type="text"
+                    id="name_ar"
+                    name="name_ar"
+                    value={formData.name_ar}
+                    onChange={handleInputChange}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-right"
+                    placeholder="أدخل اسم المنتج"
+                    dir="rtl"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description_ar" className="block text-sm font-medium text-gray-700 mb-1">
+                    الوصف
+                  </label>
+                  <textarea
+                    id="description_ar"
+                    name="description_ar"
+                    value={formData.description_ar}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-right"
+                    placeholder="أدخل وصف المنتج"
+                    dir="rtl"
+                  />
+                </div>
+
+                {/* Nutrition Information */}
+                <div className="mb-4">
+                  <label htmlFor="nutrition_ar" className="block text-sm font-medium text-gray-700 mb-1">
+                    معلومات التغذية
+                  </label>
+                  <textarea
+                    id="nutrition_ar"
+                    name="nutrition_ar"
+                    value={formData.nutrition_ar}
+                    onChange={handleInputChange}
+                    rows={3}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-right"
+                    placeholder="أدخل معلومات التغذية"
+                    dir="rtl"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Description */}
-            <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                {t('productForm.fields.description.label')}
-              </label>
-              <textarea
-                id="description"
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                required
-                rows={4}
-                className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder={t('productForm.fields.description.placeholder')}
-              />
-            </div>
+            {/* Shared Fields */}
+            <div className="bg-white p-6 rounded-lg shadow space-y-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Product Details</h3>
+              
+              {/* Price and Category */}
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="price" className="block text-sm font-medium text-gray-700">
+                    {t('productForm.fields.price.label')}
+                  </label>
+                  <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    value={formData.price}
+                    onChange={handleInputChange}
+                    required
+                    min="0"
+                    step="0.01"
+                    className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                    placeholder={t('productForm.fields.price.placeholder')}
+                  />
+                </div>
 
-            {/* Price and Category */}
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-              <div>
-                <label htmlFor="price" className="block text-sm font-medium text-gray-700">
-                  {t('productForm.fields.price.label')}
-                </label>
+                <div>
+                  <label htmlFor="category" className="block text-sm font-medium text-gray-700">
+                    {t('productForm.fields.category.label')}
+                  </label>
+                  <select
+                    id="category"
+                    name="category"
+                    value={formData.category}
+                    onChange={handleInputChange}
+                    required
+                    className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  >
+                    <option value="">{t('productForm.fields.category.placeholder')}</option>
+                    <option value="Vegetables">{t('productForm.categories.vegetables')}</option>
+                    <option value="Fruits">{t('productForm.categories.fruits')}</option>
+                    <option value="Dairy">{t('productForm.categories.dairy')}</option>
+                    <option value="Bakery">{t('productForm.categories.bakery')}</option>
+                    <option value="Meat">{t('productForm.categories.meat')}</option>
+                    <option value="Cheese">{t('productForm.categories.cheese')}</option>
+                    <option value="Beverages">{t('productForm.categories.beverages')}</option>
+                    <option value="Snacks">{t('productForm.categories.snacks')}</option>
+                    <option value="Pantry">{t('productForm.categories.pantry')}</option>
+                    <option value="Koffie">{t('productForm.categories.koffie')}</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Stock Status */}
+              <div className="flex items-center">
                 <input
-                  type="number"
-                  id="price"
-                  name="price"
-                  value={formData.price}
+                  type="checkbox"
+                  id="in_stock"
+                  name="in_stock"
+                  checked={formData.in_stock}
                   onChange={handleInputChange}
-                  required
-                  min="0"
-                  step="0.01"
-                  className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder={t('productForm.fields.price.placeholder')}
+                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
                 />
-              </div>
-
-              <div>
-                <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-                  {t('productForm.fields.category.label')}
+                <label htmlFor="in_stock" className="ml-2 block text-sm text-gray-900">
+                  {t('productForm.fields.inStock.label')}
                 </label>
-                <select
-                  id="category"
-                  name="category"
-                  value={formData.category}
-                  onChange={handleInputChange}
-                  required
-                  className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                >
-                  <option value="">{t('productForm.fields.category.placeholder')}</option>
-                  <option value="Vegetables">{t('productForm.categories.vegetables')}</option>
-                  <option value="Fruits">{t('productForm.categories.fruits')}</option>
-                  <option value="Dairy">{t('productForm.categories.dairy')}</option>
-                  <option value="Bakery">{t('productForm.categories.bakery')}</option>
-                  <option value="Meat">{t('productForm.categories.meat')}</option>
-                  <option value="Cheese">{t('productForm.categories.cheese')}</option>
-                  <option value="Beverages">{t('productForm.categories.beverages')}</option>
-                  <option value="Snacks">{t('productForm.categories.snacks')}</option>
-                  <option value="Pantry">{t('productForm.categories.pantry')}</option>
-                </select>
               </div>
-            </div>
-
-            {/* Nutrition Information */}
-            <div>
-              <label htmlFor="nutrition" className="block text-sm font-medium text-gray-700">
-                {t('productForm.fields.nutrition.label')}
-              </label>
-              <textarea
-                id="nutrition"
-                name="nutrition"
-                value={formData.nutrition}
-                onChange={handleInputChange}
-                rows={3}
-                className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder={t('productForm.fields.nutrition.placeholder')}
-              />
-            </div>
-
-            {/* Stock Status */}
-            <div className="flex items-center">
-              <input
-                type="checkbox"
-                id="in_stock"
-                name="in_stock"
-                checked={formData.in_stock}
-                onChange={handleInputChange}
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-              />
-              <label htmlFor="in_stock" className="ml-2 block text-sm text-gray-900">
-                {t('productForm.fields.inStock.label')}
-              </label>
             </div>
 
             {/* Submit Buttons */}
             <div className="flex justify-end space-x-3 pt-6 border-t border-gray-200">
-                              <button
-                  type="button"
-                  onClick={() => navigate('/admin/products')}
-                  className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  {t('productForm.buttons.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={isUploading || createProductMutation.isPending || updateProductMutation.isPending}
-                  className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isUploading || createProductMutation.isPending || updateProductMutation.isPending
-                    ? t('productForm.buttons.saving')
-                    : isEditing
-                    ? t('productForm.buttons.update')
-                    : t('productForm.buttons.create')}
-                </button>
+              <button
+                type="button"
+                onClick={() => navigate('/admin/products')}
+                className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                {t('productForm.buttons.cancel')}
+              </button>
+              <button
+                type="submit"
+                disabled={isUploading || createProductMutation.isPending || updateProductMutation.isPending}
+                className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isUploading || createProductMutation.isPending || updateProductMutation.isPending
+                  ? t('productForm.buttons.saving')
+                  : isEditing
+                  ? t('productForm.buttons.update')
+                  : t('productForm.buttons.create')}
+              </button>
             </div>
           </form>
         </div>

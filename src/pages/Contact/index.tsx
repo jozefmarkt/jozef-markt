@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const { t: _t } = useTranslation('common');
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,17 +42,16 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('title')}</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have a question or need assistance? We're here to help! 
-            Reach out to us and we'll get back to you as soon as possible.
+            {t('subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('getInTouch')}</h2>
             
             <div className="space-y-6">
               <div className="flex items-start space-x-4">

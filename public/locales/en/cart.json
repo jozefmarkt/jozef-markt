@@ -3,5 +3,10 @@
   "empty": "Your cart is empty",
   "subtotal": "Subtotal",
   "clear": "Clear All",
-  "checkout": "Checkout"
+  "checkout": "Checkout",
+  "remove": "Remove",
+  "quantity": "Quantity",
+  "total": "Total",
+  "continueShopping": "Continue Shopping",
+  "items": "items"
 } 

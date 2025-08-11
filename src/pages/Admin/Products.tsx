@@ -8,7 +8,8 @@ import {
   Trash2, 
   Eye,
   Package,
-  AlertTriangle
+  AlertTriangle,
+  Star
 } from 'lucide-react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productService } from '../../services/supabase';
@@ -16,14 +17,39 @@ import type { Product } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminProducts: React.FC = () => {
-  const { t } = useTranslation('admin');
+  const { t, i18n } = useTranslation('admin');
   const queryClient = useQueryClient();
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null);
+  const currentLanguage = i18n.language;
   
   const { data: products, isLoading, error } = useQuery({
     queryKey: ['products'],
     queryFn: productService.getAll,
   });
+
+  // Helper function to get product name in current language
+  const getProductName = (product: Product): string => {
+    switch (currentLanguage) {
+      case 'nl':
+        return product.name_nl || product.name;
+      case 'ar':
+        return product.name_ar || product.name;
+      default:
+        return product.name;
+    }
+  };
+
+  // Helper function to get product description in current language
+  const getProductDescription = (product: Product): string => {
+    switch (currentLanguage) {
+      case 'nl':
+        return product.description_nl || product.description;
+      case 'ar':
+        return product.description_ar || product.description;
+      default:
+        return product.description;
+    }
+  };
 
   const deleteProductMutation = useMutation({
     mutationFn: productService.delete,
@@ -32,6 +58,18 @@ const AdminProducts: React.FC = () => {
       setDeleteConfirm(null);
     },
   });
+
+  const toggleFeaturedMutation = useMutation({
+    mutationFn: ({ id, featured }: { id: string; featured: boolean }) => 
+      productService.toggleFeatured(id, featured),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['products'] });
+    },
+  });
+
+  const handleToggleFeatured = (productId: string, currentFeatured: boolean) => {
+    toggleFeaturedMutation.mutate({ id: productId, featured: !currentFeatured });
+  };
 
   const handleDelete = (productId: string) => {
     deleteProductMutation.mutate(productId);
@@ -92,7 +130,7 @@ const AdminProducts: React.FC = () => {
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div className="px-4 py-6 sm:px-0">
           {/* Stats */}
-          <div className="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white overflow-hidden shadow rounded-lg">
               <div className="p-5">
                 <div className="flex items-center">
@@ -152,13 +190,33 @@ const AdminProducts: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            <div className="bg-white overflow-hidden shadow rounded-lg">
+              <div className="p-5">
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <Star className="h-6 w-6 text-yellow-400" />
+                  </div>
+                  <div className="ml-5 w-0 flex-1">
+                    <dl>
+                      <dt className="text-sm font-medium text-gray-500 truncate">
+                        Featured Products
+                      </dt>
+                      <dd className="text-lg font-medium text-gray-900">
+                        {products?.filter(p => p.featured).length || 0}
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Products Table */}
-          <div className="bg-white shadow overflow-hidden sm:rounded-md">
-            <div className="px-4 py-5 sm:px-6">
+          <div className="bg-white shadow rounded-lg">
+            <div className="px-6 py-4 border-b border-gray-200">
               <h3 className="text-lg leading-6 font-medium text-gray-900">
-                {t('products.title')}
+                {t('products.table.title')}
               </h3>
             </div>
             <div className="overflow-x-auto">
@@ -175,7 +233,10 @@ const AdminProducts: React.FC = () => {
                       {t('products.table.price')}
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      {t('products.table.status')}
+                      {t('products.table.stock')}
+                    </th>
+                    <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      {t('products.table.featured')}
                     </th>
                     <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                       {t('products.table.actions')}
@@ -183,7 +244,7 @@ const AdminProducts: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {products?.map((product: Product) => (
+                  {products?.map((product) => (
                     <tr key={product.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
@@ -191,15 +252,15 @@ const AdminProducts: React.FC = () => {
                             <img 
                               className="h-10 w-10 rounded-lg object-cover" 
                               src={product.image} 
-                              alt={product.name}
+                              alt={getProductName(product)}
                             />
                           </div>
                           <div className="ml-4">
                             <div className="text-sm font-medium text-gray-900">
-                              {product.name}
+                              {getProductName(product)}
                             </div>
                             <div className="text-sm text-gray-500">
-                              {product.description.substring(0, 50)}...
+                              {getProductDescription(product).substring(0, 50)}...
                             </div>
                           </div>
                         </div>
@@ -220,6 +281,20 @@ const AdminProducts: React.FC = () => {
                         }`}>
                           {product.in_stock ? t('products.table.inStock') : t('products.table.outOfStock')}
                         </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-center">
+                        <button
+                          onClick={() => handleToggleFeatured(product.id, product.featured || false)}
+                          disabled={toggleFeaturedMutation.isPending}
+                          className={`p-2 rounded-full transition-all duration-200 ${
+                            product.featured 
+                              ? 'text-yellow-500 hover:text-yellow-600 bg-yellow-50 hover:bg-yellow-100' 
+                              : 'text-gray-400 hover:text-gray-600 bg-gray-50 hover:bg-gray-100'
+                          }`}
+                          title={product.featured ? 'Remove from featured' : 'Add to featured'}
+                        >
+                          <Star className={`h-5 w-5 ${product.featured ? 'fill-current' : ''}`} />
+                        </button>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                         <div className="flex justify-end space-x-2">
@@ -272,16 +347,15 @@ const AdminProducts: React.FC = () => {
               <div className="flex justify-center space-x-3 mt-4">
                 <button
                   onClick={() => setDeleteConfirm(null)}
-                  className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                  className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
                 >
                   {t('products.deleteModal.cancel')}
                 </button>
                 <button
                   onClick={() => handleDelete(deleteConfirm)}
-                  disabled={deleteProductMutation.isPending}
-                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 disabled:opacity-50"
+                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
                 >
-                  {deleteProductMutation.isPending ? t('products.deleteModal.deleting') : t('products.deleteModal.delete')}
+                  {t('products.deleteModal.confirm')}
                 </button>
               </div>
             </div>

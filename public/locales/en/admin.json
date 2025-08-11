@@ -89,7 +89,24 @@
       "deleting": "Deleting..."
     },
     "loading": "Loading products...",
-    "error": "Error loading products. Please try again."
+    "error": "Error loading products. Please try again.",
+    "validation": {
+      "nameRequired": "Product name is required",
+      "descriptionRequired": "Description is required",
+      "priceRequired": "Price is required",
+      "categoryRequired": "Category is required",
+      "invalidPrice": "Price must be a positive number",
+      "imageRequired": "Product image is required"
+    },
+    "filters": {
+      "allCategories": "All Categories",
+      "searchProducts": "Search products...",
+      "sortBy": "Sort by",
+      "priceLowToHigh": "Price: Low to High",
+      "priceHighToLow": "Price: High to Low",
+      "nameAZ": "Name: A to Z",
+      "nameZA": "Name: Z to A"
+    }
   },
   "productForm": {
     "addTitle": "Add Product",
@@ -135,7 +152,8 @@
       "cheese": "Cheese",
       "beverages": "Beverages",
       "snacks": "Snacks",
-      "pantry": "Pantry"
+      "pantry": "Pantry",
+      "koffie": "Coffee"
     },
     "buttons": {
       "cancel": "Cancel",
@@ -197,7 +215,20 @@
     },
     "loading": "Loading offers...",
     "error": "Error loading offers. Please try again.",
-    "empty": "No offers found. Create your first offer to get started."
+    "empty": "No offers found. Create your first offer to get started.",
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "expired": "Expired",
+      "upcoming": "Upcoming"
+    },
+    "validation": {
+      "titleRequired": "Offer title is required",
+      "descriptionRequired": "Description is required",
+      "discountRequired": "Discount percentage is required",
+      "datesRequired": "Start and end dates are required",
+      "invalidDiscount": "Discount must be between 1 and 100"
+    }
   },
   "offerForm": {
     "addTitle": "Add Offer",
@@ -254,6 +285,14 @@
     "edit": "Edit",
     "delete": "Delete",
     "view": "View",
-    "back": "Back"
+    "back": "Back",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh"
   }
 } 

@@ -3,42 +3,66 @@
     {
       "id": "1",
       "name": "Fresh Organic Tomatoes",
+      "name_ar": "طماطم عضوية طازجة",
       "price": 3.99,
       "image": "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400&h=300&fit=crop",
       "inStock": true,
       "description": "Juicy, vine-ripened organic tomatoes perfect for salads, sauces, and fresh eating. Grown locally without pesticides.",
+      "description_ar": "طماطم عضوية ناضجة على الكرمة مثالية للسلطات والصلصات والأكل الطازج. تزرع محلياً بدون مبيدات.",
       "nutrition": "Energy 18 kcal/100g, Protein 0.9g/100g, Carbohydrates 3.9g/100g",
-      "category": "Vegetables"
+      "nutrition_ar": "الطاقة 18 سعرة/100غ، البروتين 0.9غ/100غ، الكربوهيدرات 3.9غ/100غ",
+      "category": "Vegetables",
+      "featured": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
     },
     {
       "id": "2",
       "name": "Whole Grain Bread",
+      "name_ar": "خبز الحبوب الكاملة",
       "price": 2.49,
       "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop",
       "inStock": true,
       "description": "Artisan whole grain bread made with stone-ground flour. Rich in fiber and nutrients, perfect for healthy sandwiches.",
+      "description_ar": "خبز حرفي من الحبوب الكاملة مصنوع من دقيق مطحون بالحجر. غني بالألياف والعناصر الغذائية، مثالي للسندويتشات الصحية.",
       "nutrition": "Energy 247 kcal/100g, Protein 9g/100g, Carbohydrates 49g/100g, Fiber 7g/100g",
-      "category": "Bakery"
+      "nutrition_ar": "الطاقة 247 سعرة/100غ، البروتين 9غ/100غ، الكربوهيدرات 49غ/100غ، الألياف 7غ/100غ",
+      "category": "Bakery",
+      "featured": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
     },
     {
       "id": "3",
       "name": "Premium Dutch Cheese",
+      "name_ar": "جبن هولندي مميز",
       "price": 8.75,
       "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=300&fit=crop",
       "inStock": false,
       "description": "Aged Dutch Gouda cheese with rich, nutty flavor and smooth texture. Perfect for cheese boards and cooking.",
+      "description_ar": "جبن جودة هولندي معتق بنكهة غنية وجوزية وملمس ناعم. مثالي لألواح الجبن والطبخ.",
       "nutrition": "Energy 356 kcal/100g, Protein 25g/100g, Fat 28g/100g, Calcium 700mg/100g",
-      "category": "Cheese"
+      "nutrition_ar": "الطاقة 356 سعرة/100غ، البروتين 25غ/100غ، الدهون 28غ/100غ، الكالسيوم 700ملغ/100غ",
+      "category": "Cheese",
+      "featured": false,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
     },
     {
       "id": "4",
       "name": "Fresh Milk 1L",
+      "name_ar": "حليب طازج 1 لتر",
       "price": 1.29,
       "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&h=300&fit=crop",
       "inStock": true,
       "description": "Fresh, pasteurized whole milk from local dairy farms. Rich in calcium and essential nutrients for daily nutrition.",
+      "description_ar": "حليب طازج مبستر كامل الدسم من مزارع الألبان المحلية. غني بالكالسيوم والعناصر الغذائية الأساسية للتغذية اليومية.",
       "nutrition": "Energy 64 kcal/100ml, Protein 3.4g/100ml, Fat 3.6g/100ml, Calcium 120mg/100ml",
-      "category": "Dairy"
+      "nutrition_ar": "الطاقة 64 سعرة/100مل، البروتين 3.4غ/100مل، الدهون 3.6غ/100مل، الكالسيوم 120ملغ/100مل",
+      "category": "Dairy",
+      "featured": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00Z"
     }
   ]
 } 

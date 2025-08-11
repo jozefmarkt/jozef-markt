@@ -1,33 +1,44 @@
 import React, { useEffect } from 'react';
 import { X, ShoppingCart } from 'lucide-react';
-import { useCart } from '../../contexts/CartContext';
 import { useTranslation } from 'react-i18next';
+import { useCart } from '../../contexts/CartContext';
 
 export const CartDrawer: React.FC = () => {
-  const { state, remove, clear, close } = useCart();
-  const { t } = useTranslation('cart');
+  const { t, i18n } = useTranslation('cart');
+  const { state, close, remove, clear } = useCart();
+  const currentLanguage = i18n.language;
 
   const formatPrice = (price: number): string => {
     return `€${price.toFixed(2).replace('.', ',')}`;
   };
 
-  const totalItems = state.items.reduce((sum, item) => sum + item.qty, 0);
-  const subtotal = state.items.reduce((sum, item) => sum + (item.product.price * item.qty), 0);
+  // Helper function to get product name in current language
+  const getProductName = (product: any): string => {
+    switch (currentLanguage) {
+      case 'nl':
+        return product.name_nl || product.name;
+      case 'ar':
+        return product.name_ar || product.name;
+      default:
+        return product.name;
+    }
+  };
 
-  // Handle ESC key to close drawer
+  const totalItems = state.items.reduce((total, item) => total + item.qty, 0);
+  const subtotal = state.items.reduce((total, item) => total + (item.product.price * item.qty), 0);
+
   useEffect(() => {
+    if (state.isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && state.isOpen) {
+      if (event.key === 'Escape') {
         close();
       }
     };
 
-    if (state.isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.addEventListener('keydown', handleEscape);
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
@@ -79,11 +90,11 @@ export const CartDrawer: React.FC = () => {
                 <div key={item.product.id} className="flex gap-3 p-3 bg-gray-50 rounded-lg">
                   <img
                     src={item.product.image}
-                    alt={item.product.name}
+                    alt={getProductName(item.product)}
                     className="w-16 h-16 object-cover rounded-md"
                   />
                   <div className="flex-1">
-                    <h3 className="font-medium text-gray-900">{item.product.name}</h3>
+                    <h3 className="font-medium text-gray-900">{getProductName(item.product)}</h3>
                     <p className="text-sm text-gray-600">
                       {item.qty} × {formatPrice(item.product.price)}
                     </p>

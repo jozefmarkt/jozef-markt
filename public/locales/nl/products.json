@@ -1,0 +1,23 @@
+{
+  "title": "Onze Producten",
+  "loading": "Producten laden...",
+  "error": "Fout bij het laden van producten. Probeer het opnieuw.",
+  "noItems": "Geen producten gevonden",
+  "backToProducts": "← Terug naar producten",
+  "description": "Beschrijving",
+  "addToCart": "Toevoegen aan Winkelwagen",
+  "outOfStock": "Niet op Voorraad",
+  "loadingProduct": "Product laden...",
+  "errorLoadingProduct": "Fout bij het laden van product. Probeer het opnieuw.",
+  "price": "Prijs",
+  "category": "Categorie",
+  "inStock": "Op Voorraad",
+  "nutrition": "Voedingsinformatie",
+  "descriptions": {
+    "1": "Vers volkorenbrood, dagelijks handgemaakt in onze lokale bakkerij. Hoog in vezels en eiwitten.",
+    "2": "Extra vergine olijfolie van eeuwenoude olijfbomen in de Middellandse Zee. Rijk van smaak en gezondheidsvoordelen.",
+    "3": "Traditionele fetakaas van schapen- en geitenmelk. Perfect gezouten en gekruid voor salades en Griekse gerechten.",
+    "4": "Natuurlijke biologische honing van lokale bijen. Zoete smaak en rijk aan natuurlijke gezondheidsvoordelen.",
+    "5": "Gedroogde tijm van verse kruiden. Perfect voor koken en het toevoegen van smaak aan verschillende gerechten."
+  }
+}

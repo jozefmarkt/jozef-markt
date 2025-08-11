@@ -20,9 +20,11 @@
     "loading": "Loading products...",
     "error": "Error loading products. Please try again.",
     "noItems": "No items found",
+    "noFeatured": "No featured products available",
     "backToProducts": "← Back to products",
     "description": "Description",
     "addToCart": "Add to Cart",
+    "viewAll": "View All Products",
     "outOfStock": "Out of Stock",
     "loadingProduct": "Loading product...",
     "errorLoadingProduct": "Error loading product. Please try again.",
@@ -68,5 +70,44 @@
     "terms": "Terms of Service",
     "cookies": "Cookie Policy",
     "copyright": "© {{year}} jozef supermarket. All rights reserved."
+  },
+  "about": {
+    "title": "About Jozef Supermarkt"
+  },
+  "services": {
+    "title": "Our Services",
+    "fastDelivery": {
+      "title": "Fast Delivery",
+      "desc": "Same day delivery available"
+    },
+    "qualityProducts": {
+      "title": "Quality Products",
+      "desc": "Premium selection guaranteed"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "desc": "Always here to help you"
+    },
+    "returns": {
+      "title": "Easy Returns",
+      "desc": "Hassle-free return policy"
+    }
+  },
+  "accessibility": {
+    "shoppingCart": "Shopping cart",
+    "toggleNavigation": "Toggle navigation",
+    "logo": "Jozef Supermarkt Logo"
+  },
+  "language": {
+    "en": "English",
+    "nl": "Dutch",
+    "ar": "Arabic"
+  },
+  "actions": {
+    "close": "Close",
+    "open": "Open",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
   }
 } 
