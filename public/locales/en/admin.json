@@ -141,6 +141,9 @@
       },
       "inStock": {
         "label": "Product is in stock"
+      },
+      "featured": {
+        "label": "Featured Product"
       }
     },
     "categories": {

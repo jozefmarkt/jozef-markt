@@ -20,6 +20,7 @@ interface ProductFormData {
   nutrition_nl: string;
   nutrition_ar: string;
   in_stock: boolean;
+  featured: boolean;
   image: string;
 }
 
@@ -43,6 +44,7 @@ const ProductForm: React.FC = () => {
     nutrition_nl: '',
     nutrition_ar: '',
     in_stock: true,
+    featured: false,
     image: '',
   });
 
@@ -73,6 +75,7 @@ const ProductForm: React.FC = () => {
         nutrition_nl: existingProduct.nutrition_nl || '',
         nutrition_ar: existingProduct.nutrition_ar || '',
         in_stock: existingProduct.in_stock,
+        featured: existingProduct.featured,
         image: existingProduct.image,
       });
       setImagePreview(existingProduct.image);
@@ -481,6 +484,21 @@ const ProductForm: React.FC = () => {
                 />
                 <label htmlFor="in_stock" className="ml-2 block text-sm text-gray-900">
                   {t('productForm.fields.inStock.label')}
+                </label>
+              </div>
+
+              {/* Featured Status */}
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="featured"
+                  name="featured"
+                  checked={formData.featured}
+                  onChange={handleInputChange}
+                  className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                />
+                <label htmlFor="featured" className="ml-2 block text-sm text-gray-900">
+                  {t('productForm.fields.featured.label')}
                 </label>
               </div>
             </div>

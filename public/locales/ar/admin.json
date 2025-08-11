@@ -141,6 +141,9 @@
       },
       "inStock": {
         "label": "المنتج متوفر"
+      },
+      "featured": {
+        "label": "منتج مميز"
       }
     },
     "categories": {

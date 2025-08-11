@@ -141,6 +141,9 @@
       },
       "inStock": {
         "label": "Product is op voorraad"
+      },
+      "featured": {
+        "label": "Uitgelicht Product"
       }
     },
     "categories": {
