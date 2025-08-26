@@ -118,7 +118,7 @@ const TikTokVideo = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80">
+      <div key={videoId} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80">
         {/* TikTok Video Embed */}
         <div className="w-full h-full bg-white">
           <blockquote 
@@ -129,8 +129,13 @@ const TikTokVideo = () => {
             data-embed-format="video"
             data-embed-width="320"
             data-embed-height="568"
+            data-embed-from="embed_page"
           >
-            <section></section>
+            <section>
+              <a target="_blank" href={getVideoUrl(videoId)}>
+                @jozef.market on TikTok
+              </a>
+            </section>
           </blockquote>
         </div>
         
