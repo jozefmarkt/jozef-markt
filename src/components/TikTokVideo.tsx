@@ -113,6 +113,7 @@ const TikTokVideo = () => {
           {/* TikTok Video Preview */}
           <div className="absolute inset-0 bg-black">
             <iframe
+              key={`tiktok-${videoId}-${isMobile}`}
               src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=${isMobile ? '1' : '0'}&loop=1&muted=1`}
               className="w-full h-full"
               frameBorder="0"
@@ -134,7 +135,7 @@ const TikTokVideo = () => {
               <span className="text-white text-sm font-medium">@jozef.market</span>
             </div>
             <div className="text-white text-xs opacity-75">
-              Autoplay • Loop
+              {isMobile ? 'Autoplay • Loop' : 'Click to Play • Loop'}
             </div>
           </div>
           
@@ -150,15 +151,6 @@ const TikTokVideo = () => {
             </p>
           </div>
           
-          {/* Play Button Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-              <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </div>
-          
           {/* TikTok Logo */}
           <div className="absolute top-4 right-4 w-8 h-8 bg-black rounded-full flex items-center justify-center">
             <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -166,9 +158,9 @@ const TikTokVideo = () => {
             </svg>
           </div>
           
-          {/* Click-to-play overlay for desktop */}
+          {/* Click-to-play overlay for desktop only */}
           {!isMobile && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer">
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer z-10">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
