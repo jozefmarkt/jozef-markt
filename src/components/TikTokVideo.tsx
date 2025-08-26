@@ -59,19 +59,29 @@ const TikTokVideo = () => {
     return (
       <div className="flex justify-center">
         <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+          {/* TikTok Video Preview */}
+          <div className="absolute inset-0 bg-black">
+            <iframe
+              src={`https://www.tiktok.com/embed/v2/${videoId}`}
+              className="w-full h-full"
+              frameBorder="0"
+              allowFullScreen
+              title="TikTok Video"
+            />
+          </div>
+          
+          {/* Overlay with TikTok branding */}
+          <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 4 15.22a6.34 6.34 0 0 0 10.14 4.43 6.34 6.34 0 0 0 5.45-12.96z"/>
                 </svg>
               </div>
-              <p className="text-gray-600 text-sm font-medium">
-                @jozef.market
-              </p>
-              <p className="text-gray-500 text-xs mt-2">
-                Video ID: {videoId}
-              </p>
+              <span className="text-white text-sm font-medium">@jozef.market</span>
+            </div>
+            <div className="text-white text-xs opacity-75">
+              Click to view on TikTok
             </div>
           </div>
           
