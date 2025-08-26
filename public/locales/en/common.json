@@ -42,7 +42,10 @@
     "loading": "Loading offers...",
     "error": "Error loading offers. Please try again.",
     "noOffers": "No active offers at the moment. Check back soon for great deals!",
-    "validUntil": "Valid until"
+    "validUntil": "Valid until",
+    "addToCart": "Add to Cart",
+    "off": "OFF",
+    "save": "Save"
   },
   "cart": {
     "title": "Shopping Cart",
@@ -52,9 +55,16 @@
     "checkout": "Checkout"
   },
   "hero": {
-    "title": "Fresh Mediterranean groceries, delivered fast",
-    "subtitle": "Premium pantry staples and produce direct to your door in 48 hours.",
-    "shipping": "Free EU shipping on orders ≥ €80"
+    "title": "Jozef Supermarkt Syrian Authenticity",
+    "subtitle": "Premium kitchen essentials and fresh products directly to your door in 48 hours.",
+    "marketing": {
+      "sentence1": "Best prices and highest quality products",
+      "sentence2": "Exclusive daily offers - discounts up to 50%",
+      "sentence3": "Fresh products from farm to your door",
+      "sentence4": "Premium customer service 24/7",
+      "sentence5": "Free shipping for large orders"
+    },
+    "shipping": "Free delivery in the Netherlands for orders over €100"
   },
   "footer": {
     "company": "Company",
@@ -72,25 +82,38 @@
     "copyright": "© {{year}} jozef supermarket. All rights reserved."
   },
   "about": {
-    "title": "About Jozef Supermarkt"
+    "title": "About Jozef Supermarkt",
+    "description": "Jozef Supermarkt is your first destination for the best authentic Syrian products in the Netherlands. We offer a wide range of fresh and premium products, from traditional spices to high-quality organic products. Our store was founded on the values of authenticity and quality, and we are proud to present the authentic taste of Syria to our valued customers. We are committed to providing excellent service and fresh products daily, while ensuring quality and authentic taste in every product.",
+    "features": {
+      "fresh": "Fresh products daily",
+      "quality": "Authentic Syrian quality"
+    },
+    "tiktok": {
+      "title": "Follow Us on TikTok",
+      "description": "Discover our fresh products and traditional Syrian recipes through live videos on TikTok",
+      "videoPlaceholder": "Latest Video Preview",
+      "followButton": "Follow on TikTok"
+    }
   },
   "services": {
     "title": "Our Services",
+    "subtitle": "We provide exceptional service and quality for all your needs",
+    "cta": "Discover more about our services",
     "fastDelivery": {
       "title": "Fast Delivery",
-      "desc": "Same day delivery available"
+      "desc": "Delivered to your home within 24 hours, also available on Saturdays"
     },
     "qualityProducts": {
-      "title": "Quality Products",
-      "desc": "Premium selection guaranteed"
+      "title": "Premium Quality",
+      "desc": "Selected authentic Syrian products of the highest quality"
     },
     "support": {
-      "title": "24/7 Support",
-      "desc": "Always here to help you"
+      "title": "Personal Support",
+      "desc": "Our experts are ready to help you with all your questions"
     },
     "returns": {
       "title": "Easy Returns",
-      "desc": "Hassle-free return policy"
+      "desc": "100% satisfaction guarantee with hassle-free return policy"
     }
   },
   "accessibility": {
@@ -109,5 +132,9 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success"
+  },
+  "whatsapp": {
+    "button": "Chat on WhatsApp",
+    "message": "Hello! I have a question about Jozef Supermarkt."
   }
 } 

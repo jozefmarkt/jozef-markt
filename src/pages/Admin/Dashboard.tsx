@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
-import { Package, TrendingUp, Tag, Home } from 'lucide-react';
+import { Package, TrendingUp, Tag, Home, Video } from 'lucide-react';
 import { productService } from '../../services/supabase';
 import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
+import TikTokManager from '../../components/admin/TikTokManager';
 
 const AdminDashboard: React.FC = () => {
   const { t } = useTranslation('admin');
@@ -247,6 +248,15 @@ const AdminDashboard: React.FC = () => {
                 </span>
               </Link>
             </div>
+          </div>
+
+          {/* TikTok Management */}
+          <div className="mt-8">
+            <h3 className="text-lg leading-6 font-medium text-gray-900 mb-4 flex items-center">
+              <Video className="h-5 w-5 mr-2 text-purple-600" />
+              TikTok Video Management
+            </h3>
+            <TikTokManager />
           </div>
         </div>
       </main>

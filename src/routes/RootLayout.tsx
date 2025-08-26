@@ -12,6 +12,7 @@ import ProductsPage from "../pages/Products";
 import ProductDetails from "../pages/Products/Details";
 import Contact from "../pages/Contact";
 import OffersPage from "../pages/Offers";
+import About from "../pages/About";
 import AdminLogin from "../pages/Admin/Login";
 import AdminDashboard from "../pages/Admin/Dashboard";
 import AdminProducts from "../pages/Admin/Products";
@@ -40,6 +41,7 @@ const RootLayout: React.FC = () => {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/offers" element={<OffersPage />} />

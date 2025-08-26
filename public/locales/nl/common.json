@@ -42,7 +42,10 @@
     "loading": "Aanbiedingen laden...",
     "error": "Fout bij het laden van aanbiedingen. Probeer het opnieuw.",
     "noOffers": "Momenteel geen actieve aanbiedingen. Kom binnenkort terug voor geweldige deals!",
-    "validUntil": "Geldig tot"
+    "validUntil": "Geldig tot",
+    "addToCart": "Toevoegen aan Winkelwagen",
+    "off": "KORTING",
+    "save": "Bespaar"
   },
   "cart": {
     "title": "Winkelwagen",
@@ -52,9 +55,16 @@
     "checkout": "Afrekenen"
   },
   "hero": {
-    "title": "Verse mediterrane boodschappen, snel bezorgd",
-    "subtitle": "Premium pantry basics en groenten direct aan je deur binnen 48 uur.",
-    "shipping": "Gratis EU verzending bij bestellingen ≥ €80"
+    "title": "Jozef Supermarkt Syrische Authenticiteit",
+    "subtitle": "Premium keukenbenodigdheden en verse producten direct aan je deur binnen 48 uur.",
+    "marketing": {
+      "sentence1": "Beste prijzen en hoogste kwaliteit producten",
+      "sentence2": "Exclusieve dagelijkse aanbiedingen - kortingen tot 50%",
+      "sentence3": "Verse producten van boerderij naar je deur",
+      "sentence4": "Premium klantenservice 24/7",
+      "sentence5": "Gratis verzending voor grote bestellingen"
+    },
+    "shipping": "Gratis bezorging in Nederland voor bestellingen boven €100"
   },
   "footer": {
     "company": "Bedrijf",
@@ -72,25 +82,38 @@
     "copyright": "© {{year}} jozef supermarkt. Alle rechten voorbehouden."
   },
   "about": {
-    "title": "Over Jozef Supermarkt"
+    "title": "Over Jozef Supermarkt",
+    "description": "Jozef Supermarkt is je eerste bestemming voor de beste authentieke Syrische producten in Nederland. We bieden een breed assortiment verse en premium producten, van traditionele kruiden tot hoogwaardige biologische producten. Onze winkel is opgericht op de waarden van authenticiteit en kwaliteit, en we zijn trots om de authentieke smaak van Syrië aan onze gewaardeerde klanten te presenteren. We zijn toegewijd aan het leveren van uitstekende service en verse producten dagelijks, terwijl we kwaliteit en authentieke smaak in elk product garanderen.",
+    "features": {
+      "fresh": "Verse producten dagelijks",
+      "quality": "Authentieke Syrische kwaliteit"
+    },
+    "tiktok": {
+      "title": "Volg ons op TikTok",
+      "description": "Ontdek onze verse producten en traditionele Syrische recepten via live video's op TikTok",
+      "videoPlaceholder": "Laatste Video Voorvertoning",
+      "followButton": "Volg op TikTok"
+    }
   },
   "services": {
     "title": "Onze Diensten",
+    "subtitle": "Wij bieden uitzonderlijke service en kwaliteit voor al uw behoeften",
+    "cta": "Ontdek meer over onze diensten",
     "fastDelivery": {
       "title": "Snelle Bezorging",
-      "desc": "Zelfde dag bezorging beschikbaar"
+      "desc": "Binnen 24 uur bij u thuis, ook op zaterdag beschikbaar"
     },
     "qualityProducts": {
-      "title": "Kwaliteitsproducten",
-      "desc": "Premium selectie gegarandeerd"
+      "title": "Premium Kwaliteit",
+      "desc": "Geselecteerde authentieke Syrische producten van de hoogste kwaliteit"
     },
     "support": {
-      "title": "24/7 Ondersteuning",
-      "desc": "Altijd hier om je te helpen"
+      "title": "Persoonlijke Ondersteuning",
+      "desc": "Onze experts staan klaar om u te helpen met al uw vragen"
     },
     "returns": {
       "title": "Eenvoudige Retourzending",
-      "desc": "Probleemloos retourbeleid"
+      "desc": "100% tevredenheidsgarantie met probleemloos retourbeleid"
     }
   },
   "accessibility": {
@@ -109,5 +132,9 @@
     "loading": "Laden...",
     "error": "Fout",
     "success": "Succes"
+  },
+  "whatsapp": {
+    "button": "Chat op WhatsApp",
+    "message": "Hallo! Ik heb een vraag over Jozef Supermarkt."
   }
 }

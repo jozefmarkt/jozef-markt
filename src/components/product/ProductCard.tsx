@@ -9,7 +9,7 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-  const { add } = useCart();
+  const { addProduct } = useCart();
   const { t, i18n } = useTranslation(['common', 'products']);
   const currentLanguage = i18n.language;
   
@@ -32,8 +32,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const displayName = getDisplayName();
 
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden">
-      <Link to={`/products/${product.id}`} className="block">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-full">
+      <Link to={`/products/${product.id}`} className="block flex-1">
         <div className="relative">
           <img
             src={product.image}
@@ -49,19 +49,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           )}
         </div>
         
-        <div className="p-4">
-          <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-lion-600 transition-colors">
+        <div className="p-4 flex-1 flex flex-col">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-lion-600 transition-colors min-h-[3rem]">
             {displayName}
           </h3>
+          <p className="text-xl font-semibold text-gray-800 mt-auto">
+            {formatPrice(product.price)}
+          </p>
         </div>
       </Link>
       
       <div className="px-4 pb-4">
-        <p className="text-xl font-semibold text-gray-800 mb-4">
-          {formatPrice(product.price)}
-        </p>
         <button
-          onClick={() => add(product)}
+          onClick={() => addProduct(product)}
           disabled={!product.in_stock}
           className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
             product.in_stock

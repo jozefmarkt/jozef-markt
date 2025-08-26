@@ -248,17 +248,37 @@
         "label": "Offer Title *",
         "placeholder": "e.g., Summer Sale - 20% Off"
       },
+      "title_nl": {
+        "label": "Offer Title (Dutch)",
+        "placeholder": "e.g., Zomeruitverkoop - 20% Korting"
+      },
+      "title_ar": {
+        "label": "Offer Title (Arabic)",
+        "placeholder": "مثال: عرض الصيف - خصم 20%"
+      },
       "description": {
         "label": "Description *",
         "placeholder": "Describe the offer details..."
       },
-      "discount_percentage": {
-        "label": "Discount Percentage *",
-        "placeholder": "20"
+      "description_nl": {
+        "label": "Description (Dutch)",
+        "placeholder": "Beschrijf de aanbiedingsdetails..."
       },
-      "discount_amount": {
-        "label": "Fixed Discount Amount (Optional)",
-        "placeholder": "5.00"
+      "description_ar": {
+        "label": "Description (Arabic)",
+        "placeholder": "صف تفاصيل العرض..."
+      },
+      "price": {
+        "label": "Price *",
+        "placeholder": "10.00"
+      },
+      "price_before": {
+        "label": "Price Before Discount (Optional)",
+        "placeholder": "15.00"
+      },
+      "price_after": {
+        "label": "Price After Discount (Optional)",
+        "placeholder": "8.00"
       },
       "start_date": {
         "label": "Start Date *"

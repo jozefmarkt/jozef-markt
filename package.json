@@ -10,7 +10,8 @@
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,css,md}\"",
     "preview": "vite preview",
-    "api": "json-server --watch db.json --port 5174"
+    "api": "json-server --watch db.json --port 5174",
+    "keep-alive": "node keep-alive.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.53.0",

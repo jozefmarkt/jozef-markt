@@ -248,17 +248,37 @@
         "label": "عنوان العرض *",
         "placeholder": "مثال: عرض الصيف - خصم 20%"
       },
+      "title_nl": {
+        "label": "عنوان العرض (هولندي)",
+        "placeholder": "bijv. Zomeruitverkoop - 20% Korting"
+      },
+      "title_ar": {
+        "label": "عنوان العرض (عربي)",
+        "placeholder": "مثال: عرض الصيف - خصم 20%"
+      },
       "description": {
         "label": "الوصف *",
         "placeholder": "صف تفاصيل العرض..."
       },
-      "discount_percentage": {
-        "label": "نسبة الخصم *",
-        "placeholder": "20"
+      "description_nl": {
+        "label": "الوصف (هولندي)",
+        "placeholder": "Beschrijf de aanbiedingsdetails..."
       },
-      "discount_amount": {
-        "label": "مبلغ الخصم الثابت (اختياري)",
-        "placeholder": "5.00"
+      "description_ar": {
+        "label": "الوصف (عربي)",
+        "placeholder": "صف تفاصيل العرض..."
+      },
+      "price": {
+        "label": "السعر *",
+        "placeholder": "10.00"
+      },
+      "price_before": {
+        "label": "السعر قبل الخصم (اختياري)",
+        "placeholder": "15.00"
+      },
+      "price_after": {
+        "label": "السعر بعد الخصم (اختياري)",
+        "placeholder": "8.00"
       },
       "start_date": {
         "label": "تاريخ البداية *"

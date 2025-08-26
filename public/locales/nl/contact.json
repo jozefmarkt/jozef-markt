@@ -13,6 +13,12 @@
     "number": "+31 (0) 20 123 4567",
     "hours": "Maandag - Vrijdag: 8:00 - 20:00"
   },
+  "whatsapp": {
+    "title": "WhatsApp",
+    "message": "Chat met ons op WhatsApp",
+    "button": "Chat op WhatsApp",
+    "number": "+31 (0) 20 123 4567"
+  },
   "email": {
     "title": "E-mail",
     "info": "info@jozefmarkt.com",

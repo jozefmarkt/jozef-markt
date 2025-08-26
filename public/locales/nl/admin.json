@@ -248,17 +248,37 @@
         "label": "Aanbiedingstitel *",
         "placeholder": "bijv. Zomeruitverkoop - 20% Korting"
       },
+      "title_nl": {
+        "label": "Aanbiedingstitel (Nederlands)",
+        "placeholder": "bijv. Zomeruitverkoop - 20% Korting"
+      },
+      "title_ar": {
+        "label": "Aanbiedingstitel (Arabisch)",
+        "placeholder": "مثال: عرض الصيف - خصم 20%"
+      },
       "description": {
         "label": "Beschrijving *",
         "placeholder": "Beschrijf de aanbiedingsdetails..."
       },
-      "discount_percentage": {
-        "label": "Kortingspercentage *",
-        "placeholder": "20"
+      "description_nl": {
+        "label": "Beschrijving (Nederlands)",
+        "placeholder": "Beschrijf de aanbiedingsdetails..."
       },
-      "discount_amount": {
-        "label": "Vaste Kortingsbedrag (Optioneel)",
-        "placeholder": "5.00"
+      "description_ar": {
+        "label": "Beschrijving (Arabisch)",
+        "placeholder": "صف تفاصيل العرض..."
+      },
+      "price": {
+        "label": "Prijs *",
+        "placeholder": "10.00"
+      },
+      "price_before": {
+        "label": "Prijs Voor Korting (Optioneel)",
+        "placeholder": "15.00"
+      },
+      "price_after": {
+        "label": "Prijs Na Korting (Optioneel)",
+        "placeholder": "8.00"
       },
       "start_date": {
         "label": "Startdatum *"

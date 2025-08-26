@@ -231,13 +231,17 @@ const AdminOffers: React.FC = () => {
                             </div>
                           </div>
                           <p className="text-sm text-gray-500">{offer.description}</p>
-                          <div className="flex items-center mt-1 text-xs text-gray-400">
-                            <Calendar className="h-3 w-3 mr-1" />
-                            {formatDate(offer.start_date)} - {formatDate(offer.end_date)}
-                            <span className="mx-2">•</span>
-                            <Percent className="h-3 w-3 mr-1" />
-                            {offer.discount_percentage}% off
-                          </div>
+                                                     <div className="flex items-center mt-1 text-xs text-gray-400">
+                             <Calendar className="h-3 w-3 mr-1" />
+                             {formatDate(offer.start_date)} - {formatDate(offer.end_date)}
+                             {offer.price_before && offer.price_before > offer.price && (
+                               <>
+                                 <span className="mx-2">•</span>
+                                 <Percent className="h-3 w-3 mr-1" />
+                                 {Math.round(((offer.price_before - offer.price) / offer.price_before) * 100)}% {t('offers.off')}
+                               </>
+                             )}
+                           </div>
                         </div>
                       </div>
                       <div className="flex items-center space-x-2">

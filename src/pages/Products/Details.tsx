@@ -2,11 +2,13 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useProduct } from '../../hooks/useProduct';
+import { useCart } from '../../contexts/CartContext';
 
 const ProductDetails: React.FC = () => {
   const { t, i18n } = useTranslation('products');
   const { id } = useParams<{ id: string }>();
   const { data: product, isLoading, error } = useProduct(id!);
+  const { addProduct } = useCart();
   const currentLanguage = i18n.language;
 
   const formatPrice = (price: number): string => {
@@ -110,6 +112,7 @@ const ProductDetails: React.FC = () => {
           </div>
 
           <button
+            onClick={() => addProduct(product)}
             disabled={!product.in_stock}
             className={`w-full py-3 px-6 rounded-lg font-medium text-lg transition-colors ${
               product.in_stock

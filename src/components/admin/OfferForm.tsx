@@ -10,9 +10,14 @@ import LanguageSwitcher from './LanguageSwitcher';
 
 interface OfferFormData {
   title: string;
+  title_nl?: string;
+  title_ar?: string;
   description: string;
-  discount_percentage: number;
-  discount_amount?: number;
+  description_nl?: string;
+  description_ar?: string;
+  price: number;
+  price_before?: number;
+  price_after?: number;
   start_date: string;
   end_date: string;
   is_active: boolean;
@@ -30,9 +35,14 @@ const OfferForm: React.FC = () => {
 
   const [formData, setFormData] = useState<OfferFormData>({
     title: '',
+    title_nl: '',
+    title_ar: '',
     description: '',
-    discount_percentage: 0,
-    discount_amount: 0,
+    description_nl: '',
+    description_ar: '',
+    price: 0,
+    price_before: 0,
+    price_after: 0,
     start_date: '',
     end_date: '',
     is_active: true,
@@ -57,9 +67,14 @@ const OfferForm: React.FC = () => {
     if (existingOffer) {
       setFormData({
         title: existingOffer.title,
+        title_nl: existingOffer.title_nl || '',
+        title_ar: existingOffer.title_ar || '',
         description: existingOffer.description,
-        discount_percentage: existingOffer.discount_percentage,
-        discount_amount: existingOffer.discount_amount,
+        description_nl: existingOffer.description_nl || '',
+        description_ar: existingOffer.description_ar || '',
+        price: existingOffer.price || 0,
+        price_before: existingOffer.price_before || 0,
+        price_after: existingOffer.price_after || 0,
         start_date: existingOffer.start_date.split('T')[0], // Format for date input
         end_date: existingOffer.end_date.split('T')[0],
         is_active: existingOffer.is_active,
@@ -236,74 +251,188 @@ const OfferForm: React.FC = () => {
               </div>
             </div>
 
-            {/* Offer Title */}
-            <div>
-              <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-                {t('offerForm.fields.title.label')}
-              </label>
-              <input
-                type="text"
-                id="title"
-                name="title"
-                value={formData.title}
-                onChange={handleInputChange}
-                required
-                className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder={t('offerForm.fields.title.placeholder')}
-              />
+            {/* Three Language Forms Side by Side */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* English Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">EN</div>
+                  <h3 className="text-lg font-semibold text-gray-900">English</h3>
+                </div>
+                
+                {/* Offer Title */}
+                <div className="mb-4">
+                  <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
+                    Offer Title *
+                  </label>
+                  <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    value={formData.title}
+                    onChange={handleInputChange}
+                    required
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter offer title"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
+                    Description *
+                  </label>
+                  <textarea
+                    id="description"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter offer description"
+                  />
+                </div>
+              </div>
+
+              {/* Dutch Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">NL</div>
+                  <h3 className="text-lg font-semibold text-gray-900">Nederlands</h3>
+                </div>
+                
+                {/* Offer Title */}
+                <div className="mb-4">
+                  <label htmlFor="title_nl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Aanbiedingstitel
+                  </label>
+                  <input
+                    type="text"
+                    id="title_nl"
+                    name="title_nl"
+                    value={formData.title_nl || ''}
+                    onChange={handleInputChange}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="Voer aanbiedingstitel in"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description_nl" className="block text-sm font-medium text-gray-700 mb-1">
+                    Beschrijving
+                  </label>
+                  <textarea
+                    id="description_nl"
+                    name="description_nl"
+                    value={formData.description_nl || ''}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    placeholder="Voer aanbiedingsbeschrijving in"
+                  />
+                </div>
+              </div>
+
+              {/* Arabic Form */}
+              <div className="bg-white p-6 rounded-lg shadow">
+                <div className="flex items-center mb-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">ع</div>
+                  <h3 className="text-lg font-semibold text-gray-900">العربية</h3>
+                </div>
+                
+                {/* Offer Title */}
+                <div className="mb-4">
+                  <label htmlFor="title_ar" className="block text-sm font-medium text-gray-700 mb-1">
+                    عنوان العرض
+                  </label>
+                  <input
+                    type="text"
+                    id="title_ar"
+                    name="title_ar"
+                    value={formData.title_ar || ''}
+                    onChange={handleInputChange}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-right"
+                    placeholder="أدخل عنوان العرض"
+                    dir="rtl"
+                  />
+                </div>
+
+                {/* Description */}
+                <div className="mb-4">
+                  <label htmlFor="description_ar" className="block text-sm font-medium text-gray-700 mb-1">
+                    الوصف
+                  </label>
+                  <textarea
+                    id="description_ar"
+                    name="description_ar"
+                    value={formData.description_ar || ''}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500 text-right"
+                    placeholder="أدخل وصف العرض"
+                    dir="rtl"
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Description */}
-            <div>
-              <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-                {t('offerForm.fields.description.label')}
-              </label>
-              <textarea
-                id="description"
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                required
-                rows={4}
-                className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                placeholder={t('offerForm.fields.description.placeholder')}
-              />
-            </div>
-
-            {/* Discount Settings */}
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {/* Shared Fields */}
+            <div className="bg-white p-6 rounded-lg shadow space-y-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Offer Details</h3>
+              
+              {/* Price Settings */}
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <div>
-                <label htmlFor="discount_percentage" className="block text-sm font-medium text-gray-700">
-                  {t('offerForm.fields.discount_percentage.label')}
+                <label htmlFor="price" className="block text-sm font-medium text-gray-700">
+                  {t('offerForm.fields.price.label')}
                 </label>
                 <input
                   type="number"
-                  id="discount_percentage"
-                  name="discount_percentage"
-                  value={formData.discount_percentage}
+                  id="price"
+                  name="price"
+                  value={formData.price}
                   onChange={handleInputChange}
                   required
                   min="0"
-                  max="100"
+                  step="0.01"
                   className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder={t('offerForm.fields.discount_percentage.placeholder')}
+                  placeholder={t('offerForm.fields.price.placeholder')}
                 />
               </div>
 
               <div>
-                <label htmlFor="discount_amount" className="block text-sm font-medium text-gray-700">
-                  {t('offerForm.fields.discount_amount.label')}
+                <label htmlFor="price_before" className="block text-sm font-medium text-gray-700">
+                  {t('offerForm.fields.price_before.label')}
                 </label>
                 <input
                   type="number"
-                  id="discount_amount"
-                  name="discount_amount"
-                  value={formData.discount_amount || ''}
+                  id="price_before"
+                  name="price_before"
+                  value={formData.price_before || ''}
                   onChange={handleInputChange}
                   min="0"
                   step="0.01"
                   className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholder={t('offerForm.fields.discount_amount.placeholder')}
+                  placeholder={t('offerForm.fields.price_before.placeholder')}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="price_after" className="block text-sm font-medium text-gray-700">
+                  {t('offerForm.fields.price_after.label')}
+                </label>
+                <input
+                  type="number"
+                  id="price_after"
+                  name="price_after"
+                  value={formData.price_after || ''}
+                  onChange={handleInputChange}
+                  min="0"
+                  step="0.01"
+                  className="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  placeholder={t('offerForm.fields.price_after.placeholder')}
                 />
               </div>
             </div>
@@ -354,6 +483,7 @@ const OfferForm: React.FC = () => {
               <label htmlFor="is_active" className="ml-2 block text-sm text-gray-900">
                 {t('offerForm.fields.is_active.label')}
               </label>
+            </div>
             </div>
 
             {/* Submit Buttons */}
