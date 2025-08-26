@@ -111,19 +111,16 @@ const TikTokVideo = () => {
           className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
         >
           {/* TikTok Video Preview */}
-          <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500">
-            {/* TikTok branding overlay */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <svg className="w-10 h-10 text-black" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 4 15.22a6.34 6.34 0 0 0 10.14 4.43 6.34 6.34 0 0 0 5.45-12.96z"/>
-                  </svg>
-                </div>
-                <p className="text-white text-lg font-bold">@jozef.market</p>
-                <p className="text-white text-sm opacity-90 mt-2">Latest TikTok Video</p>
-              </div>
-            </div>
+          <div className="absolute inset-0 bg-black">
+            <iframe
+              src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=1&loop=1&muted=1`}
+              className="w-full h-full"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; encrypted-media"
+              title="TikTok Video"
+              id="tiktok-iframe"
+            />
           </div>
           
           {/* Overlay with TikTok branding */}
@@ -137,7 +134,7 @@ const TikTokVideo = () => {
               <span className="text-white text-sm font-medium">@jozef.market</span>
             </div>
             <div className="text-white text-xs opacity-75">
-              Click to Watch
+              Autoplay • Loop
             </div>
           </div>
           
@@ -160,25 +157,12 @@ const TikTokVideo = () => {
             </svg>
           </div>
           
-          {/* Clickable link to TikTok */}
-          <a
-            href={getVideoUrl(videoId)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute inset-0 z-10 flex items-center justify-center group"
-            aria-label={`View TikTok video ${videoId}`}
-          >
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 opacity-80 group-hover:opacity-100">
-              <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-            </div>
-          </a>
+
           
           {/* TikTok branding overlay - non-clickable */}
           <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
             <div className="text-white text-xs opacity-75 text-center">
-              Click to watch on TikTok • @jozef.market
+              TikTok Video • @jozef.market
             </div>
           </div>
         </div>
