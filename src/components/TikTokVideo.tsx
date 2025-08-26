@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const TikTokVideo = () => {
@@ -6,6 +6,8 @@ const TikTokVideo = () => {
   const [videoId, setVideoId] = useState('7532444305118498080');
   const [embedLoaded, setEmbedLoaded] = useState(false);
   const [showFallback, setShowFallback] = useState(true); // Show fallback by default
+  const [isInView, setIsInView] = useState(false);
+  const videoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Load current video ID from admin settings
@@ -50,6 +52,26 @@ const TikTokVideo = () => {
     };
   }, [embedLoaded]);
 
+  // Intersection Observer for autoplay when in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Trigger when 50% of video is visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   const getVideoUrl = (id: string) => {
     return `https://www.tiktok.com/@jozef.market/video/${id}`;
   };
@@ -58,20 +80,24 @@ const TikTokVideo = () => {
   if (showFallback) {
     return (
       <div className="flex justify-center">
-        <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div 
+          ref={videoRef}
+          className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] w-80 bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+        >
           {/* TikTok Video Preview */}
           <div className="absolute inset-0 bg-black">
             <iframe
-              src={`https://www.tiktok.com/embed/v2/${videoId}`}
+              src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=${isInView ? '1' : '0'}&loop=1&muted=1`}
               className="w-full h-full"
               frameBorder="0"
               allowFullScreen
+              allow="autoplay; encrypted-media"
               title="TikTok Video"
             />
           </div>
           
           {/* Overlay with TikTok branding */}
-          <div className="absolute top-4 left-4 right-4 flex justify-between items-center">
+          <div className="absolute top-4 left-4 right-4 flex justify-between items-center pointer-events-none">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -81,7 +107,7 @@ const TikTokVideo = () => {
               <span className="text-white text-sm font-medium">@jozef.market</span>
             </div>
             <div className="text-white text-xs opacity-75">
-              Click to view on TikTok
+              Autoplay • Loop
             </div>
           </div>
           
@@ -113,14 +139,12 @@ const TikTokVideo = () => {
             </svg>
           </div>
           
-          {/* Clickable overlay */}
-          <a
-            href={getVideoUrl(videoId)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute inset-0 z-10"
-            aria-label={`View TikTok video ${videoId}`}
-          />
+          {/* TikTok branding overlay - non-clickable */}
+          <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
+            <div className="text-white text-xs opacity-75 text-center">
+              TikTok Video • @jozef.market
+            </div>
+          </div>
         </div>
       </div>
     );
