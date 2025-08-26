@@ -103,17 +103,8 @@ const TikTokVideo = () => {
   };
 
   const handleDesktopPlay = () => {
-    const iframe = document.getElementById('tiktok-iframe') as HTMLIFrameElement;
-    if (iframe && iframe.contentWindow) {
-      try {
-        // Try to send play message to TikTok embed
-        iframe.contentWindow.postMessage({
-          type: 'play'
-        }, 'https://www.tiktok.com');
-      } catch (error) {
-        console.log('Could not control TikTok embed');
-      }
-    }
+    // Open TikTok video in new tab since embed control doesn't work
+    window.open(getVideoUrl(videoId), '_blank');
   };
 
   // Show fallback if embed failed to load or user prefers it
@@ -149,7 +140,7 @@ const TikTokVideo = () => {
               <span className="text-white text-sm font-medium">@jozef.market</span>
             </div>
             <div className="text-white text-xs opacity-75">
-              {isMobile ? 'Autoplay • Loop' : 'Click to Play • Loop'}
+              {isMobile ? 'Autoplay • Loop' : 'Click to Watch'}
             </div>
           </div>
           
@@ -177,11 +168,15 @@ const TikTokVideo = () => {
             <div 
               className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer z-10"
               onClick={handleDesktopPlay}
+              title="Click to watch on TikTok"
             >
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
                 </svg>
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 text-center">
+                <p className="text-white text-xs opacity-90">Click to watch on TikTok</p>
               </div>
             </div>
           )}
