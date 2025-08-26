@@ -102,6 +102,20 @@ const TikTokVideo = () => {
     return `https://www.tiktok.com/@jozef.market/video/${id}`;
   };
 
+  const handleDesktopPlay = () => {
+    const iframe = document.getElementById('tiktok-iframe') as HTMLIFrameElement;
+    if (iframe && iframe.contentWindow) {
+      try {
+        // Try to send play message to TikTok embed
+        iframe.contentWindow.postMessage({
+          type: 'play'
+        }, 'https://www.tiktok.com');
+      } catch (error) {
+        console.log('Could not control TikTok embed');
+      }
+    }
+  };
+
   // Show fallback if embed failed to load or user prefers it
   if (showFallback) {
     return (
@@ -113,6 +127,7 @@ const TikTokVideo = () => {
           {/* TikTok Video Preview */}
           <div className="absolute inset-0 bg-black">
             <iframe
+              key={`tiktok-${videoId}-${isMobile}`}
               src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=${isMobile ? '1' : '0'}&loop=1&muted=1`}
               className="w-full h-full"
               frameBorder="0"
@@ -159,7 +174,10 @@ const TikTokVideo = () => {
           
           {/* Click-to-play overlay for desktop only */}
           {!isMobile && (
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer z-10">
+            <div 
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer z-10"
+              onClick={handleDesktopPlay}
+            >
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z"/>
