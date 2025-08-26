@@ -5,7 +5,7 @@ const TikTokVideo = () => {
   const { t } = useTranslation('common');
   const [videoId, setVideoId] = useState('7532444305118498080');
   const [embedLoaded, setEmbedLoaded] = useState(false);
-  const [showFallback, setShowFallback] = useState(false);
+  const [showFallback, setShowFallback] = useState(true); // Show fallback by default
 
   useEffect(() => {
     // Load current video ID from admin settings
@@ -156,11 +156,11 @@ const TikTokVideo = () => {
         {/* Fallback button - always visible */}
         <div className="absolute top-2 right-2">
           <button
-            onClick={() => setShowFallback(true)}
+            onClick={() => setShowFallback(!showFallback)}
             className="w-8 h-8 bg-black bg-opacity-70 text-white rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all duration-200 text-xs"
-            title="Show fallback preview"
+            title={showFallback ? "Try TikTok embed" : "Show fallback preview"}
           >
-            ⚙️
+            {showFallback ? "🎥" : "⚙️"}
           </button>
         </div>
       </div>
