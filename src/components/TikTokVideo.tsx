@@ -7,9 +7,21 @@ const TikTokVideo = () => {
   const [embedLoaded, setEmbedLoaded] = useState(false);
   const [showFallback, setShowFallback] = useState(true); // Show fallback by default
   const [isInView, setIsInView] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Detect mobile device
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+      const isMobileViewport = window.innerWidth <= 768;
+      setIsMobile(isMobileDevice || isMobileViewport);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
     // Load current video ID from admin settings
     const savedSettings = localStorage.getItem('tiktok-settings');
     if (savedSettings) {
@@ -49,6 +61,7 @@ const TikTokVideo = () => {
 
     return () => {
       clearTimeout(timeout);
+      window.removeEventListener('resize', checkMobile);
     };
   }, [embedLoaded]);
 
@@ -100,7 +113,7 @@ const TikTokVideo = () => {
           {/* TikTok Video Preview */}
           <div className="absolute inset-0 bg-black">
             <iframe
-              src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=1&loop=1&muted=1`}
+              src={`https://www.tiktok.com/embed/v2/${videoId}?autoplay=${isMobile ? '1' : '0'}&loop=1&muted=1`}
               className="w-full h-full"
               frameBorder="0"
               allowFullScreen
@@ -153,10 +166,21 @@ const TikTokVideo = () => {
             </svg>
           </div>
           
+          {/* Click-to-play overlay for desktop */}
+          {!isMobile && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-300 group cursor-pointer">
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+            </div>
+          )}
+          
           {/* TikTok branding overlay - non-clickable */}
           <div className="absolute bottom-4 left-4 right-4 pointer-events-none">
             <div className="text-white text-xs opacity-75 text-center">
-              TikTok Video • @jozef.market
+              {isMobile ? 'Autoplay • Loop' : 'Click to Play • Loop'} • @jozef.market
             </div>
           </div>
         </div>
