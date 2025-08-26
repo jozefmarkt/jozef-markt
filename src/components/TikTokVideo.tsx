@@ -15,29 +15,38 @@ const TikTokVideo = () => {
       setVideoId(settings.videoId);
     }
 
-    // Load TikTok embed script with error handling
-    const script = document.createElement('script');
-    script.src = 'https://www.tiktok.com/embed.js';
-    script.async = true;
-    script.onload = () => setEmbedLoaded(true);
-    script.onerror = () => setShowFallback(true);
+    // Check if TikTok embed script already exists
+    const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
     
-    // Add script to head instead of body for better cleanup
-    document.head.appendChild(script);
+    if (!existingScript) {
+      // Load TikTok embed script with error handling
+      const script = document.createElement('script');
+      script.src = 'https://www.tiktok.com/embed.js';
+      script.async = true;
+      script.onload = () => {
+        setEmbedLoaded(true);
+        // Force TikTok to re-render embeds
+        if (window.TikTok) {
+          window.TikTok.reloadEmbeds();
+        }
+      };
+      script.onerror = () => setShowFallback(true);
+      
+      // Add script to head
+      document.head.appendChild(script);
+    } else {
+      setEmbedLoaded(true);
+    }
 
     // Set a timeout to show fallback if embed doesn't load
     const timeout = setTimeout(() => {
       if (!embedLoaded) {
         setShowFallback(true);
       }
-    }, 5000);
+    }, 8000); // Increased timeout
 
     return () => {
       clearTimeout(timeout);
-      // Cleanup script when component unmounts
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
     };
   }, [embedLoaded]);
 
