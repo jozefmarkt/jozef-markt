@@ -115,7 +115,7 @@ const TikTokVideo = () => {
           <blockquote 
             className="tiktok-embed" 
             cite={getVideoUrl(videoId)}
-            data-unique-id="jozef.market"
+            data-unique-id={videoId}
             data-embed-type="video"
             data-embed-format="video"
             data-embed-width="320"
