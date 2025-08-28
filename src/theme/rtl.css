@@ -362,9 +362,11 @@
 @media (max-width: 640px) {
   /* Ensure cart doesn't take full screen height */
   .cart-drawer-mobile {
-    height: 90vh !important;
-    top: 10vh !important;
+    height: 85vh !important;
+    top: 15vh !important;
     bottom: 0 !important;
+    max-height: 85vh !important;
+    overflow: hidden !important;
   }
   
   /* Better mobile cart spacing */
@@ -381,5 +383,14 @@
   .cart-button-mobile {
     padding: 0.75rem 1rem !important;
     font-size: 0.875rem !important;
+  }
+  
+  /* Force mobile cart positioning */
+  .cart-drawer-mobile {
+    position: fixed !important;
+    top: 15vh !important;
+    height: 85vh !important;
+    max-height: 85vh !important;
+    overflow: hidden !important;
   }
 } 

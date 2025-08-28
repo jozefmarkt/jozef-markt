@@ -183,12 +183,19 @@ export const CartDrawer: React.FC = () => {
     <>
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        className="fixed inset-0 bg-black bg-opacity-70 z-40"
         onClick={close}
       />
       
+      {/* Mobile Backdrop Text */}
+      <div className="sm:hidden fixed top-4 left-4 z-45 text-white text-center">
+        <div className="bg-black bg-opacity-80 p-3 rounded-lg">
+          <p className="text-sm font-bold">Tap outside to close cart</p>
+        </div>
+      </div>
+      
       {/* Drawer */}
-      <div className="fixed inset-y-0 right-0 w-full sm:w-[450px] bg-white shadow-2xl z-50 flex flex-col cart-drawer-mobile">
+      <div className="fixed top-0 bottom-0 right-0 w-full sm:w-[450px] bg-white shadow-2xl z-50 flex flex-col cart-drawer-mobile">
         {/* Header */}
         <div className="flex items-center justify-between p-4 sm:p-8 border-b bg-gradient-to-r from-lion-500 via-lion-600 to-lion-700 text-white">
           <div className="flex items-center gap-2 sm:gap-4">
@@ -207,6 +214,16 @@ export const CartDrawer: React.FC = () => {
             className="p-2 sm:p-3 hover:bg-white/20 rounded-full transition-colors"
           >
             <X size={20} className="sm:w-7 sm:h-7" />
+          </button>
+        </div>
+        
+        {/* Mobile Close Button - Always Visible */}
+        <div className="sm:hidden bg-red-500 text-white p-3 text-center">
+          <button
+            onClick={close}
+            className="w-full py-2 px-4 bg-red-600 hover:bg-red-700 rounded-lg font-bold text-white transition-colors"
+          >
+            ✕ CLOSE CART
           </button>
         </div>
 
