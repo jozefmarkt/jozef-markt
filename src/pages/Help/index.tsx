@@ -1,9 +1,10 @@
+import React from 'react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, ChevronRight, Search, ShoppingCart, Truck, Package, User, CreditCard, RotateCcw, MessageCircle, Settings, HelpCircle } from 'lucide-react';
 
 const HelpPage: React.FC = () => {
-  const { t, i18n } = useTranslation('help');
+  const { t } = useTranslation('help');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 

@@ -1,45 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, MessageCircle, Mail, Clock } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation('contact');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   // WhatsApp configuration - change this to your number first, then to the final number
   const whatsappNumber = '+31623735563'; // Your WhatsApp number
   const whatsappMessage = 'Hello! I have a question about Jozef Supermarkt.';
 
-  const handleInputChange = (field: keyof typeof formData) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData(prev => ({ ...prev, [field]: e.target.value }));
-  };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // In a real app, you would send this to your backend
-    console.log('Contact form submitted:', formData);
-    
-    setSubmitStatus('success');
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Reset success message after 3 seconds
-    setTimeout(() => setSubmitStatus('idle'), 3000);
-  };
 
   const handleWhatsAppClick = () => {
     const formattedNumber = whatsappNumber.replace(/\s+/g, '').replace(/[()]/g, '');

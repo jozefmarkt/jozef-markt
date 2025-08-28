@@ -481,9 +481,7 @@ export const CartDrawer: React.FC = () => {
                 <span className="font-bold text-gray-700 text-lg">{t('subtotal')}</span>
                 <span className="text-3xl font-bold text-gray-900">{formatPrice(subtotal)}</span>
               </div>
-              <div className="text-sm text-gray-500 bg-green-50 p-3 rounded-lg border border-green-200">
-                🚚 Free delivery on orders over €80
-              </div>
+
             </div>
             
             <div className="flex gap-4">
