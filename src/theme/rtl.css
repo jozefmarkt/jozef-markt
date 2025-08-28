@@ -320,4 +320,40 @@
 [dir="rtl"] .mr-4 {
   margin-right: 0 !important;
   margin-left: 1rem !important;
+}
+
+/* Mobile admin layout fixes */
+@media (max-width: 640px) {
+  .admin-header-mobile {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+  
+  .admin-header-mobile .controls {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+  
+  .admin-header-mobile .controls > * {
+    width: 100% !important;
+  }
+  
+  .admin-header-mobile button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 640px) {
+  .px-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .space-y-4 > * + * {
+    margin-top: 1rem !important;
+  }
 } 
