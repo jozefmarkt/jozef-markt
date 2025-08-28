@@ -356,4 +356,30 @@
   .space-y-4 > * + * {
     margin-top: 1rem !important;
   }
+}
+
+/* Mobile cart improvements */
+@media (max-width: 640px) {
+  /* Ensure cart doesn't take full screen height */
+  .cart-drawer-mobile {
+    height: 90vh !important;
+    top: 10vh !important;
+    bottom: 0 !important;
+  }
+  
+  /* Better mobile cart spacing */
+  .cart-item-mobile {
+    padding: 1rem !important;
+  }
+  
+  .cart-item-mobile img {
+    width: 4rem !important;
+    height: 4rem !important;
+  }
+  
+  /* Mobile cart buttons */
+  .cart-button-mobile {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
 } 

@@ -188,51 +188,51 @@ export const CartDrawer: React.FC = () => {
       />
       
       {/* Drawer */}
-      <div className="fixed inset-y-0 right-0 w-[450px] bg-white shadow-2xl z-50 flex flex-col">
+      <div className="fixed inset-y-0 right-0 w-full sm:w-[450px] bg-white shadow-2xl z-50 flex flex-col cart-drawer-mobile">
         {/* Header */}
-        <div className="flex items-center justify-between p-8 border-b bg-gradient-to-r from-lion-500 via-lion-600 to-lion-700 text-white">
-          <div className="flex items-center gap-4">
-            <div className="p-3 bg-white/20 rounded-full shadow-lg">
-              <ShoppingCart size={28} />
+        <div className="flex items-center justify-between p-4 sm:p-8 border-b bg-gradient-to-r from-lion-500 via-lion-600 to-lion-700 text-white">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="p-2 sm:p-3 bg-white/20 rounded-full shadow-lg">
+              <ShoppingCart size={20} className="sm:w-7 sm:h-7" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">{t('title')}</h2>
+              <h2 className="text-lg sm:text-2xl font-bold">{t('title')}</h2>
               {totalItems > 0 && (
-                <p className="text-base opacity-90">{totalItems} {totalItems === 1 ? 'item' : 'items'} in cart</p>
+                <p className="text-sm sm:text-base opacity-90">{totalItems} {totalItems === 1 ? 'item' : 'items'} in cart</p>
               )}
             </div>
           </div>
           <button
             onClick={close}
-            className="p-3 hover:bg-white/20 rounded-full transition-colors"
+            className="p-2 sm:p-3 hover:bg-white/20 rounded-full transition-colors"
           >
-            <X size={28} />
+            <X size={20} className="sm:w-7 sm:h-7" />
           </button>
         </div>
 
         {/* Items */}
-        <div className="flex-1 overflow-y-auto p-8">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-8">
           {state.items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-gray-500">
-              <div className="p-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full mb-6 shadow-lg">
-                <ShoppingCart size={64} className="opacity-50" />
+              <div className="p-6 sm:p-8 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full mb-4 sm:mb-6 shadow-lg">
+                <ShoppingCart size={48} className="sm:w-16 sm:h-16 opacity-50" />
               </div>
-              <p className="text-center text-xl font-semibold">{t('empty')}</p>
-              <p className="text-center text-base text-gray-400 mt-3">Add some items to get started</p>
+              <p className="text-center text-lg sm:text-xl font-semibold">{t('empty')}</p>
+              <p className="text-center text-sm sm:text-base text-gray-400 mt-2 sm:mt-3">Add some items to get started</p>
             </div>
           ) : (
-            <div className="space-y-8">
+            <div className="space-y-4 sm:space-y-8">
               {state.items.map((item) => {
                 const itemDetails = getItemDetails(item);
                 return (
                   <div key={item.id} className="bg-white border-2 border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="p-6">
-                      <div className="flex gap-6">
+                    <div className="p-4 sm:p-6">
+                      <div className="flex gap-3 sm:gap-6">
                         <div className="relative flex-shrink-0">
                           <img
                             src={itemDetails.image}
                             alt={itemDetails.name}
-                            className="w-24 h-24 object-cover rounded-xl shadow-md"
+                            className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-xl shadow-md"
                           />
                           {itemDetails.isOffer && (
                             <div className="absolute -top-3 -right-3 bg-gradient-to-r from-lion-500 to-lion-600 text-white rounded-full p-2 shadow-xl">
@@ -243,20 +243,20 @@ export const CartDrawer: React.FC = () => {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between">
                             <div className="flex-1 min-w-0">
-                              <h3 className="font-bold text-gray-900 text-xl leading-tight mb-2">
+                              <h3 className="font-bold text-gray-900 text-base sm:text-xl leading-tight mb-2">
                                 {itemDetails.name}
                               </h3>
                               {itemDetails.isOffer && (
-                                <span className="inline-block bg-gradient-to-r from-lion-100 to-lion-200 text-lion-800 text-sm font-bold px-3 py-1.5 rounded-full mb-3 shadow-sm">
+                                <span className="inline-block bg-gradient-to-r from-lion-100 to-lion-200 text-lion-800 text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full mb-2 sm:mb-3 shadow-sm">
                                   🎉 SPECIAL OFFER 🎉
                                 </span>
                               )}
-                              <div className="flex items-center gap-3 mb-3">
-                                <span className="text-base text-gray-600 font-medium">
+                              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-2 sm:mb-3">
+                                <span className="text-sm sm:text-base text-gray-600 font-medium">
                                   Quantity: {item.qty}
                                 </span>
-                                <span className="text-gray-300 text-lg">•</span>
-                                <span className="text-xl font-bold text-lion-600">
+                                <span className="hidden sm:inline text-gray-300 text-lg">•</span>
+                                <span className="text-lg sm:text-xl font-bold text-lion-600">
                                   {formatPrice(item.price)}
                                 </span>
                               </div>
@@ -475,28 +475,38 @@ export const CartDrawer: React.FC = () => {
 
         {/* Footer */}
         {state.items.length > 0 && !showDeliveryOptions && deliveryType !== 'delivery' && (
-          <div className="border-t bg-gradient-to-br from-gray-50 to-gray-100 p-8 space-y-6">
-            <div className="bg-white rounded-2xl p-6 border-2 border-gray-200 shadow-lg">
+          <div className="border-t bg-gradient-to-br from-gray-50 to-gray-100 p-4 sm:p-8 space-y-4 sm:space-y-6">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 border-2 border-gray-200 shadow-lg">
               <div className="flex justify-between items-center mb-3">
-                <span className="font-bold text-gray-700 text-lg">{t('subtotal')}</span>
-                <span className="text-3xl font-bold text-gray-900">{formatPrice(subtotal)}</span>
+                <span className="font-bold text-gray-700 text-base sm:text-lg">{t('subtotal')}</span>
+                <span className="text-2xl sm:text-3xl font-bold text-gray-900">{formatPrice(subtotal)}</span>
               </div>
 
             </div>
             
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <button
                 onClick={clear}
-                className="flex-1 py-4 px-6 border-2 border-gray-300 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors font-bold text-lg"
+                className="flex-1 py-3 sm:py-4 px-4 sm:px-6 border-2 border-gray-300 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors font-bold text-base sm:text-lg"
               >
                 {t('clear')}
               </button>
               <button
                 onClick={handleCheckout}
-                className="flex-1 py-4 px-6 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-xl hover:from-green-600 hover:via-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center gap-3 font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105"
+                className="flex-1 py-3 sm:py-4 px-4 sm:px-6 bg-gradient-to-r from-green-500 via-green-600 to-green-700 text-white rounded-xl hover:from-green-600 hover:via-green-700 hover:to-green-800 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 font-bold text-base sm:text-lg shadow-xl hover:shadow-2xl transform hover:scale-105"
               >
-                <MessageCircle size={20} />
+                <MessageCircle size={18} className="sm:w-5 sm:h-5" />
                 {t('checkout')}
+              </button>
+            </div>
+            
+            {/* Mobile close button */}
+            <div className="sm:hidden">
+              <button
+                onClick={close}
+                className="w-full py-3 px-4 border-2 border-gray-300 rounded-xl text-gray-700 hover:bg-gray-100 transition-colors font-bold text-base"
+              >
+                Close Cart
               </button>
             </div>
           </div>
