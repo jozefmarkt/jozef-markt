@@ -5,7 +5,7 @@ import { useCart } from '../../contexts/CartContext';
 
 export const CartDrawer: React.FC = () => {
   const { t, i18n } = useTranslation('cart');
-  const { state, close, remove, clear } = useCart();
+  const { state, close, remove, clear, dispatch } = useCart();
   const currentLanguage = i18n.language;
   const [showDeliveryOptions, setShowDeliveryOptions] = useState(false);
   const [deliveryType, setDeliveryType] = useState<'delivery' | 'pickup' | null>(null);
@@ -181,6 +181,21 @@ export const CartDrawer: React.FC = () => {
 
   return (
     <>
+      {/* Cart Notification */}
+      {state.showNotification && (
+        <div className="fixed top-4 right-4 z-50 bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg animate-pulse">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium">✓ {state.notificationMessage}</span>
+            <button
+              onClick={() => dispatch({ type: 'HIDE_NOTIFICATION' })}
+              className="ml-2 text-white hover:text-green-100"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+      
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-70 z-40"

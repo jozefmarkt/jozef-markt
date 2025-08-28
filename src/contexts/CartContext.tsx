@@ -16,6 +16,8 @@ interface CartItem {
 interface CartState {
   items: CartItem[];
   isOpen: boolean;
+  showNotification: boolean;
+  notificationMessage: string;
 }
 
 type CartAction =
@@ -25,7 +27,9 @@ type CartAction =
   | { type: 'CLEAR' }
   | { type: 'TOGGLE' }
   | { type: 'CLOSE' }
-  | { type: 'LOAD'; payload: CartItem[] };
+  | { type: 'LOAD'; payload: CartItem[] }
+  | { type: 'SHOW_NOTIFICATION'; payload: string }
+  | { type: 'HIDE_NOTIFICATION' };
 
 const CartContext = createContext<{
   state: CartState;
@@ -35,6 +39,7 @@ const CartContext = createContext<{
   clear: () => void;
   toggle: () => void;
   close: () => void;
+  dispatch: React.Dispatch<CartAction>;
 } | null>(null);
 
 const cartReducer = (state: CartState, action: CartAction): CartState => {
@@ -130,6 +135,20 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         items: action.payload
       };
     }
+    case 'SHOW_NOTIFICATION': {
+      return {
+        ...state,
+        showNotification: true,
+        notificationMessage: action.payload
+      };
+    }
+    case 'HIDE_NOTIFICATION': {
+      return {
+        ...state,
+        showNotification: false,
+        notificationMessage: ''
+      };
+    }
     default:
       return state;
   }
@@ -140,7 +159,9 @@ const CART_STORAGE_KEY = 'jozef-cart';
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, {
     items: [],
-    isOpen: false
+    isOpen: false,
+    showNotification: false,
+    notificationMessage: ''
   });
 
   // Load cart from localStorage on mount
@@ -163,12 +184,18 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const addProduct = (product: Product) => {
     dispatch({ type: 'ADD_PRODUCT', payload: product });
-    dispatch({ type: 'TOGGLE' }); // Open drawer for instant feedback
+    // Show notification instead of opening cart
+    dispatch({ type: 'SHOW_NOTIFICATION', payload: `${product.name} added to cart` });
+    // Auto-hide notification after 3 seconds
+    setTimeout(() => dispatch({ type: 'HIDE_NOTIFICATION' }), 3000);
   };
 
   const addOffer = (offer: Offer) => {
     dispatch({ type: 'ADD_OFFER', payload: offer });
-    dispatch({ type: 'TOGGLE' }); // Open drawer for instant feedback
+    // Show notification instead of opening cart
+    dispatch({ type: 'SHOW_NOTIFICATION', payload: `${offer.title} added to cart` });
+    // Auto-hide notification after 3 seconds
+    setTimeout(() => dispatch({ type: 'HIDE_NOTIFICATION' }), 3000);
   };
 
   const remove = (id: string) => {
@@ -188,7 +215,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <CartContext.Provider value={{ state, addProduct, addOffer, remove, clear, toggle, close }}>
+    <CartContext.Provider value={{ state, addProduct, addOffer, remove, clear, toggle, close, dispatch }}>
       {children}
     </CartContext.Provider>
   );
