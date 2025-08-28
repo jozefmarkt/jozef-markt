@@ -1,0 +1,67 @@
+{
+  "title": "Cookie Policy",
+  "subtitle": "This policy explains how we use cookies and similar technologies on our website to enhance your browsing experience.",
+  "lastUpdated": "Last Updated",
+  "lastUpdatedDate": "January 15, 2025",
+  "summary": {
+    "title": "Quick Summary",
+    "whatAreCookies": "What Are Cookies?",
+    "cookie1": "Small text files stored on your device",
+    "cookie2": "Help websites remember your preferences",
+    "cookie3": "Improve website functionality and performance",
+    "cookie4": "Provide personalized content and services",
+    "howWeUse": "How We Use Cookies",
+    "use1": "Remember your language preferences",
+    "use2": "Analyze website traffic and performance",
+    "use3": "Improve website functionality",
+    "use4": "Provide personalized content"
+  },
+  "sections": {
+    "overview": {
+      "title": "Overview",
+      "content": "This Cookie Policy explains how Jozef Supermarkt ('we', 'our', or 'us') uses cookies and similar tracking technologies when you visit our website. By using our website, you consent to the use of cookies in accordance with this policy.\n\nCookies are small text files that are placed on your device (computer, tablet, or mobile phone) when you visit a website. They help us provide you with a better experience by remembering your preferences and analyzing how you use our website.\n\nThis policy applies to all cookies used on our website, including those set by us and those set by third-party services we use."
+    },
+    "types": {
+      "title": "Types of Cookies We Use",
+      "content": "We use several types of cookies on our website:\n\nEssential Cookies:\n• Required for basic website functionality\n• Cannot be disabled as they are necessary for the website to work\n• Include session cookies for shopping cart functionality\n• Security cookies for protecting your data\n\nAnalytics Cookies:\n• Help us understand how visitors use our website\n• Collect information about pages visited and time spent\n• Help us improve website performance and user experience\n• Do not collect personal information\n\nPreference Cookies:\n• Remember your language and regional preferences\n• Store your shopping cart contents\n• Remember your login status and preferences\n• Improve your browsing experience\n\nMarketing Cookies:\n• Used to deliver relevant advertisements\n• Track the effectiveness of our marketing campaigns\n• Help us provide personalized content\n• May be set by third-party advertising partners"
+    },
+    "usage": {
+      "title": "How We Use Cookies",
+      "content": "We use cookies for the following purposes:\n\nWebsite Functionality:\n• Maintain your shopping cart across sessions\n• Remember your language preferences\n• Keep you logged in during your visit\n• Ensure secure checkout processes\n\nPerformance and Analytics:\n• Analyze website traffic and usage patterns\n• Identify popular products and pages\n• Monitor website performance and speed\n• Improve user experience based on data\n\nPersonalization:\n• Show you relevant products and offers\n• Remember your previous searches and preferences\n• Provide personalized recommendations\n• Customize content based on your location\n\nSecurity and Safety:\n• Protect against fraud and abuse\n• Verify your identity during transactions\n• Secure payment processing\n• Prevent unauthorized access to your account"
+    },
+    "management": {
+      "title": "Managing Your Cookie Preferences",
+      "content": "You have several options for managing cookies:\n\nBrowser Settings:\n• Most browsers allow you to control cookies through settings\n• You can block all cookies or only third-party cookies\n• Set your browser to notify you when cookies are set\n• Delete existing cookies through browser settings\n\nCookie Consent:\n• We will ask for your consent before setting non-essential cookies\n• You can change your preferences at any time\n• Use our cookie consent banner to manage preferences\n• Withdraw consent for specific cookie types\n\nImpact of Disabling Cookies:\n• Some website features may not work properly\n• Shopping cart may not persist between sessions\n• Language preferences may not be remembered\n• Some personalized content may not be available\n\nThird-Party Cookie Control:\n• Many third-party services provide opt-out mechanisms\n• Check individual service privacy policies for opt-out options\n• Use browser extensions to block specific tracking\n• Consider privacy-focused browser settings"
+    },
+    "thirdParty": {
+      "title": "Third-Party Cookies",
+      "content": "We use third-party services that may set their own cookies:\n\nAnalytics Services:\n• Google Analytics for website performance tracking\n• Help us understand user behavior and improve our site\n• May collect anonymous usage data\n• You can opt out through Google Analytics settings\n\nPayment Processors:\n• Tikkie payment system cookies for secure transactions\n• Essential for processing your payments\n• Help prevent fraud and ensure security\n• Cannot be disabled for payment functionality\n\nSocial Media:\n• Facebook, Instagram, and TikTok integration cookies\n• Used for social media sharing and content display\n• May track your activity for advertising purposes\n• You can control these through social media settings\n\nAdvertising Partners:\n• Cookies from advertising networks we work with\n• Used to show relevant advertisements\n• May track your browsing across websites\n• You can opt out through advertising network settings\n\nWe do not control third-party cookies and their use is governed by the respective third-party privacy policies."
+    },
+    "choices": {
+      "title": "Your Cookie Choices",
+      "content": "You have the right to control how cookies are used:\n\nAccept All Cookies:\n• Full website functionality and personalization\n• Best user experience with all features available\n• Analytics data helps us improve our services\n• Recommended for optimal browsing experience\n\nAccept Essential Cookies Only:\n• Basic website functionality will work\n• Shopping cart and security features available\n• No personalized content or analytics\n• Some features may be limited\n\nDecline Non-Essential Cookies:\n• Essential cookies required for website operation\n• No analytics or marketing cookies\n• Limited personalization features\n• May affect some website functionality\n\nChange Preferences Later:\n• You can update your cookie preferences anytime\n• Use our cookie consent banner to modify settings\n• Browser settings can be changed at any time\n• Contact us for help with cookie management\n\nWe respect your choices and will honor your preferences. However, disabling certain cookies may impact your experience on our website."
+    },
+    "security": {
+      "title": "Cookie Security and Privacy",
+      "content": "We take cookie security and privacy seriously:\n\nData Protection:\n• Cookies do not contain personal information\n• We do not use cookies to track your identity\n• All cookie data is encrypted and secure\n• We follow GDPR and privacy regulations\n\nSecure Transmission:\n• All cookies are transmitted over secure HTTPS connections\n• We use secure cookie flags where appropriate\n• Sensitive data is never stored in cookies\n• Regular security audits of our cookie practices\n\nPrivacy Compliance:\n• We comply with EU cookie regulations\n• Clear consent mechanisms for non-essential cookies\n• Easy opt-out options for all cookie types\n• Transparent information about cookie usage\n\nData Retention:\n• Session cookies are deleted when you close your browser\n• Persistent cookies have appropriate expiration dates\n• Analytics data is anonymized and aggregated\n• You can delete cookies at any time\n\nWe are committed to protecting your privacy and ensuring that our use of cookies is transparent and secure."
+    },
+    "updates": {
+      "title": "Updates to This Cookie Policy",
+      "content": "We may update this Cookie Policy from time to time:\n\nNotification of Changes:\n• We will notify you of significant changes\n• Updates will be posted on this page\n• The 'Last Updated' date will be revised\n• We may send email notifications for major changes\n\nContinued Use:\n• Continued use after changes constitutes acceptance\n• You can review the policy at any time\n• Contact us if you have questions about changes\n• You can update your preferences at any time\n\nMaterial Changes:\n• Significant changes will be clearly communicated\n• You may need to provide new consent\n• We will explain the impact of changes\n• You will have the opportunity to update preferences\n\nWe encourage you to review this policy periodically to stay informed about how we use cookies and your options for managing them."
+    },
+    "contact": {
+      "title": "Contact Us About Cookies",
+      "content": "If you have questions about our use of cookies:\n\nContact Information:\n• Email: cookies@jozefmarkt.nl\n• Phone: +31 6 24837889\n• Address: Jozef Supermarkt, Nieuwe Binnenweg 327 b, 3021 GJ Rotterdam, Netherlands\n\nResponse Times:\n• We aim to respond within 24-48 hours\n• Cookie-related questions will be prioritized\n• Technical inquiries may take longer to process\n• We will acknowledge receipt of all inquiries\n\nCookie Management Help:\n• We can help you understand your cookie options\n• Assistance with browser settings and preferences\n• Guidance on managing third-party cookies\n• Support for cookie-related technical issues\n\nGeneral Support:\n• For general questions, use our regular contact channels\n• WhatsApp: +31 6 24837889\n• Customer service available daily 10 AM - 10 PM\n• We are committed to addressing all cookie-related concerns"
+    }
+  },
+  "consent": {
+    "title": "Cookie Consent",
+    "description": "We use cookies to enhance your browsing experience. Please choose your cookie preferences:",
+    "accept": "Accept All Cookies",
+    "decline": "Essential Cookies Only"
+  },
+  "contactInfo": {
+    "title": "Contact Us About Cookies",
+    "description": "If you have any questions about our Cookie Policy or need help managing your cookie preferences, please contact us:"
+  }
+}

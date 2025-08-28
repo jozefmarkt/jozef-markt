@@ -116,4 +116,60 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+/* Mobile navigation RTL fixes */
+[dir="rtl"] .overflow-x-auto {
+  direction: rtl;
+}
+
+[dir="rtl"] .overflow-x-auto > * {
+  direction: ltr;
+}
+
+/* Prevent content from being cut off on mobile */
+[dir="rtl"] .max-w-7xl {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+[dir="rtl"] .w-full {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Better mobile spacing for RTL */
+[dir="rtl"] .space-x-3 > * + * {
+  margin-right: 0.75rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-2 > * + * {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+[dir="rtl"] .space-x-8 > * + * {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
+/* Ensure navigation items don't get cut off */
+[dir="rtl"] .whitespace-nowrap {
+  white-space: normal;
+  word-break: break-word;
+}
+
+[dir="rtl"] .flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+[dir="rtl"] .break-words {
+  word-break: break-word;
+  overflow-wrap: break-word;
 } 

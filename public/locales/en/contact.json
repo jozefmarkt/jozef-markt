@@ -4,31 +4,30 @@
   "getInTouch": "Get in Touch",
   "address": {
     "title": "Address",
-    "street": "123 Supermarket Street",
-    "city": "Amsterdam, Netherlands",
-    "postal": "1000 AB"
+    "street": "Nieuwe Binnenweg 327 b",
+    "city": "Rotterdam, Netherlands",
+    "postal": "3021 GJ"
   },
   "phone": {
     "title": "Phone",
-    "number": "+31 (0) 20 123 4567",
-    "hours": "Monday - Friday: 8:00 AM - 8:00 PM"
+    "number": "+31 6 23735563",
+    "hours": "Every day: 10:00 AM - 10:00 PM"
   },
   "whatsapp": {
     "title": "WhatsApp",
     "message": "Chat with us on WhatsApp",
     "button": "Chat on WhatsApp",
-    "number": "+31 (0) 20 123 4567"
+    "number": "+31 6 23735563"
   },
   "email": {
     "title": "Email",
-    "info": "info@jozefmarkt.com",
-    "support": "support@jozefmarkt.com"
+    "info": "jozefmarkt@gmail.com"
   },
   "openingHours": {
     "title": "Opening Hours",
-    "weekdays": "Monday - Friday: 8:00 AM - 8:00 PM",
-    "saturday": "Saturday: 9:00 AM - 6:00 PM",
-    "sunday": "Sunday: 10:00 AM - 4:00 PM"
+    "weekdays": "Every day: 10:00 AM - 10:00 PM",
+    "saturday": "Every day: 10:00 AM - 10:00 PM",
+    "sunday": "Every day: 10:00 AM - 10:00 PM"
   },
   "sendMessage": "Send us a Message",
   "successMessage": "Thank you! Your message has been sent successfully.",

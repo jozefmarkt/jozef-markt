@@ -1,11 +1,14 @@
+# Admin Authentication
+# IMPORTANT: Change these credentials for production use
+# Use a strong password with at least 12 characters
+VITE_ADMIN_USERNAME=your_admin_email@domain.com
+VITE_ADMIN_PASSWORD=your_very_secure_password_here
+
 # Supabase Configuration
-# Replace these with your actual Supabase project credentials
-# Get these from your Supabase project dashboard > Settings > API
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 
-VITE_SUPABASE_URL=https://your-project-id.supabase.co
-VITE_SUPABASE_ANON_KEY=your-anon-key-here
-VITE_SUPABASE_SERVICE_ROLE_KEY=your-service-role-key-here
-
-# Optional: For local development
-# VITE_API_URL=http://localhost:5174 
+# Cloudinary Configuration
+VITE_CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+VITE_CLOUDINARY_UPLOAD_PRESET=your_upload_preset 
  

@@ -1,0 +1,145 @@
+{
+  "title": "Help Center",
+  "subtitle": "Find answers to frequently asked questions and get the support you need",
+  "searchPlaceholder": "Search for help topics...",
+  "quickContact": {
+    "title": "Need immediate assistance?",
+    "description": "Our customer service team is here to help you with any questions or concerns",
+    "contactUs": "Contact Us",
+    "whatsapp": "Chat on WhatsApp"
+  },
+  "actions": {
+    "viewAllHelp": "View All Help",
+    "contactUs": "Contact Us"
+  },
+  "shipping": {
+    "subtitle": "All information about our delivery and shipping",
+    "contactTitle": "Do you have questions about delivery?",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "directContact": "Direct contact",
+    "faqTitle": "Frequently asked questions about delivery"
+  },
+  "noResults": {
+    "title": "No results found",
+    "description": "Try searching with different keywords or browse our help sections below",
+    "clearSearch": "Clear Search"
+  },
+  "sections": {
+    "shopping": {
+      "title": "Shopping & Orders",
+      "q1": "How do I place an order?",
+      "a1": "Browse our products, add items to your cart, and proceed to checkout. You will then be redirected to WhatsApp with your complete order details. Our service team will send you a tikkie (payment link), and once payment is confirmed, we'll prepare your order for pickup or delivery based on your preference.",
+      "q2": "How can I track my order?",
+      "a2": "Once your order is confirmed, you'll receive a tracking number via email or WhatsApp. You can also contact us directly for order status updates.",
+      "q3": "Can I modify or cancel my order?",
+      "a3": "Orders can be modified or cancelled within 2 hours of placement. Contact us immediately via WhatsApp or phone for assistance.",
+      "q4": "What payment methods do you accept?",
+      "a4": "We use tikkie (Dutch payment system) for secure payments. After placing your order, you'll receive a payment link via WhatsApp. Once payment is confirmed, we'll prepare your order for pickup or delivery.",
+      "q5": "How do I know my order is confirmed?",
+      "a5": "After payment via tikkie, you'll receive a WhatsApp confirmation with your order details. We'll then prepare your order and contact you to arrange pickup or delivery."
+    },
+    "delivery": {
+      "title": "Delivery & Shipping",
+      "q1": "What are your delivery areas and times?",
+      "a1": "We deliver in Rotterdam and the surrounding areas. Delivery is available every day of the week, with orders typically delivered within 48 hours. You can also choose to pick up your order from our store.",
+      "q2": "When is delivery free?",
+      "a2": "Delivery is free for customers who live within 3 kilometers of the store. For customers who live more than 3 kilometers away, the order must be €50 or more for delivery, plus additional delivery costs.",
+      "q3": "How are delivery fees calculated for distant locations?",
+      "a3": "For customers who live more than 3 kilometers away, delivery fees will be discussed with the store owner or seller based on the actual distance. The farther the distance, the higher the delivery fee.",
+      "q4": "Do you deliver every day of the week?",
+      "a4": "Yes, we offer delivery every day of the week for your convenience. You can request delivery on any day of the week.",
+      "q5": "How can I track my delivery?",
+      "a5": "You'll receive real-time delivery updates via WhatsApp and email, including the driver's contact information.",
+      "q6": "What if I'm not home during delivery?",
+      "a6": "Our drivers will contact you before delivery. If you're not home, we can arrange a safe drop-off location or reschedule.",
+      "q7": "What are the exact delivery times?",
+      "a7": "We deliver from 10:00 AM to 10:00 PM, every day of the week. You can specify a preferred time when placing your order.",
+      "q8": "How long does it take for my order to be delivered?",
+      "a8": "Standard delivery takes 24-48 hours. For urgent orders, we can deliver within 4-6 hours (for an additional fee).",
+      "q9": "Can I cancel or change my delivery?",
+      "a9": "Yes, you can change or cancel your delivery up to 2 hours before the scheduled delivery time. Contact us via WhatsApp.",
+      "q10": "What happens if my order arrives damaged?",
+      "a10": "If your order arrives damaged, take photos and contact us immediately. We'll replace the damaged items for free or give you a full refund.",
+      "q11": "Do you deliver on holidays?",
+      "a11": "Yes, we also deliver on holidays, but delivery times may be adjusted. Check our website or contact us for current delivery times during holidays.",
+      "q12": "Can I specify a specific delivery location?",
+      "a12": "Yes, you can specify a specific delivery location, such as an office, school, or other address. Make sure to give clear instructions for the driver.",
+      "q13": "What if I'm not satisfied with the delivery?",
+      "a13": "If you're not satisfied with the delivery, contact us within 24 hours. We'll do our best to resolve the issue and satisfy you.",
+      "q14": "Do you deliver outside Rotterdam?",
+      "a14": "We mainly deliver in Rotterdam and the immediate surrounding area. For locations further away, we can arrange delivery, but this depends on the distance and may involve additional costs.",
+      "q15": "Can I pick up my order instead of having it delivered?",
+      "a15": "Yes, you can always pick up your order from our store. This is free and you can usually pick up your order within 2 hours of payment confirmation."
+    },
+    "products": {
+      "title": "Products & Inventory",
+      "q1": "Are your products fresh?",
+      "a1": "Yes, we source fresh products daily from local suppliers and our own bakery. All products are delivered within 48 hours to ensure freshness.",
+      "q2": "Do you have organic products?",
+      "a2": "We offer both organic and conventional products. All organic items are clearly labeled and certified.",
+      "q3": "What if a product is out of stock?",
+      "a3": "If a product is temporarily unavailable, we'll notify you and offer alternatives. You can also request to be notified when it's back in stock.",
+      "q4": "Do you provide allergen information?",
+      "a4": "Yes, all products include detailed allergen information and ingredient lists. Contact us for specific dietary requirements.",
+      "q5": "Are your Syrian products authentic?",
+      "a5": "Absolutely! We import authentic Syrian products directly from trusted suppliers, ensuring you get the genuine taste of Syria."
+    },
+    "account": {
+      "title": "Account & Profile",
+      "q1": "How do I create an account?",
+      "a1": "Currently, our website doesn't require a separate account creation. You can order directly through the website and will be redirected to WhatsApp to complete the payment and ordering process.",
+      "q2": "How do I manage my personal information?",
+      "a2": "Since we don't use a traditional account system, you can send updates to your personal information and delivery addresses via WhatsApp or contact us directly.",
+      "q3": "Can I view my order history?",
+      "a3": "You can review your order history through your previous WhatsApp conversations with us, or you can contact us for information about your past orders.",
+      "q4": "How do I change my language preferences?",
+      "a4": "You can switch between English, Dutch, and Arabic using the language selector in the top navigation bar."
+    },
+    "returns": {
+      "title": "Returns & Refunds",
+      "q1": "What is your return policy?",
+      "a1": "We offer a 100% satisfaction guarantee. If you're not satisfied with any product, contact us within 24 hours for a refund or replacement.",
+      "q2": "How do I return a product?",
+      "a2": "Contact us via WhatsApp or phone to initiate a return. We'll arrange pickup and process your refund within 3-5 business days.",
+      "q3": "What if a product arrives damaged?",
+      "a3": "If any product arrives damaged, take photos and contact us immediately. We'll replace it at no cost or provide a full refund.",
+      "q4": "Do you offer quality guarantees?",
+      "a4": "Yes, we guarantee the quality of all our products. If you're not satisfied, we'll make it right with a replacement or refund."
+    },
+    "payment": {
+      "title": "Payment & Billing",
+      "q1": "Is my payment information secure?",
+      "a1": "Yes, we use the secure Tikkie payment system. Tikkie is a trusted and secure Dutch payment system, and we don't store any sensitive payment information.",
+      "q2": "When will I be charged?",
+      "a2": "Payment is processed when your order is confirmed via Tikkie. You'll receive a secure payment link via WhatsApp to complete the payment.",
+      "q3": "Can I get an invoice?",
+      "a3": "Yes, you'll receive the invoice in the bag with delivery or when you pick up your order from the store. Invoices are printed and available with every order.",
+      "q4": "What if my payment fails?",
+      "a4": "If payment fails via Tikkie, we'll notify you immediately via WhatsApp. You can try again or contact us for help resolving the issue."
+    },
+    "support": {
+      "title": "Customer Service",
+      "q1": "How can I contact customer service?",
+      "a1": "You can reach us via WhatsApp (+31 6 23735563), phone, or email. We're available every day of the week for assistance.",
+      "q2": "What are your business hours?",
+      "a2": "Our customer service team is available every day of the week from 10 AM to 10 PM.",
+      "q3": "How quickly do you respond to inquiries?",
+      "a3": "We typically respond to WhatsApp messages within 30 minutes and emails within 2 hours during business hours.",
+      "q4": "Do you offer support in multiple languages?",
+      "a4": "Yes, our customer service team can assist you in English, Dutch, and Arabic."
+    },
+    "technical": {
+      "title": "Technical Support",
+      "q1": "The website isn't loading properly. What should I do?",
+      "a1": "Try refreshing the page or clearing your browser cache. If the problem persists, contact us and we'll help you troubleshoot.",
+      "q2": "I can't add items to my cart. What's wrong?",
+      "a2": "This might be a temporary technical issue. Try refreshing the page or contact us for immediate assistance.",
+      "q3": "How can I change the language?",
+      "a3": "You can change the language using the language selector in the top navigation bar. We support Arabic, English, and Dutch.",
+      "q4": "Is the website mobile-friendly?",
+      "a4": "Yes, our website is fully optimized for mobile devices and works great on smartphones and tablets."
+    }
+  }
+}

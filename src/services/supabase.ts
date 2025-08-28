@@ -60,6 +60,18 @@ export interface Offer {
   updated_at: string;
 }
 
+// Category types
+export interface Category {
+  id: string;
+  name: string;
+  name_nl?: string; // Dutch name
+  name_ar?: string; // Arabic name
+  color: string;
+  icon: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // Product service functions
 export const productService = {
   // Get all products
@@ -285,6 +297,81 @@ export const offerService = {
 
     if (error) {
       throw new Error(`Error deleting offer: ${error.message}`);
+    }
+  },
+};
+
+// Category service functions
+export const categoryService = {
+  // Get all categories
+  async getAll(): Promise<Category[]> {
+    const { data, error } = await supabase
+      .from('categories')
+      .select('*')
+      .order('name', { ascending: true });
+
+    if (error) {
+      throw new Error(`Error fetching categories: ${error.message}`);
+    }
+
+    return data || [];
+  },
+
+  // Get category by ID
+  async getById(id: string): Promise<Category | null> {
+    const { data, error } = await supabase
+      .from('categories')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (error) {
+      throw new Error(`Error fetching category: ${error.message}`);
+    }
+
+    return data;
+  },
+
+  // Create new category
+  async create(category: Omit<Category, 'id' | 'created_at' | 'updated_at'>): Promise<Category> {
+    const { data, error } = await supabase
+      .from('categories')
+      .insert([category])
+      .select()
+      .single();
+
+    if (error) {
+      throw new Error(`Error creating category: ${error.message}`);
+    }
+
+    return data;
+  },
+
+  // Update category
+  async update(id: string, updates: Partial<Category>): Promise<Category> {
+    const { data, error } = await supabase
+      .from('categories')
+      .update(updates)
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      throw new Error(`Error updating category: ${error.message}`);
+    }
+
+    return data;
+  },
+
+  // Delete category
+  async delete(id: string): Promise<void> {
+    const { error } = await supabase
+      .from('categories')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      throw new Error(`Error deleting category: ${error.message}`);
     }
   },
 }; 

@@ -5,6 +5,44 @@
 /* Import RTL utilities */
 @import './theme/rtl.css';
 
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Mobile navigation fixes */
+@media (max-width: 640px) {
+  nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ensure navigation items don't get cut off */
+  nav a {
+    white-space: normal !important;
+    word-break: break-word !important;
+    min-width: fit-content !important;
+  }
+}
+
+/* RTL mobile fixes */
+[dir="rtl"] nav {
+  direction: rtl;
+}
+
+[dir="rtl"] nav a {
+  direction: ltr;
+}
+
 /* Basic CSS without Tailwind */
 body {
   margin: 0;

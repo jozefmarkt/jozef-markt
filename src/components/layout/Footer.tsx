@@ -10,7 +10,6 @@ const Footer: React.FC = () => {
         <div className="flex flex-col gap-2">
           <h4 className="font-semibold">{t('footer.company')}</h4>
           <Link to="/about" className="footer-link">{t('footer.about')}</Link>
-          <Link to="/press" className="footer-link">{t('footer.press')}</Link>
         </div>
         <div className="flex flex-col gap-2">
           <h4 className="font-semibold">{t('footer.support')}</h4>

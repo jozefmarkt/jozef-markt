@@ -103,3 +103,4 @@ const displayTitle = currentLanguage === 'ar' ? offer.title_ar || offer.title :
 
 
 
+

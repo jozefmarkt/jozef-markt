@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# Security - Admin credentials
+admin-config.json
+.env

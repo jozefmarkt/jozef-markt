@@ -17,7 +17,7 @@ export const CartDrawer: React.FC = () => {
   });
 
   // WhatsApp configuration
-  const whatsappNumber = '+31624837889';
+  const whatsappNumber = '+31623735563';
 
   const handleCheckout = () => {
     if (state.items.length === 0) return;
@@ -433,9 +433,9 @@ export const CartDrawer: React.FC = () => {
                   value={address.city}
                   onChange={(e) => setAddress({...address, city: e.target.value})}
                   placeholder={
-                    currentLanguage === 'ar' ? 'أمستردام' : 
-                    currentLanguage === 'nl' ? 'Amsterdam' : 
-                    'Amsterdam'
+                    currentLanguage === 'ar' ? 'روتردام' : 
+                    currentLanguage === 'nl' ? 'Rotterdam' : 
+                    'Rotterdam'
                   }
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lion-500 focus:border-lion-500"
                 />

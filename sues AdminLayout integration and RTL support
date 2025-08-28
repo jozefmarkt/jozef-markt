@@ -1,0 +1,76 @@
+warning: in the working copy of '.github/workflows/keep-alive.yml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'env-template.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'keep-alive.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/ar/admin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/ar/common.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/ar/contact.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/en/admin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/en/common.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/en/contact.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/nl/admin.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/nl/common.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/locales/nl/contact.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/admin/LanguageSwitcher.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/admin/LoginForm.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/admin/ProtectedRoute.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/cart/CartDrawer.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/layout/Footer.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/layout/Header.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/contexts/AuthContext.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/i18n/index.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/Admin/Dashboard.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/Admin/Offers.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/Admin/Products.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/Contact/index.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/pages/Home/index.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/routes/RootLayout.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/services/supabase.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/theme/rtl.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'vite.config.ts', LF will be replaced by CRLF the next time Git touches it
+.env
+.gitignore
+GITHUB_ACTIONS_SETUP.md
+MULTILINGUAL_OFFERS_README.md
+add-multilingual-offers.sql
+env-template.txt
+index.html
+keep-alive.bat
+package-lock.json
+package.json
+public/locales/ar/admin.json
+public/locales/ar/common.json
+public/locales/ar/contact.json
+public/locales/en/admin.json
+public/locales/en/common.json
+public/locales/en/contact.json
+public/locales/nl/admin.json
+public/locales/nl/common.json
+public/locales/nl/contact.json
+setup-multilingual-offers.md
+src/components/TikTokVideo.tsx
+src/components/admin/LanguageSwitcher.tsx
+src/components/admin/LoginForm.tsx
+src/components/admin/ProtectedRoute.tsx
+src/components/admin/TikTokManager.tsx
+src/components/cart/CartDrawer.tsx
+src/components/layout/Footer.tsx
+src/components/layout/Header.tsx
+src/contexts/AuthContext.tsx
+src/i18n/index.ts
+src/index.css
+src/main.tsx
+src/pages/Admin/Dashboard.tsx
+src/pages/Admin/Offers.tsx
+src/pages/Admin/Products.tsx
+src/pages/Contact/index.tsx
+src/pages/Home/index.tsx
+src/routes/RootLayout.tsx
+src/services/supabase.ts
+src/theme/rtl.css
+src/types/Offer.ts
+vite.config.ts

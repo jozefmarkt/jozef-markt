@@ -38,3 +38,5 @@ You can also run it manually anytime from the Actions tab if needed.
 - Check the Actions tab for any error logs
 - Verify your GitHub secrets are set correctly
 - Ensure your Supabase project is active
+
+

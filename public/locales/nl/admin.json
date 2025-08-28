@@ -166,6 +166,42 @@
     },
     "loading": "Product laden..."
   },
+  "categories": {
+    "title": "Categorieën",
+    "subtitle": "Beheer productcategorieën",
+    "addCategory": "Categorie Toevoegen",
+    "editCategory": "Categorie Bewerken",
+    "totalCategories": "Totaal Categorieën",
+    "activeCategories": "Actieve Categorieën",
+    "recentlyUpdated": "Recent Bijgewerkt",
+    "allCategories": "Alle Categorieën",
+    "noCategories": "Geen Categorieën",
+    "noCategoriesDescription": "Begin met het maken van een nieuwe categorie om uw producten te organiseren.",
+    "addFirstCategory": "Eerste Categorie Toevoegen",
+    "lastUpdated": "Laatst Bijgewerkt",
+    "basicInfo": "Basisinformatie",
+    "name": "Categorienaam",
+    "namePlaceholder": "Voer categorienaam in",
+    "description": "Categoriebeschrijving",
+    "descriptionPlaceholder": "Voer categoriebeschrijving in",
+    "visualSettings": "Visuele Instellingen",
+    "color": "Kleur",
+    "icon": "Pictogram",
+    "preview": "Voorvertoning",
+    "previewName": "Categorienaam",
+    "previewDescription": "Categoriebeschrijving",
+    "backToCategories": "Terug naar Categorieën",
+    "validation": {
+      "nameRequired": "Categorienaam is verplicht",
+      "descriptionRequired": "Categoriebeschrijving is verplicht"
+    },
+    "deleteModal": {
+      "title": "Categorie Verwijderen",
+      "message": "Weet u zeker dat u deze categorie wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
+      "cancel": "Annuleren",
+      "delete": "Verwijderen"
+    }
+  },
   "imageManager": {
     "title": "Afbeeldingenbeheer",
     "subtitle": "Upload en beheer productafbeeldingen",

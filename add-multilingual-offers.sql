@@ -24,3 +24,4 @@ WHERE title_nl IS NULL OR title_ar IS NULL OR description_nl IS NULL OR descript
 
 
 
+

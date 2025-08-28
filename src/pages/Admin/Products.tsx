@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { 
-  ArrowLeft, 
   Plus, 
   Edit, 
   Trash2, 
@@ -14,7 +13,6 @@ import {
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productService } from '../../services/supabase';
 import type { Product } from '../../services/supabase';
-import LanguageSwitcher from '../../components/admin/LanguageSwitcher';
 
 const AdminProducts: React.FC = () => {
   const { t, i18n } = useTranslation('admin');
@@ -77,7 +75,7 @@ const AdminProducts: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="flex items-center justify-center py-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
       </div>
     );
@@ -85,7 +83,7 @@ const AdminProducts: React.FC = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="flex items-center justify-center py-8">
         <div className="text-center">
           <h2 className="text-xl font-semibold text-gray-900">{t('products.error')}</h2>
           <p className="text-gray-600">{t('products.error')}</p>
@@ -95,54 +93,31 @@ const AdminProducts: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <Link 
-                to="/admin"
-                className="mr-4 p-2 text-gray-400 hover:text-gray-600"
-              >
-                <ArrowLeft className="h-5 w-5" />
-              </Link>
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">{t('products.title')}</h1>
-                <p className="text-gray-600">{t('products.subtitle')}</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <LanguageSwitcher />
-              <Link
-                to="/admin/products/add"
-                className="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
-              >
-                <Plus className="h-4 w-4 mr-2" />
-                {t('products.addProduct')}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
+    <div>
+      {/* Add Product Button */}
+      <div className="mb-6 flex justify-end">
+        <Link
+          to="/admin/products/add"
+          className="flex items-center px-3 sm:px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 text-sm sm:text-base"
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          {t('products.addProduct')}
+        </Link>
+      </div>
           {/* Stats */}
-          <div className="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mb-6 grid grid-cols-1 gap-3 sm:gap-5 sm:grid-cols-2 lg:grid-cols-4">
             <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Package className="h-6 w-6 text-gray-400" />
+                    <Package className="h-5 w-5 sm:h-6 sm:w-6 text-gray-400" />
                   </div>
-                  <div className="ml-5 w-0 flex-1">
+                  <div className="ml-3 sm:ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">
+                      <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">
                         {t('products.stats.totalProducts')}
                       </dt>
-                      <dd className="text-lg font-medium text-gray-900">
+                      <dd className="text-base sm:text-lg font-medium text-gray-900">
                         {products?.length || 0}
                       </dd>
                     </dl>
@@ -172,17 +147,17 @@ const AdminProducts: React.FC = () => {
             </div>
 
             <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Package className="h-6 w-6 text-red-400" />
+                    <Package className="h-5 w-5 sm:h-6 sm:w-6 text-red-400" />
                   </div>
-                  <div className="ml-5 w-0 flex-1">
+                  <div className="ml-3 sm:ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">
+                      <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">
                         {t('products.stats.outOfStock')}
                       </dt>
-                      <dd className="text-lg font-medium text-gray-900">
+                      <dd className="text-base sm:text-lg font-medium text-gray-900">
                         {products?.filter(p => !p.in_stock).length || 0}
                       </dd>
                     </dl>
@@ -192,17 +167,17 @@ const AdminProducts: React.FC = () => {
             </div>
 
             <div className="bg-white overflow-hidden shadow rounded-lg">
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
-                    <Star className="h-6 w-6 text-yellow-400" />
+                    <Star className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-400" />
                   </div>
-                  <div className="ml-5 w-0 flex-1">
+                  <div className="ml-3 sm:ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">
+                      <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">
                         Featured Products
                       </dt>
-                      <dd className="text-lg font-medium text-gray-900">
+                      <dd className="text-base sm:text-lg font-medium text-gray-900">
                         {products?.filter(p => p.featured).length || 0}
                       </dd>
                     </dl>
@@ -214,12 +189,76 @@ const AdminProducts: React.FC = () => {
 
           {/* Products Table */}
           <div className="bg-white shadow rounded-lg">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h3 className="text-lg leading-6 font-medium text-gray-900">
+            <div className="px-4 sm:px-6 py-4 border-b border-gray-200">
+              <h3 className="text-base sm:text-lg leading-6 font-medium text-gray-900">
                 {t('products.table.title')}
               </h3>
             </div>
-            <div className="overflow-x-auto">
+            
+            {/* Mobile Cards View */}
+            <div className="block sm:hidden">
+              {products?.map((product) => (
+                <div key={product.id} className="border-b border-gray-200 p-4">
+                  <div className="flex items-center space-x-3">
+                    <img 
+                      className="h-12 w-12 rounded-lg object-cover" 
+                      src={product.image} 
+                      alt={getProductName(product)}
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-medium text-gray-900 truncate">
+                        {getProductName(product)}
+                      </div>
+                      <div className="text-xs text-gray-500 truncate">
+                        {getProductDescription(product).substring(0, 30)}...
+                      </div>
+                      <div className="flex items-center space-x-2 mt-1">
+                        <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                          {product.category}
+                        </span>
+                        <span className="text-sm font-medium text-gray-900">
+                          €{product.price}
+                        </span>
+                        <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                          product.in_stock 
+                            ? 'bg-green-100 text-green-800' 
+                            : 'bg-red-100 text-red-800'
+                        }`}>
+                          {product.in_stock ? 'In Stock' : 'Out of Stock'}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex flex-col space-y-1">
+                      <button
+                        onClick={() => handleToggleFeatured(product.id, product.featured)}
+                        className={`p-1 rounded ${
+                          product.featured 
+                            ? 'text-yellow-600 bg-yellow-50' 
+                            : 'text-gray-400 hover:text-yellow-600'
+                        }`}
+                      >
+                        <Star className="h-4 w-4" />
+                      </button>
+                      <Link
+                        to={`/admin/products/edit/${product.id}`}
+                        className="p-1 text-blue-600 hover:text-blue-800"
+                      >
+                        <Edit className="h-4 w-4" />
+                      </Link>
+                      <button
+                        onClick={() => setDeleteConfirm(product.id)}
+                        className="p-1 text-red-600 hover:text-red-800"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop Table View */}
+            <div className="hidden sm:block overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -327,42 +366,40 @@ const AdminProducts: React.FC = () => {
               </table>
             </div>
           </div>
-        </div>
-      </main>
 
-      {/* Delete Confirmation Modal */}
-      {deleteConfirm && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
-          <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-            <div className="mt-3 text-center">
-              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
-                <AlertTriangle className="h-6 w-6 text-red-600" />
-              </div>
-              <h3 className="text-lg font-medium text-gray-900 mt-4">{t('products.deleteModal.title')}</h3>
-              <div className="mt-2 px-7 py-3">
-                <p className="text-sm text-gray-500">
-                  {t('products.deleteModal.message')}
-                </p>
-              </div>
-              <div className="flex justify-center space-x-3 mt-4">
-                <button
-                  onClick={() => setDeleteConfirm(null)}
-                  className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
-                >
-                  {t('products.deleteModal.cancel')}
-                </button>
-                <button
-                  onClick={() => handleDelete(deleteConfirm)}
-                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
-                >
-                  {t('products.deleteModal.confirm')}
-                </button>
+          {/* Delete Confirmation Modal */}
+          {deleteConfirm && (
+            <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+              <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                <div className="mt-3 text-center">
+                  <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                    <AlertTriangle className="h-6 w-6 text-red-600" />
+                  </div>
+                  <h3 className="text-lg font-medium text-gray-900 mt-4">{t('products.deleteModal.title')}</h3>
+                  <div className="mt-2 px-7 py-3">
+                    <p className="text-sm text-gray-500">
+                      {t('products.deleteModal.message')}
+                    </p>
+                  </div>
+                  <div className="flex justify-center space-x-3 mt-4">
+                    <button
+                      onClick={() => setDeleteConfirm(null)}
+                      className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400"
+                    >
+                      {t('products.deleteModal.cancel')}
+                    </button>
+                    <button
+                      onClick={() => handleDelete(deleteConfirm)}
+                      className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700"
+                    >
+                      {t('products.deleteModal.confirm')}
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
-    </div>
   );
 };
 

@@ -1,0 +1,73 @@
+{
+  "title": "Terms of Service",
+  "subtitle": "Please read these terms carefully before using our services. These terms govern your use of Jozef Supermarkt's website and services.",
+  "lastUpdated": "Last Updated",
+  "lastUpdatedDate": "January 15, 2025",
+  "summary": {
+    "title": "Quick Summary",
+    "keyPoints": "Key Points",
+    "point1": "Acceptance of terms by using our services",
+    "point2": "Secure payment processing via Tikkie",
+    "point3": "48-hour delivery or pickup options",
+    "point4": "100% satisfaction guarantee",
+    "important": "Important Information",
+    "important1": "Orders can be modified within 2 hours",
+    "important2": "Returns accepted within 24 hours",
+    "important3": "Free delivery within 3km radius",
+    "important4": "Contact us for any questions"
+  },
+  "sections": {
+    "acceptance": {
+      "title": "Acceptance of Terms",
+      "content": "By accessing and using the Jozef Supermarkt website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.\n\nThese Terms of Service ('Terms') govern your use of our website, mobile applications, and services (collectively, the 'Service') operated by Jozef Supermarkt ('we', 'us', or 'our').\n\nWe reserve the right to modify these terms at any time. We will notify users of any material changes by posting the new Terms on this page and updating the 'Last Updated' date."
+    },
+    "services": {
+      "title": "Description of Services",
+      "content": "Jozef Supermarkt provides an online platform for ordering authentic Syrian products and fresh groceries. Our services include:\n\nProduct Offerings:\n• Fresh bakery products and bread\n• Authentic Syrian spices and ingredients\n• Organic and conventional groceries\n• Premium quality food products\n\nService Features:\n• Online ordering and payment processing\n• Home delivery and store pickup options\n• Customer support via WhatsApp and phone\n• Multilingual support (English, Dutch, Arabic)\n\nService Availability:\n• Orders accepted 24/7 through our website\n• Customer service available daily 10 AM - 10 PM\n• Delivery available every day of the week\n• Store pickup available during business hours"
+    },
+    "orders": {
+      "title": "Ordering and Order Acceptance",
+      "content": "Order Process:\n• Browse products on our website\n• Add items to your cart\n• Proceed to checkout\n• Complete payment via Tikkie\n• Receive order confirmation\n\nOrder Acceptance:\n• All orders are subject to acceptance by Jozef Supermarkt\n• We reserve the right to refuse any order\n• Orders are confirmed after payment is received\n• You will receive confirmation via WhatsApp\n\nOrder Modifications:\n• Orders can be modified within 2 hours of placement\n• Contact us immediately for any changes\n• Modifications subject to product availability\n• We will confirm any changes via WhatsApp\n\nOrder Cancellation:\n• Orders can be cancelled within 2 hours of placement\n• Contact us immediately for cancellation\n• Refunds processed within 3-5 business days\n• Cancellation confirmed via WhatsApp"
+    },
+    "payment": {
+      "title": "Payment Terms",
+      "content": "Payment Methods:\n• We accept payments through Tikkie (Dutch payment system)\n• Secure payment processing\n• No credit card information stored on our servers\n• Payment required before order processing\n\nPayment Process:\n• After placing your order, you'll receive a Tikkie payment link\n• Complete payment through the secure Tikkie system\n• Payment confirmation sent via WhatsApp\n• Order processing begins after payment confirmation\n\nPricing:\n• All prices are in Euros (€)\n• Prices include applicable taxes\n• Delivery fees apply based on distance\n• Free delivery for orders over €50 (within 3km)\n\nPayment Security:\n• Tikkie provides secure payment processing\n• We do not store sensitive payment information\n• All transactions are encrypted\n• Payment disputes handled through Tikkie"
+    },
+    "delivery": {
+      "title": "Delivery and Shipping",
+      "content": "Delivery Areas:\n• Primary delivery area: Rotterdam and surrounding areas\n• Delivery available every day of the week\n• Delivery times: Within 48 hours of order confirmation\n• Store pickup available as alternative\n\nDelivery Fees:\n• Free delivery within 3 kilometers of store\n• €50 minimum order for delivery beyond 3km\n• Additional delivery fees for distant locations\n• Fees calculated based on actual distance\n\nDelivery Process:\n• Orders prepared after payment confirmation\n• Delivery arranged based on your preference\n• Real-time delivery updates via WhatsApp\n• Driver contact information provided\n\nDelivery Issues:\n• Contact us immediately for delivery problems\n• We will resolve issues promptly\n• Alternative delivery arrangements available\n• Compensation for delivery failures"
+    },
+    "returns": {
+      "title": "Returns and Refunds",
+      "content": "Return Policy:\n• 100% satisfaction guarantee\n• Returns accepted within 24 hours of delivery\n• Contact us immediately for any issues\n• Full refund or replacement offered\n\nReturn Process:\n• Contact us via WhatsApp or phone\n• Describe the issue with your order\n• We will arrange pickup if needed\n• Refund processed within 3-5 business days\n\nReturn Conditions:\n• Products must be in original condition\n• Perishable items handled case-by-case\n• Damaged items replaced at no cost\n• Quality issues addressed immediately\n\nRefund Methods:\n• Refunds processed through original payment method\n• Tikkie refunds typically processed within 3-5 days\n• Store credit available as alternative\n• Refund confirmation sent via WhatsApp"
+    },
+    "intellectual": {
+      "title": "Intellectual Property Rights",
+      "content": "Ownership:\n• All content on this website is owned by Jozef Supermarkt\n• This includes text, images, logos, and design elements\n• All rights are reserved unless otherwise stated\n• Unauthorized use is strictly prohibited\n\nPermitted Use:\n• You may view and use our website for personal, non-commercial purposes\n• You may place orders through our platform\n• You may contact us for customer service\n• You may share our website with others\n\nRestricted Use:\n• You may not copy, reproduce, or distribute our content\n• You may not use our content for commercial purposes\n• You may not modify or create derivative works\n• You may not attempt to reverse engineer our systems\n\nTrademarks:\n• 'Jozef Supermarkt' is a registered trademark\n• Our logo and branding are protected\n• Unauthorized use of our trademarks is prohibited\n• Violations will be pursued legally"
+    },
+    "userObligations": {
+      "title": "User Obligations and Conduct",
+      "content": "User Responsibilities:\n• Provide accurate and complete information\n• Maintain the security of your account\n• Comply with all applicable laws and regulations\n• Use our services for lawful purposes only\n\nProhibited Activities:\n• Providing false or misleading information\n• Attempting to defraud or deceive us\n• Interfering with our website or services\n• Harassing or abusing our staff\n\nAccount Security:\n• You are responsible for maintaining account security\n• Notify us immediately of any security concerns\n• Do not share account information with others\n• Log out after each session\n\nCompliance:\n• You must comply with all applicable laws\n• You must not use our services for illegal activities\n• You must respect our intellectual property rights\n• You must follow our reasonable instructions"
+    },
+    "limitations": {
+      "title": "Limitations of Liability",
+      "content": "Service Availability:\n• We strive to maintain service availability but cannot guarantee uninterrupted access\n• We are not liable for temporary service interruptions\n• We will notify users of planned maintenance\n• We will restore services as quickly as possible\n\nProduct Quality:\n• We source high-quality products but cannot guarantee perfection\n• We will replace or refund defective products\n• We are not liable for individual product preferences\n• We will address quality issues promptly\n\nDelivery Limitations:\n• We are not liable for delivery delays beyond our control\n• Weather, traffic, and other factors may affect delivery\n• We will communicate delays promptly\n• We will work to minimize delivery issues\n\nGeneral Limitations:\n• Our liability is limited to the amount you paid for the service\n• We are not liable for indirect or consequential damages\n• These limitations apply to the maximum extent permitted by law\n• Some jurisdictions may not allow these limitations"
+    },
+    "governing": {
+      "title": "Governing Law and Jurisdiction",
+      "content": "Applicable Law:\n• These Terms are governed by Dutch law\n• Any disputes will be resolved under Dutch jurisdiction\n• The courts of Rotterdam have exclusive jurisdiction\n• EU consumer protection laws apply where applicable\n\nDispute Resolution:\n• We encourage direct communication to resolve issues\n• Contact us first for any concerns or complaints\n• We will respond to complaints within 30 days\n• Alternative dispute resolution may be available\n\nConsumer Rights:\n• EU consumers have additional rights under EU law\n• These Terms do not limit your statutory rights\n• You may have rights under local consumer protection laws\n• Contact us for information about your rights\n\nEnforcement:\n• If any provision is found to be unenforceable, the remainder remains in effect\n• Our failure to enforce any provision does not waive our rights\n• These Terms constitute the entire agreement\n• No oral modifications are binding"
+    },
+    "changes": {
+      "title": "Changes to Terms",
+      "content": "Modification Rights:\n• We reserve the right to modify these Terms at any time\n• Changes will be posted on this page\n• The 'Last Updated' date will be revised\n• We may notify users of significant changes\n\nNotification of Changes:\n• Material changes will be communicated to users\n• We may send email notifications for important changes\n• Changes will be effective immediately upon posting\n• Continued use constitutes acceptance of changes\n\nUser Rights:\n• You may stop using our services if you disagree with changes\n• You may contact us with questions about changes\n• You may request clarification of any changes\n• You may provide feedback on proposed changes\n\nRetroactive Application:\n• Changes apply to all future use of our services\n• Existing orders are governed by the terms in effect at the time of order\n• We will not retroactively apply changes to completed transactions\n• We will provide reasonable notice for significant changes"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "For questions about these Terms of Service:\n\nContact Details:\n• Email: legal@jozefmarkt.nl\n• Phone: +31 6 24837889\n• Address: Jozef Supermarkt, Nieuwe Binnenweg 327 b, 3021 GJ Rotterdam, Netherlands\n\nResponse Times:\n• We aim to respond within 24-48 hours\n• Urgent legal matters will be prioritized\n• Complex inquiries may take longer to process\n• We will acknowledge receipt of all inquiries\n\nLegal Inquiries:\n• For legal matters, contact our legal department\n• Include relevant order numbers and details\n• Provide clear description of your concern\n• Include your contact information\n\nGeneral Support:\n• For general questions, use our regular contact channels\n• WhatsApp: +31 6 24837889\n• Customer service available daily 10 AM - 10 PM\n• We are committed to addressing all inquiries promptly"
+    }
+  },
+  "contactInfo": {
+    "title": "Contact Us About Terms",
+    "description": "If you have any questions about these Terms of Service or need clarification on any terms, please contact us:"
+  }
+}

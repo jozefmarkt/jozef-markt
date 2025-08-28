@@ -7,11 +7,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const { isLoading } = useAuth();
-
-  // Temporarily bypass authentication for testing
-  // TODO: Remove this in production
-  const isAuthenticatedForTesting = true;
+  const { isLoading, isAuthenticated } = useAuth();
 
   if (isLoading) {
     return (
@@ -21,7 +17,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     );
   }
 
-  if (!isAuthenticatedForTesting) {
+  if (!isAuthenticated) {
     return <Navigate to="/admin/login" replace />;
   }
 

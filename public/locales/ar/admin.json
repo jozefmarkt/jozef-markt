@@ -166,6 +166,42 @@
     },
     "loading": "جاري تحميل المنتج..."
   },
+  "categories": {
+    "title": "الفئات",
+    "subtitle": "إدارة فئات المنتجات",
+    "addCategory": "إضافة فئة",
+    "editCategory": "تعديل الفئة",
+    "totalCategories": "إجمالي الفئات",
+    "activeCategories": "الفئات النشطة",
+    "recentlyUpdated": "محدثة مؤخراً",
+    "allCategories": "جميع الفئات",
+    "noCategories": "لا توجد فئات",
+    "noCategoriesDescription": "ابدأ بإنشاء فئة جديدة لتنظيم منتجاتك.",
+    "addFirstCategory": "إضافة أول فئة",
+    "lastUpdated": "آخر تحديث",
+    "basicInfo": "المعلومات الأساسية",
+    "name": "اسم الفئة",
+    "namePlaceholder": "أدخل اسم الفئة",
+    "description": "وصف الفئة",
+    "descriptionPlaceholder": "أدخل وصف الفئة",
+    "visualSettings": "الإعدادات البصرية",
+    "color": "اللون",
+    "icon": "الأيقونة",
+    "preview": "معاينة",
+    "previewName": "اسم الفئة",
+    "previewDescription": "وصف الفئة",
+    "backToCategories": "العودة إلى الفئات",
+    "validation": {
+      "nameRequired": "اسم الفئة مطلوب",
+      "descriptionRequired": "وصف الفئة مطلوب"
+    },
+    "deleteModal": {
+      "title": "حذف الفئة",
+      "message": "هل أنت متأكد من حذف هذه الفئة؟ لا يمكن التراجع عن هذا الإجراء.",
+      "cancel": "إلغاء",
+      "delete": "حذف"
+    }
+  },
   "imageManager": {
     "title": "مدير الصور",
     "subtitle": "رفع وإدارة صور المنتجات",

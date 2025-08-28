@@ -4,31 +4,30 @@
   "getInTouch": "تواصل معنا",
   "address": {
     "title": "العنوان",
-    "street": "123 شارع السوبرماركت",
-    "city": "أمستردام، هولندا",
-    "postal": "1000 AB"
+    "street": "Nieuwe Binnenweg 327 b",
+    "city": "Rotterdam, Netherlands",
+    "postal": "3021 GJ"
   },
   "phone": {
     "title": "الهاتف",
-    "number": "+31 (0) 20 123 4567",
-    "hours": "الاثنين - الجمعة: 8:00 ص - 8:00 م"
+    "number": "‎+31 6 23735563",
+    "hours": "كل يوم: 10:00 ص - 10:00 م"
   },
   "whatsapp": {
     "title": "واتساب",
     "message": "تحدث معنا على واتساب",
     "button": "تحدث على واتساب",
-    "number": "+31 (0) 20 123 4567"
+    "number": "‎+31 6 23735563"
   },
   "email": {
     "title": "البريد الإلكتروني",
-    "info": "info@jozefmarkt.com",
-    "support": "support@jozefmarkt.com"
+    "info": "jozefmarkt@gmail.com"
   },
   "openingHours": {
     "title": "ساعات العمل",
-    "weekdays": "الاثنين - الجمعة: 8:00 ص - 8:00 م",
-    "saturday": "السبت: 9:00 ص - 6:00 م",
-    "sunday": "الأحد: 10:00 ص - 4:00 م"
+    "weekdays": "كل يوم: 10:00 ص - 10:00 م",
+    "saturday": "كل يوم: 10:00 ص - 10:00 م",
+    "sunday": "كل يوم: 10:00 ص - 10:00 م"
   },
   "sendMessage": "أرسل لنا رسالة",
   "successMessage": "شكراً لك! تم إرسال رسالتك بنجاح.",

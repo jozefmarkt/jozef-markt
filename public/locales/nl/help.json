@@ -1,0 +1,145 @@
+{
+  "title": "Helpcentrum",
+  "subtitle": "Vind antwoorden op veelgestelde vragen en krijg de ondersteuning die je nodig hebt",
+  "searchPlaceholder": "Zoek naar hulponderwerpen...",
+  "quickContact": {
+    "title": "Heeft u directe hulp nodig?",
+    "description": "Ons klantenserviceteam staat klaar om u te helpen al uw vragen of zorgen",
+    "contactUs": "Neem Contact Op",
+    "whatsapp": "Chat op WhatsApp"
+  },
+  "actions": {
+    "viewAllHelp": "Bekijk alle hulp",
+    "contactUs": "Neem contact op"
+  },
+  "shipping": {
+    "subtitle": "Alle informatie over onze bezorging en verzending",
+    "contactTitle": "Heeft u vragen over bezorging?",
+    "phone": "Telefoon",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "directContact": "Direct contact",
+    "faqTitle": "Veelgestelde vragen over bezorging"
+  },
+  "noResults": {
+    "title": "Geen resultaten gevonden",
+    "description": "Probeer te zoeken met andere zoekwoorden of blader door onze hulpsecties hieronder",
+    "clearSearch": "Zoekopdracht Wissen"
+  },
+  "sections": {
+    "shopping": {
+      "title": "Winkelen & Bestellingen",
+      "q1": "Hoe plaats ik een bestelling?",
+      "a1": "Blader door onze producten, voeg items toe aan je winkelwagen en ga naar de kassa. Je wordt dan doorgestuurd naar WhatsApp met je complete bestelgegevens. Ons serviceteam stuurt je een tikkie (betaallink), en zodra de betaling is bevestigd, bereiden we je bestelling voor voor ophaal of bezorging op basis van je voorkeur.",
+      "q2": "Hoe kan ik mijn bestelling volgen?",
+      "a2": "Zodra je bestelling is bevestigd, ontvang je een trackingnummer via e-mail of WhatsApp. Je kunt ook direct contact met ons opnemen voor bestellingsstatus updates.",
+      "q3": "Kan ik mijn bestelling wijzigen of annuleren?",
+      "a3": "Bestellingen kunnen binnen 2 uur na plaatsing worden gewijzigd of geannuleerd. Neem direct contact met ons op via WhatsApp of telefoon voor hulp.",
+      "q4": "Welke betaalmethoden accepteert u?",
+      "a4": "We gebruiken tikkie (Nederlands betaalsysteem) voor veilige betalingen. Na het plaatsen van je bestelling ontvang je een betaallink via WhatsApp. Zodra de betaling is bevestigd, bereiden we je bestelling voor voor ophaal of bezorging.",
+      "q5": "Hoe weet ik dat mijn bestelling is bevestigd?",
+      "a5": "Na betaling via tikkie ontvang je een WhatsApp-bevestiging met je bestelgegevens. We bereiden dan je bestelling voor en nemen contact met je op om ophaal of bezorging te regelen."
+    },
+    "delivery": {
+      "title": "Bezorging & Verzending",
+      "q1": "Wat zijn uw bezorggebieden en tijden?",
+      "a1": "We bezorgen in Rotterdam en de omliggende gebieden. Bezorging is beschikbaar elke dag van de week, met bestellingen die meestal binnen 48 uur worden bezorgd. Je kunt ook kiezen om je bestelling op te halen in onze winkel.",
+      "q2": "Wanneer is bezorging gratis?",
+      "a2": "Bezorging is gratis voor klanten die binnen 3 kilometer van de winkel wonen. Voor klanten die meer dan 3 kilometer weg wonen, moet de bestelling €50 of meer zijn voor bezorging, plus extra bezorgkosten.",
+      "q3": "Hoe worden bezorgkosten berekend voor verre locaties?",
+      "a3": "Voor klanten die meer dan 3 kilometer weg wonen, worden bezorgkosten besproken met de winkelier of verkoper op basis van de werkelijke afstand. Hoe verder de afstand, hoe hoger de bezorgkosten.",
+      "q4": "Bezorgt u elke dag van de week?",
+      "a4": "Ja, we bieden bezorging elke dag van de week voor uw gemak. U kunt bezorging aanvragen op elke dag van de week.",
+      "q5": "Hoe kan ik mijn bezorging volgen?",
+      "a5": "Je ontvangt real-time bezorgupdates via WhatsApp en e-mail, inclusief de contactgegevens van de chauffeur.",
+      "q6": "Wat als ik niet thuis ben tijdens bezorging?",
+      "a6": "Onze chauffeurs nemen contact met je op voor de bezorging. Als je niet thuis bent, kunnen we een veilige afleverlocatie regelen of een nieuwe afspraak maken.",
+      "q7": "Wat zijn de exacte bezorgtijden?",
+      "a7": "We bezorgen van 10:00 tot 22:00 uur, elke dag van de week. Je kunt een voorkeurstijd opgeven bij het plaatsen van je bestelling.",
+      "q8": "Hoe lang duurt het voordat mijn bestelling wordt bezorgd?",
+      "a8": "Standaard bezorging duurt 24-48 uur. Voor spoedbestellingen kunnen we binnen 4-6 uur bezorgen (tegen een extra vergoeding).",
+      "q9": "Kan ik mijn bezorging annuleren of wijzigen?",
+      "a9": "Ja, je kunt je bezorging wijzigen of annuleren tot 2 uur voor de geplande bezorgtijd. Neem contact met ons op via WhatsApp.",
+      "q10": "Wat gebeurt er als mijn bestelling beschadigd aankomt?",
+      "a10": "Als je bestelling beschadigd aankomt, maak dan foto's en neem direct contact met ons op. We vervangen de beschadigde items gratis of geven je een volledige terugbetaling.",
+      "q11": "Bezorgt u ook op feestdagen?",
+      "a11": "Ja, we bezorgen ook op feestdagen, maar bezorgtijden kunnen aangepast zijn. Controleer onze website of neem contact op voor actuele bezorgtijden tijdens feestdagen.",
+      "q12": "Kan ik een specifieke bezorglocatie opgeven?",
+      "a12": "Ja, je kunt een specifieke bezorglocatie opgeven, zoals een kantoor, school of ander adres. Zorg ervoor dat je duidelijke instructies geeft voor de chauffeur.",
+      "q13": "Wat als ik niet tevreden ben over de bezorging?",
+      "a13": "Als je niet tevreden bent over de bezorging, neem dan binnen 24 uur contact met ons op. We doen ons best om het probleem op te lossen en je tevreden te stellen.",
+      "q14": "Bezorgt u ook buiten Rotterdam?",
+      "a14": "We bezorgen voornamelijk in Rotterdam en directe omgeving. Voor locaties verder weg kunnen we bezorging regelen, maar dit is afhankelijk van de afstand en kan extra kosten met zich meebrengen.",
+      "q15": "Kan ik mijn bestelling ophalen in plaats van laten bezorgen?",
+      "a15": "Ja, je kunt je bestelling altijd ophalen in onze winkel. Dit is gratis en je kunt je bestelling meestal binnen 2 uur ophalen na bevestiging van je betaling."
+    },
+    "products": {
+      "title": "Producten & Voorraad",
+      "q1": "Zijn uw producten vers?",
+      "a1": "Ja, we halen dagelijks verse producten bij lokale leveranciers en onze eigen bakkerij. Alle producten worden binnen 48 uur bezorgd om versheid te garanderen.",
+      "q2": "Heeft u biologische producten?",
+      "a2": "We bieden zowel biologische als conventionele producten. Alle biologische artikelen zijn duidelijk gelabeld en gecertificeerd.",
+      "q3": "Wat als een product niet op voorraad is?",
+      "a3": "Als een product tijdelijk niet beschikbaar is, informeren we je en bieden we alternatieven. Je kunt ook vragen om een melding wanneer het weer op voorraad is.",
+      "q4": "Geeft u allergie-informatie?",
+      "a4": "Ja, alle producten bevatten gedetailleerde allergie-informatie en ingrediëntenlijsten. Neem contact met ons op voor specifieke dieetvereisten.",
+      "q5": "Zijn uw Syrische producten authentiek?",
+      "a5": "Absoluut! We importeren authentieke Syrische producten rechtstreeks van vertrouwde leveranciers, zodat je de echte smaak van Syrië krijgt."
+    },
+    "account": {
+      "title": "Account & Profiel",
+      "q1": "Hoe maak ik een account aan?",
+      "a1": "Momenteel vereist onze website geen aparte accountaanmaak. Je kunt direct bestellen via de website en wordt doorgestuurd naar WhatsApp om het betalings- en bestelproces te voltooien.",
+      "q2": "Hoe beheer ik mijn persoonlijke informatie?",
+      "a2": "Aangezien we geen traditioneel accountsysteem gebruiken, kun je updates van je persoonlijke informatie en bezorgadressen sturen via WhatsApp of direct contact met ons opnemen.",
+      "q3": "Kan ik mijn bestelgeschiedenis bekijken?",
+      "a3": "Je kunt je bestelgeschiedenis bekijken via je eerdere WhatsApp-gesprekken met ons, of je kunt contact met ons opnemen voor informatie over je eerdere bestellingen.",
+      "q4": "Hoe verander ik mijn taalvoorkeuren?",
+      "a4": "Je kunt schakelen tussen Engels, Nederlands en Arabisch met de taalselector in de bovenste navigatiebalk."
+    },
+    "returns": {
+      "title": "Retour & Terugbetaling",
+      "q1": "Wat is uw retourbeleid?",
+      "a1": "We bieden een 100% tevredenheidsgarantie. Als je niet tevreden bent met een product, neem binnen 24 uur contact met ons op voor een terugbetaling of vervanging.",
+      "q2": "Hoe retourneer ik een product?",
+      "a2": "Neem contact met ons op via WhatsApp of telefoon om een retour te starten. We regelen ophaal en verwerken je terugbetaling binnen 3-5 werkdagen.",
+      "q3": "Wat als een product beschadigd aankomt?",
+      "a3": "Als een product beschadigd aankomt, maak foto's en neem direct contact met ons op. We vervangen het zonder kosten of geven een volledige terugbetaling.",
+      "q4": "Biedt u kwaliteitsgaranties?",
+      "a4": "Ja, we garanderen de kwaliteit van al onze producten. Als je niet tevreden bent, maken we het goed met een vervanging of terugbetaling."
+    },
+    "payment": {
+      "title": "Betaling & Facturering",
+      "q1": "Is mijn betaalinformatie veilig?",
+      "a1": "Ja, we gebruiken het veilige Tikkie betaalsysteem. Tikkie is een vertrouwd en veilig Nederlands betaalsysteem, en we slaan geen gevoelige betaalinformatie op.",
+      "q2": "Wanneer word ik in rekening gebracht?",
+      "a2": "Betaling wordt verwerkt wanneer je bestelling wordt bevestigd via Tikkie. Je ontvangt een veilige betaallink via WhatsApp om de betaling te voltooien.",
+      "q3": "Kan ik een factuur krijgen?",
+      "a3": "Ja, je ontvangt de factuur in de tas bij bezorging of wanneer je je bestelling ophaalt in de winkel. Facturen worden geprint en zijn beschikbaar bij elke bestelling.",
+      "q4": "Wat als mijn betaling mislukt?",
+      "a4": "Als betaling via Tikkie mislukt, informeren we je direct via WhatsApp. Je kunt het opnieuw proberen of contact met ons opnemen voor hulp bij het oplossen van het probleem."
+    },
+    "support": {
+      "title": "Klantenservice",
+      "q1": "Hoe kan ik contact opnemen met klantenservice?",
+      "a1": "Je kunt ons bereiken via WhatsApp (+31 6 23735563), telefoon of e-mail. We zijn elke dag van de week beschikbaar voor hulp.",
+      "q2": "Wat zijn uw openingstijden?",
+      "a2": "Ons klantenserviceteam is elke dag van de week beschikbaar van 10:00 tot 22:00 uur.",
+      "q3": "Hoe snel reageert u op vragen?",
+      "a3": "We reageren meestal binnen 30 minuten op WhatsApp-berichten en binnen 2 uur op e-mails tijdens kantooruren.",
+      "q4": "Biedt u ondersteuning in meerdere talen?",
+      "a4": "Ja, ons klantenserviceteam kan je helpen in het Engels, Nederlands en Arabisch."
+    },
+    "technical": {
+      "title": "Technische Ondersteuning",
+      "q1": "De website laadt niet goed. Wat moet ik doen?",
+      "a1": "Probeer de pagina te verversen of je browsercache te wissen. Als het probleem aanhoudt, neem contact met ons op en we helpen je bij het oplossen.",
+      "q2": "Ik kan geen items aan mijn winkelwagen toevoegen. Wat is er mis?",
+      "a2": "Dit kan een tijdelijk technisch probleem zijn. Probeer de pagina te verversen of neem contact met ons op voor directe hulp.",
+      "q3": "Hoe kan ik de taal wijzigen?",
+      "a3": "Je kunt de taal wijzigen met de taalselector in de bovenste navigatiebalk. We ondersteunen Arabisch, Engels en Nederlands.",
+      "q4": "Is de website mobiel-vriendelijk?",
+      "a4": "Ja, onze website is volledig geoptimaliseerd voor mobiele apparaten en werkt geweldig op smartphones en tablets."
+    }
+  }
+}
