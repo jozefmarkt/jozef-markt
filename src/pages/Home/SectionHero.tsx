@@ -13,7 +13,6 @@ const SectionHero = () => {
     t('hero.marketing.sentence2'),
     t('hero.marketing.sentence3'),
     t('hero.marketing.sentence4'),
-    t('hero.marketing.sentence5'),
   ];
 
   useEffect(() => {

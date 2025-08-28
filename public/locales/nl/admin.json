@@ -65,12 +65,16 @@
     "stats": {
       "totalProducts": "Totaal Producten",
       "inStock": "Op Voorraad",
-      "outOfStock": "Niet op Voorraad"
+      "outOfStock": "Niet op Voorraad",
+      "featuredProducts": "Uitgelichte Producten"
     },
     "table": {
+      "title": "Producten Tabel",
       "product": "Product",
       "category": "Categorie",
       "price": "Prijs",
+      "stock": "Voorraad",
+      "featured": "Uitgelicht",
       "status": "Status",
       "actions": "Acties",
       "inStock": "Op Voorraad",
@@ -353,5 +357,17 @@
     "filter": "Filteren",
     "sort": "Sorteren",
     "refresh": "Vernieuwen"
+  },
+  "categoryNames": {
+    "vegetables": "Groenten",
+    "fruits": "Fruit",
+    "dairy": "Zuivel",
+    "bakery": "Bakkerij",
+    "meat": "Vlees",
+    "cheese": "Kaas",
+    "beverages": "Dranken",
+    "snacks": "Snacks",
+    "pantry": "Voorraad",
+    "koffie": "Koffie"
   }
 }

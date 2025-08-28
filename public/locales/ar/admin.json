@@ -65,12 +65,16 @@
     "stats": {
       "totalProducts": "إجمالي المنتجات",
       "inStock": "متوفر",
-      "outOfStock": "نفذت الكمية"
+      "outOfStock": "نفذت الكمية",
+      "featuredProducts": "المنتجات المميزة"
     },
     "table": {
+      "title": "جدول المنتجات",
       "product": "المنتج",
       "category": "الفئة",
       "price": "السعر",
+      "stock": "المخزون",
+      "featured": "مميز",
       "status": "الحالة",
       "actions": "الإجراءات",
       "inStock": "متوفر",
@@ -353,5 +357,17 @@
     "filter": "تصفية",
     "sort": "ترتيب",
     "refresh": "تحديث"
+  },
+  "categoryNames": {
+    "vegetables": "خضروات",
+    "fruits": "فواكه",
+    "dairy": "ألبان",
+    "bakery": "مخبز",
+    "meat": "لحوم",
+    "cheese": "جبن",
+    "beverages": "مشروبات",
+    "snacks": "وجبات خفيفة",
+    "pantry": "مخزن",
+    "koffie": "قهوة"
   }
 } 

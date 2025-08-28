@@ -12,6 +12,9 @@
     "search": "Search",
     "category": "Category"
   },
+  "filter": {
+    "allCategories": "All Categories"
+  },
   "msg": {
     "noItems": "No items found"
   },
@@ -61,8 +64,7 @@
       "sentence1": "Best prices and highest quality products",
       "sentence2": "Exclusive daily offers - discounts up to 50%",
       "sentence3": "Fresh products from farm to your door",
-      "sentence4": "Premium customer service 24/7",
-      "sentence5": "Free shipping for large orders"
+      "sentence4": "Premium customer service 24/7"
     },
     "shipping": "Free delivery in the Netherlands for orders over €100"
   },

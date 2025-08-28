@@ -65,12 +65,16 @@
     "stats": {
       "totalProducts": "Total Products",
       "inStock": "In Stock",
-      "outOfStock": "Out of Stock"
+      "outOfStock": "Out of Stock",
+      "featuredProducts": "Featured Products"
     },
     "table": {
+      "title": "Products Table",
       "product": "Product",
       "category": "Category",
       "price": "Price",
+      "stock": "Stock",
+      "featured": "Featured",
       "status": "Status",
       "actions": "Actions",
       "inStock": "In Stock",
@@ -353,5 +357,17 @@
     "filter": "Filter",
     "sort": "Sort",
     "refresh": "Refresh"
+  },
+  "categoryNames": {
+    "vegetables": "Vegetables",
+    "fruits": "Fruits",
+    "dairy": "Dairy",
+    "bakery": "Bakery",
+    "meat": "Meat",
+    "cheese": "Cheese",
+    "beverages": "Beverages",
+    "snacks": "Snacks",
+    "pantry": "Pantry",
+    "koffie": "Coffee"
   }
 } 

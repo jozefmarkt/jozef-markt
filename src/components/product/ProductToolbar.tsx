@@ -18,6 +18,13 @@ export const ProductToolbar: React.FC<ProductToolbarProps> = ({ products, onFilt
   const [text, setText] = useState('');
   const [category, setCategory] = useState('All');
 
+  // Helper function to get category name in current language
+  const getCategoryName = (category: string): string => {
+    if (category === 'All') return t('filter.allCategories') || 'All';
+    const categoryKey = category.toLowerCase();
+    return t(`categoryNames.${categoryKey}`) || category;
+  };
+
   // Get unique categories from products
   const categories = ['All', ...Array.from(new Set(products.map(product => product.category)))];
 
@@ -44,7 +51,7 @@ export const ProductToolbar: React.FC<ProductToolbarProps> = ({ products, onFilt
         >
           {categories.map((cat) => (
             <option key={cat} value={cat}>
-              {cat}
+              {getCategoryName(cat)}
             </option>
           ))}
         </select>

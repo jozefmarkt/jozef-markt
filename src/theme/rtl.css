@@ -172,4 +172,152 @@
 [dir="rtl"] .break-words {
   word-break: break-word;
   overflow-wrap: break-word;
+}
+
+/* RTL Table Fixes */
+[dir="rtl"] .table th,
+[dir="rtl"] table th {
+  text-align: right !important;
+}
+
+[dir="rtl"] .table td,
+[dir="rtl"] table td {
+  text-align: right !important;
+}
+
+[dir="rtl"] .table th:last-child,
+[dir="rtl"] table th:last-child {
+  text-align: left !important;
+}
+
+[dir="rtl"] .table td:last-child,
+[dir="rtl"] table td:last-child {
+  text-align: left !important;
+}
+
+/* Ensure proper spacing in RTL tables */
+[dir="rtl"] .px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Fix table header alignment for Arabic */
+[dir="rtl"] .text-left {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left !important;
+}
+
+/* Ensure Arabic text starts from the very right edge */
+[dir="rtl"] .table td,
+[dir="rtl"] table td {
+  text-align: right !important;
+  padding-right: 0 !important;
+  padding-left: 1.5rem !important;
+}
+
+[dir="rtl"] .table th,
+[dir="rtl"] table th {
+  text-align: right !important;
+  padding-right: 0 !important;
+  padding-left: 1.5rem !important;
+}
+
+/* Special handling for the last column (actions) */
+[dir="rtl"] .table th:last-child,
+[dir="rtl"] table th:last-child {
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important;
+}
+
+[dir="rtl"] .table td:last-child,
+[dir="rtl"] table td:last-child {
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Ensure product text starts from the very right edge */
+[dir="rtl"] .product-cell {
+  text-align: right !important;
+  padding-right: 0 !important;
+}
+
+/* Fix spacing for RTL product layout */
+[dir="rtl"] .product-layout {
+  justify-content: flex-end !important;
+}
+
+/* Force Arabic text to start from the very right edge */
+[dir="rtl"] .product-cell {
+  text-align: right !important;
+  padding-right: 0 !important;
+  padding-left: 1.5rem !important;
+}
+
+[dir="rtl"] .product-cell .text-sm {
+  text-align: right !important;
+  width: 100% !important;
+}
+
+/* Ensure product text container takes full width and aligns properly */
+[dir="rtl"] .product-cell .product-layout {
+  width: 100% !important;
+  justify-content: flex-end !important;
+}
+
+[dir="rtl"] .product-cell .product-layout > div:last-child {
+  flex: 1 !important;
+  text-align: right !important;
+  padding-right: 0 !important;
+}
+
+/* Force text alignment for Arabic */
+[dir="rtl"] .product-cell .text-sm,
+[dir="rtl"] .product-cell .font-medium {
+  text-align: right !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Ensure proper RTL table layout */
+[dir="rtl"] table {
+  direction: rtl;
+}
+
+[dir="rtl"] table th,
+[dir="rtl"] table td {
+  direction: rtl;
+}
+
+/* Override any conflicting padding */
+[dir="rtl"] .px-6 {
+  padding-left: 1.5rem !important;
+  padding-right: 0 !important;
+}
+
+/* Additional RTL table fixes */
+[dir="rtl"] .product-cell {
+  position: relative !important;
+}
+
+[dir="rtl"] .product-cell .product-layout {
+  position: relative !important;
+}
+
+/* Ensure text starts from the absolute right edge */
+[dir="rtl"] .product-cell .text-sm,
+[dir="rtl"] .product-cell .font-medium {
+  position: relative !important;
+  right: 0 !important;
+  text-align: right !important;
+}
+
+/* Fix any margin issues */
+[dir="rtl"] .mr-4 {
+  margin-right: 0 !important;
+  margin-left: 1rem !important;
 } 

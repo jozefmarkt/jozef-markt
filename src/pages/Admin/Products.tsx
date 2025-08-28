@@ -49,6 +49,12 @@ const AdminProducts: React.FC = () => {
     }
   };
 
+  // Helper function to get category name in current language
+  const getCategoryName = (category: string): string => {
+    const categoryKey = category.toLowerCase();
+    return t(`categoryNames.${categoryKey}`) || category;
+  };
+
   const deleteProductMutation = useMutation({
     mutationFn: productService.delete,
     onSuccess: () => {
@@ -175,7 +181,7 @@ const AdminProducts: React.FC = () => {
                   <div className="ml-3 sm:ml-5 w-0 flex-1">
                     <dl>
                       <dt className="text-xs sm:text-sm font-medium text-gray-500 truncate">
-                        Featured Products
+                        {t('products.stats.featuredProducts')}
                       </dt>
                       <dd className="text-base sm:text-lg font-medium text-gray-900">
                         {products?.filter(p => p.featured).length || 0}
@@ -199,22 +205,28 @@ const AdminProducts: React.FC = () => {
             <div className="block sm:hidden">
               {products?.map((product) => (
                 <div key={product.id} className="border-b border-gray-200 p-4">
-                  <div className="flex items-center space-x-3">
+                  <div className={`flex items-center ${
+                    currentLanguage === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-3'
+                  }`}>
                     <img 
                       className="h-12 w-12 rounded-lg object-cover" 
                       src={product.image} 
                       alt={getProductName(product)}
                     />
-                    <div className="flex-1 min-w-0">
+                    <div className={`flex-1 min-w-0 ${
+                      currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                    }`}>
                       <div className="text-sm font-medium text-gray-900 truncate">
                         {getProductName(product)}
                       </div>
                       <div className="text-xs text-gray-500 truncate">
                         {getProductDescription(product).substring(0, 30)}...
                       </div>
-                      <div className="flex items-center space-x-2 mt-1">
+                      <div className={`flex items-center mt-1 ${
+                        currentLanguage === 'ar' ? 'space-x-reverse space-x-2' : 'space-x-2'
+                      }`}>
                         <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
-                          {product.category}
+                          {getCategoryName(product.category)}
                         </span>
                         <span className="text-sm font-medium text-gray-900">
                           €{product.price}
@@ -224,7 +236,7 @@ const AdminProducts: React.FC = () => {
                             ? 'bg-green-100 text-green-800' 
                             : 'bg-red-100 text-red-800'
                         }`}>
-                          {product.in_stock ? 'In Stock' : 'Out of Stock'}
+                          {product.in_stock ? t('products.table.inStock') : t('products.table.outOfStock')}
                         </span>
                       </div>
                     </div>
@@ -262,22 +274,32 @@ const AdminProducts: React.FC = () => {
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className={`px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider ${
+                      currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                    }`}>
                       {t('products.table.product')}
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className={`px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider ${
+                      currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                    }`}>
                       {t('products.table.category')}
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className={`px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider ${
+                      currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                    }`}>
                       {t('products.table.price')}
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className={`px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider ${
+                      currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                    }`}>
                       {t('products.table.stock')}
                     </th>
                     <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                       {t('products.table.featured')}
                     </th>
-                    <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th className={`px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider ${
+                      currentLanguage === 'ar' ? 'text-left' : 'text-right'
+                    }`}>
                       {t('products.table.actions')}
                     </th>
                   </tr>
@@ -285,8 +307,12 @@ const AdminProducts: React.FC = () => {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {products?.map((product) => (
                     <tr key={product.id} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center">
+                      <td className={`px-6 py-4 whitespace-nowrap product-cell ${
+                        currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                      }`}>
+                        <div className={`flex items-center product-layout ${
+                          currentLanguage === 'ar' ? 'flex-row-reverse justify-end' : 'flex-row'
+                        }`}>
                           <div className="flex-shrink-0 h-10 w-10">
                             <img 
                               className="h-10 w-10 rounded-lg object-cover" 
@@ -294,25 +320,37 @@ const AdminProducts: React.FC = () => {
                               alt={getProductName(product)}
                             />
                           </div>
-                          <div className="ml-4">
-                            <div className="text-sm font-medium text-gray-900">
+                          <div className={`${
+                            currentLanguage === 'ar' ? 'mr-4 text-right w-full' : 'ml-4'
+                          }`}>
+                            <div className={`text-sm font-medium text-gray-900 ${
+                              currentLanguage === 'ar' ? 'text-right' : ''
+                            }`}>
                               {getProductName(product)}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className={`text-sm text-gray-500 ${
+                              currentLanguage === 'ar' ? 'text-right' : ''
+                            }`}>
                               {getProductDescription(product).substring(0, 50)}...
                             </div>
                           </div>
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className={`px-6 py-4 whitespace-nowrap ${
+                        currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                      }`}>
                         <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
-                          {product.category}
+                          {getCategoryName(product.category)}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                      <td className={`px-6 py-4 whitespace-nowrap text-sm text-gray-900 ${
+                        currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                      }`}>
                         €{product.price.toFixed(2)}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className={`px-6 py-4 whitespace-nowrap ${
+                        currentLanguage === 'ar' ? 'text-right' : 'text-left'
+                      }`}>
                         <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                           product.in_stock 
                             ? 'bg-green-100 text-green-800' 
@@ -335,16 +373,20 @@ const AdminProducts: React.FC = () => {
                           <Star className={`h-5 w-5 ${product.featured ? 'fill-current' : ''}`} />
                         </button>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                        <div className="flex justify-end space-x-2">
-                          <Link
-                            to={`/products/${product.id}`}
-                            className="text-indigo-600 hover:text-indigo-900 p-1"
-                            title="View"
-                          >
-                            <Eye className="h-4 w-4" />
-                          </Link>
-                          <Link
+                      <td className={`px-6 py-4 whitespace-nowrap text-sm font-medium ${
+                        currentLanguage === 'ar' ? 'text-left' : 'text-right'
+                      }`}>
+                        <div className={`flex space-x-2 ${
+                          currentLanguage === 'ar' ? 'justify-start' : 'justify-end'
+                        }`}>
+                                                      <Link
+                              to={`/products/${product.id}`}
+                              className="text-indigo-600 hover:text-indigo-900 p-1"
+                              title="View"
+                            >
+                              <Eye className="h-4 w-4" />
+                            </Link>
+                            <Link
                             to={`/admin/products/edit/${product.id}`}
                             className="text-yellow-600 hover:text-yellow-900 p-1"
                             title="Edit"

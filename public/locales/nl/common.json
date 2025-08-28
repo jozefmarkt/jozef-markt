@@ -12,6 +12,9 @@
     "search": "Zoeken",
     "category": "Categorie"
   },
+  "filter": {
+    "allCategories": "Alle Categorieën"
+  },
   "msg": {
     "noItems": "Geen items gevonden"
   },
@@ -61,8 +64,7 @@
       "sentence1": "Beste prijzen en hoogste kwaliteit producten",
       "sentence2": "Exclusieve dagelijkse aanbiedingen - kortingen tot 50%",
       "sentence3": "Verse producten van boerderij naar je deur",
-      "sentence4": "Premium klantenservice 24/7",
-      "sentence5": "Gratis verzending voor grote bestellingen"
+      "sentence4": "Premium klantenservice 24/7"
     },
     "shipping": "Gratis bezorging in Nederland voor bestellingen boven €100"
   },
