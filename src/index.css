@@ -1,30 +1,40 @@
+/* Import RTL utilities first */
+@import './theme/rtl.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Import RTL utilities */
-@import './theme/rtl.css';
-
-/* Hide scrollbar utility */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
-  scrollbar-width: none;  /* Firefox */
+/* Completely disable scrollbars for header and all its children */
+header,
+header *,
+.nav-link,
+nav {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  overflow: visible !important;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Safari and Chrome */
+header::-webkit-scrollbar,
+header *::-webkit-scrollbar,
+.nav-link::-webkit-scrollbar,
+nav::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Force remove any scrollbar-like elements */
+header::before,
+header::after,
+.nav-link::before,
+.nav-link::after,
+nav::before,
+nav::after {
+  display: none !important;
 }
 
 /* Mobile navigation fixes */
 @media (max-width: 640px) {
-  nav {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  nav::-webkit-scrollbar {
-    display: none;
-  }
+  /* Ensure navigation items don't get cut off */
   
   /* Ensure navigation items don't get cut off */
   nav a {

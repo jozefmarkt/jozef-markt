@@ -118,14 +118,7 @@
   hyphens: auto;
 }
 
-/* Mobile navigation RTL fixes */
-[dir="rtl"] .overflow-x-auto {
-  direction: rtl;
-}
-
-[dir="rtl"] .overflow-x-auto > * {
-  direction: ltr;
-}
+/* Mobile navigation RTL fixes - removed overflow-x-auto to fix scrollbar issue */
 
 /* Prevent content from being cut off on mobile */
 [dir="rtl"] .max-w-7xl {

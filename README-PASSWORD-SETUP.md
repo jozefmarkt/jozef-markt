@@ -45,3 +45,4 @@ const ADMIN_CREDENTIALS = {
 - Minimum 8 characters
 - Recommended: Mix of uppercase, lowercase, numbers, and symbols
 - Use a unique password not used elsewhere
+

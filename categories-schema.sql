@@ -48,3 +48,4 @@ INSERT INTO categories (name, name_nl, name_ar, color, icon) VALUES
   ('Snacks', 'Snacks', 'وجبات خفيفة', '#f59e0b', '🍪'),
   ('Preserves', 'Conserven', 'معلبات', '#4ade80', '📦');
 
+
