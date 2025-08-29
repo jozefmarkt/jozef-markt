@@ -5,6 +5,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Responsive hero background with zoom animation */
+.hero-zoom-bg {
+  background-image: url('/optimized/hero-banner-large.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive image sizes */
+@media (max-width: 768px) {
+  .hero-zoom-bg {
+    background-image: url('/optimized/hero-banner-small.webp');
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero-zoom-bg {
+    background-image: url('/optimized/hero-banner-medium.webp');
+  }
+}
+
+@media (min-width: 1201px) {
+  .hero-zoom-bg {
+    background-image: url('/optimized/hero-banner-large.webp');
+  }
+}
+
+/* Fallback for browsers that don't support WebP */
+@supports not (background-image: url('/optimized/hero-banner-large.webp')) {
+  .hero-zoom-bg {
+    background-image: url('/hero banner.png');
+  }
+}
+
+
+
 /* Completely disable scrollbars for header and all its children */
 header,
 header *,

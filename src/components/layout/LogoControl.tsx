@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Settings, X, RotateCcw } from 'lucide-react';
+import ResponsiveLogo from '../common/ResponsiveLogo';
 
 interface LogoControlProps {
   onLogoChange: (settings: LogoSettings) => void;
@@ -80,8 +81,8 @@ const LogoControl: React.FC<LogoControlProps> = ({ onLogoChange, currentSettings
               <div className="border rounded-lg p-4 bg-gray-50">
                 <h4 className="text-sm font-medium mb-2">Preview</h4>
                 <div className="flex justify-center items-center">
-                  <img 
-                    src="/logo-symbol-text.png" 
+                  <ResponsiveLogo 
+                    size="medium"
                     alt="Logo Preview" 
                     style={{
                       ...getLogoStyle(),

@@ -5,6 +5,7 @@ import { useCart } from "../../contexts/CartContext";
 import { useState, useEffect, useMemo } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { setUserLanguageChoice } from "../../i18n";
+import ResponsiveLogo from "../common/ResponsiveLogo";
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation('common');
@@ -146,9 +147,8 @@ const Header: React.FC = () => {
               className="flex items-center flex-shrink-0"
             >
               <Link to="/" className="flex items-center">
-                <img 
-                  src="/logo-symbol-text.png" 
-                  alt="Jozef Supermarkt Logo" 
+                <ResponsiveLogo 
+                  size="small"
                   className="h-10 w-auto object-contain drop-shadow-sm"
                 />
               </Link>
@@ -167,9 +167,8 @@ const Header: React.FC = () => {
                 mass: 0.8
               }}
             >
-              <img 
-                src="/logo-symbol-text.png" 
-                alt="Jozef Supermarkt Logo" 
+              <ResponsiveLogo 
+                size="large"
                 className="h-24 w-auto object-contain drop-shadow-sm"
               />
             </motion.div>
@@ -255,9 +254,8 @@ const Header: React.FC = () => {
                 mass: 0.8
               }}
             >
-              <img 
-                src="/logo-symbol-text.png" 
-                alt="Jozef Supermarkt Logo" 
+              <ResponsiveLogo 
+                size="large"
                 className="h-24 w-auto object-contain drop-shadow-sm"
                 style={{
                   filter: 'none',
@@ -271,10 +269,7 @@ const Header: React.FC = () => {
 
             {/* Left side logo and writing */}
             <Link to="/" className="flex items-center flex-shrink-0 gap-2 sm:gap-3">
-              <motion.img 
-                src="/logo-symbol-text.png" 
-                alt="Jozef Supermarkt Logo" 
-                className="h-12 sm:h-16 w-auto object-contain drop-shadow-sm"
+              <motion.div
                 style={{
                   opacity: leftLogoOpacity
                 }}
@@ -284,7 +279,12 @@ const Header: React.FC = () => {
                   damping: 25,
                   mass: 0.8
                 }}
-              />
+              >
+                <ResponsiveLogo 
+                  size="medium"
+                  className="h-12 sm:h-16 w-auto object-contain drop-shadow-sm"
+                />
+              </motion.div>
               <motion.img 
                 src="/writing.png" 
                 alt="Jozef Markt Writing" 
