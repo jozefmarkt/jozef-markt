@@ -1,4 +1,4 @@
-/* Import RTL utilities first */
+/* Import RTL utilities first - Fixed for production build */
 @import './theme/rtl.css';
 
 @tailwind base;
