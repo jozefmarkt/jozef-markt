@@ -217,7 +217,7 @@ const OfferForm: React.FC = () => {
                     <img
                       src={imagePreview}
                       alt="Offer preview"
-                      className="h-32 w-32 rounded-lg object-cover border border-gray-300"
+                      className="h-32 w-32 rounded-lg object-contain border border-gray-300"
                     />
                     <button
                       type="button"

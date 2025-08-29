@@ -78,7 +78,7 @@ const ProductDetails: React.FC = () => {
           <img
             src={product.image}
             alt={displayName}
-            className={`w-full h-96 object-cover rounded-xl shadow-lg ${
+            className={`w-full h-96 object-contain rounded-xl shadow-lg ${
               !product.in_stock ? 'opacity-50' : ''
             }`}
           />

@@ -189,7 +189,7 @@ const AdminOffers: React.FC = () => {
                     <div className="flex-shrink-0 h-10 w-10">
                       {offer.image ? (
                         <img
-                          className="h-10 w-10 rounded-lg object-cover"
+                          className="h-10 w-10 rounded-lg object-contain"
                           src={offer.image}
                           alt={offer.title}
                         />

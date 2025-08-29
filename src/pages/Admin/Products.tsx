@@ -209,7 +209,7 @@ const AdminProducts: React.FC = () => {
                     currentLanguage === 'ar' ? 'flex-row-reverse space-x-reverse' : 'space-x-3'
                   }`}>
                     <img 
-                      className="h-12 w-12 rounded-lg object-cover" 
+                      className="h-12 w-12 rounded-lg object-contain" 
                       src={product.image} 
                       alt={getProductName(product)}
                     />
@@ -315,7 +315,7 @@ const AdminProducts: React.FC = () => {
                         }`}>
                           <div className="flex-shrink-0 h-10 w-10">
                             <img 
-                              className="h-10 w-10 rounded-lg object-cover" 
+                              className="h-10 w-10 rounded-lg object-contain" 
                               src={product.image} 
                               alt={getProductName(product)}
                             />

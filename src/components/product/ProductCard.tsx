@@ -38,7 +38,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <img
             src={product.image}
             alt={displayName}
-            className={`w-full h-48 object-cover rounded-t-xl ${
+            className={`w-full h-48 object-contain rounded-t-xl ${
               !product.in_stock ? 'opacity-50' : ''
             }`}
           />

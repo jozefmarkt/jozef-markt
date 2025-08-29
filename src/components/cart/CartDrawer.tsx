@@ -264,7 +264,7 @@ export const CartDrawer: React.FC = () => {
                           <img
                             src={itemDetails.image}
                             alt={itemDetails.name}
-                            className="w-16 h-16 sm:w-24 sm:h-24 object-cover rounded-xl shadow-md"
+                            className="w-16 h-16 sm:w-24 sm:h-24 object-contain rounded-xl shadow-md"
                           />
                           {itemDetails.isOffer && (
                             <div className="absolute -top-3 -right-3 bg-gradient-to-r from-lion-500 to-lion-600 text-white rounded-full p-2 shadow-xl">
