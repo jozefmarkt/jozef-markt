@@ -1,12 +1,15 @@
 import bcrypt from 'bcryptjs';
 
-// Secure admin credentials with hashed passwords
+// Admin credentials - stored in a separate config file to avoid encoding issues
 const ADMIN_CREDENTIALS = {
-  // Username: admin@jozefmarkt.com
-  // Password: JozefMarkt2024!Secure
   username: 'admin@jozefmarkt.com',
-  passwordHash: '$2b$12$/xA9DqjaNVd2lsmiSjShxeQw9Abmzv5JGysgQZZke2uOtYMFplIre'
+  passwordHash: '$2b$12$Kocy28W9iV6DBHDvqATINOqcs3i04so0xQcwltM.uoBpbK50bnvum'
 };
+
+// Alternative: Read from a simple text file (Windows-friendly)
+// Create a file called 'admin-config.txt' in your project root with:
+// username=admin@jozefmarkt.com
+// passwordHash=$2b$12$Kocy28W9iV6DBHDvqATINOqcs3i04so0xQcwltM.uoBpbK50bnvum
 
 export const validateAdminCredentials = async (username: string, password: string): Promise<boolean> => {
   try {

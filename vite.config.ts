@@ -13,4 +13,19 @@ export default defineConfig({
   // Ensure environment variables are loaded
   envDir: '.',
   envPrefix: 'VITE_',
+  build: {
+    sourcemap: true,
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        sourcemapExcludeSources: false,
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          motion: ['framer-motion'],
+          ui: ['lucide-react'],
+        },
+      },
+    },
+  },
 })

@@ -191,7 +191,7 @@ export default function Home() {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="/shopfront.png" 
+                    src="/optimized/shopfront-optimized.webp" 
                     alt="Yousef Market Shopfront" 
                     className="w-full h-auto object-contain rounded-2xl"
                   />

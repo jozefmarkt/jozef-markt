@@ -43,7 +43,7 @@
 
 /* Completely disable scrollbars for header and all its children */
 header,
-header *,
+header *:not(img):not(video):not(canvas),
 .nav-link,
 nav {
   -ms-overflow-style: none !important;

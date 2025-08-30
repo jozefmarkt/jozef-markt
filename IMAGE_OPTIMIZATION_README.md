@@ -86,3 +86,4 @@ To regenerate optimized images:
 - Add WebP/AVIF support for product images
 - Implement progressive image loading
 - Add image compression monitoring
+

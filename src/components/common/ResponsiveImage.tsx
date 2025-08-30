@@ -73,3 +73,4 @@ const ResponsiveImage: React.FC<ResponsiveImageProps> = ({
 };
 
 export default ResponsiveImage;
+
