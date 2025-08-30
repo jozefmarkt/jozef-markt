@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of main pages
+Allow: /products
+Allow: /categories
+Allow: /offers
+Allow: /about
+Allow: /contact
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Sitemap location
+Sitemap: https://jozef-supermarkt.vercel.app/sitemap.xml
+
+# Crawl delay (optional - be respectful to server)
+Crawl-delay: 1
