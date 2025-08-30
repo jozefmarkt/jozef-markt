@@ -15,7 +15,7 @@ Disallow: /_next/
 Disallow: /static/
 
 # Sitemap location
-Sitemap: https://jozef-supermarkt.vercel.app/sitemap.xml
+Sitemap: https://jozefmarkt.nl/sitemap.xml
 
 # Crawl delay (optional - be respectful to server)
 Crawl-delay: 1
